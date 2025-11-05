@@ -1,0 +1,71 @@
+---
+id: error
+title: "Get async job error logs"
+description: "Returns error logs for an asynchronous Pixel job."
+sidebar_label: "Get async job error logs"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RWDZyXOdip8y9psy9CtQdOeghxkmbGV2qIqyU0Cw/8+UHbXtENXYCfbEh/5+B7pDoIsPWQbWJhSG0wWR1Rt0GRgK6BAr5y28TODWwytMz5B58glNZU+2ZFLpEmkPxlVOTLU+mSlj1gne8qnIIAsOsn4ZQEZRCQIcPjYog9fqDhB1oEiE9AEfpXW1lpFRHqcHA6HyY5cM2ldjUZRgQUHeVVhI/mNE2nHpxvYU74smHU4WYQMKN+jCiDAOmYRNHqGDGFZ9xzmg9OmhLfNzs9b2lOe6AJN0DuNDvpeQNChZvgPTnc79AM937xwCq7FeOAtGT+U/zyb8eN1scWLoi6KjAWI92TZe8Z0gEfZWObQgQ8ytB4y+DpfXi+uQECD3ssSo7GcPEvW1GCotCmTA5qQHByZErZ9Hzl7VK3T4QTZpoNceq3mbagg22z7LScLFbF/lnwUVPIdpBhHJn121aN7QudjjtbVkEEVgvVZmh7IPfiK7FTtymmBNekQcKqoSdWunEg9KbCh9CcZqnWoUmn1X35cYUPJwhSWtAnJ/e019OK8TJamNSlZV+RDdjG7mP073TXHJlf4hDXZhlXmRp9lWPOADX6difFnZLge9xujIBti4lRos6MYOE7HfJlckkMQwMoMpWfT2fTTZP1rvlp/v7mDXkRZGxlNNTJm/IZhWKo4ei8L97aPs935r/UcGwp4DKmtpTZMJ4rajS5vYHAZxLi9WwGsMd90XS493ru67/n4sUXHE7QV8CSdljlLsNn2AiqUBbo4GA94ggwuB9aTO67P4XXLPD7efjZ9SDFXCm14Bxx35NXorm7WdyAgH385DRWMOcsszj8G2vK17YPNYnxyM+OFNKczHlGVYWbuPTp2tO9BjLTb8Sh28hF+Jb0/kCvO8HY8gp539zeBIP8g
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get async job error logs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/error"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns error logs for an asynchronous Pixel job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["jobId"],"type":"object","properties":{"jobId":{"type":"string","description":"Asynchronous job identifier"}},"title":"JobIdRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Error logs returned","content":{"application/json":{"example":{"status":"FAILED","message":["Error: Something went wrong"]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

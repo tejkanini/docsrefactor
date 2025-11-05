@@ -1,0 +1,71 @@
+---
+id: get-group-insight-permission
+title: "Get group permission for an insight"
+description: "Returns the permission string for the specified group, type, projectId, and insightId."
+sidebar_label: "Get group permission for an insight"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMtu2zAQ/BViz4zlFC0Q6GY0QWogbYM4OQU+0NRKYiKRLLly6wr692Il+ZEnggQ9CRJnNLvL2WmBVBEhvQXVUAlLCRlGHYwn4yykcIXUBBsFlSg8htrEaJwVkYKxhchd6E+iR21yg5kogmu8FLTxKIUP7g41zTMplM2EsdEUJc2zCUhwHoNikXkGKRRI58ycD5DLnRJI8CqoGgkDl9mCVTUyo4dnIMFwnb8aDBuQEHWJtYK0BS4BUhgqha6TO2p/8g7erp33kHfNv528lBAwemcjRj7/NJ3y4+EF7UclciRdIgtoZwktMVp5XxndTzq5i0xpn0q6FTcGXdd1Ej4/JzO3a1UZvkPf0McVjp8q3Fh2oAvmL2bCBWFGxYhbI3xI88tzXS0wrDEIDMGFjwl0Emqk0o1m7m1LJaSQcFdJ79Zk9EDymttjX9Jg9SZUkEJJ5GOaJL9duI+l8xOdF5MMK2eIcKJdnei8OFLmKMPaJd+ddZWhMlHewONtPsXaiTObeWcsiZurC2CH7mXSJKmcVlXpIqUn05Pp67+7YKw4xTVWztc8OfZsRN0EQ5sFj2tw7kpFo2ccMPvhsd7W/vzeY3hlwNjc9UBDFZ/M5uKrC7yyPJlBejqZTo6PFj9ml4tvP6+hk+BdpFr1FzWu3DnSkEeHycWRpew2ix631O498P+ibxwA4R9KfKWM5fL7S2hH14xpLIeU6xNjW+7L3llK4HtjdtuuVMSbUHUdfx6ihh2VmahWFWaQ5qqKKOEeNw/CdK2qhovrjfECeszPt0API/Mt+MOU3OOX/BIMEyC9XXYSSlQZhr6lgTjTGj0dsJ4sMP9lt6LnZ9fQdf8AN8Rqag==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get group permission for an insight"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/group/insight/getGroupInsightPermission"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the permission string for the specified group, type, projectId, and insightId.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"type","in":"query","schema":{"type":"string"}},{"name":"projectId","in":"query","schema":{"type":"string"}},{"name":"insightId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Permission fetched","content":{"application/json":{"schema":{"type":"object"}}}},"400":{"description":"Invalid input","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized or invalid session","content":{"application/json":{"schema":{"type":"object"}}}},"500":{"description":"Server error","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

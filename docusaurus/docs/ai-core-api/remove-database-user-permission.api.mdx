@@ -1,0 +1,67 @@
+---
+id: remove-database-user-permission
+title: "Remove database user permission (legacy)"
+description: "Removes a user's permission for a database. Deprecated: use /auth/admin/engine/removeEngineUserPermission."
+sidebar_label: "Remove database user permission (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VE1PGzEQ/SvWXNpKZjdUPaC9pQ1SkWhBBE4oB8eeZA27HmN706ar/e/VOAskpYKeetqvt+/NzHvjHpJaR6huQXWphoUEg1EH65MlBxVcYUsbjEKJLmJ4F4XH0NoYLTmxoiCUMCqppYpYiBn6gFolNBWjRcmUpTKtdSW6tXVYhkx3mh9uIobLJ7YCJJDHoFj4zEAFO+xspD9Eg4SA0ZOLGKHq4eNkwpfD2i8e6UTstMYYV10DEjS5hC4xXnnfWJ0x5V3kn3qIusZW8V3aeoQKaHmHOoEEH7jAZHeSI+cecEnUoOLaDus4c4ZFMAq7EqlGQYeFoUEDwyAh2dQw0Tmuld5OeXDzncrV2CwMAwM//a3dz8qIgA8dxvRmlyPL8UuWG8euUbC/0PwLzcDdPvoOVQodSmgx1cQeesrFeJVqqGA/EI+xKd+wOWLYYOCE9tCFBiqoU/KxKssfFO5jTb7Qq3VhsCGbEhaa2lKv1kfKHhlsqfxGjhrLst6+cGaGLYlTZzxZl8TN1TkMcl+mKsuGtGpqiqk6mZxMXqc7Z6yY4QYb8i2PbVhwB7oLNm3nHKxddpYqWj3lhXtOD+txvxnFaWJMjoV1K8rAMR7TM/GFAoIEnsxOelJMiuOj+ffp5fzrxTUMMo++VTnSTmXG3S4/LWze6P19ft/k3H34s6/+OQX/9zwYJ5PwZyp9o6zjvrI7/Rip8diSkFm58FE9HxCvBGshgU1lhr7P30MzDPz6ocOwhep2IWGjglVLnvntYpBQozIYchLvcctGaI2e871RTceVvlgR9v9pGS4v5tcwDL8BIi3rbA==
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove database user permission (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/database/removeDatabaseUserPermission"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Removes a user's permission for a database. Deprecated: use /auth/admin/engine/removeEngineUserPermission.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation successful","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Indicates if the operation succeeded"}},"title":"LegacyAdminSuccessResponse"}}}},"400":{"description":"Bad request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-num-members-in-group
+title: "Count group members"
+description: "Returns the number of users in a group, optionally filtered by a search term."
+sidebar_label: "Count group members"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtO3DAQ/RVrns1mqVCF8rYFRFcCWnF5QvvgdWYTg2/YE9ptlH+vJllY7qpQnyzbZ+aMz5xxB6TqDOU1qJYaWEioMOtkIpngoYRzpDb5LKhB4Vu3xCTCSrQZUxbGCyXqFNooRRgClLVrsTKWMGEllmuhREaVdCMIk5uAhBAxKYbOKyihRjpr3Sly3jz3x5wLJESVlEPCxIV14JVDBvPtvAIJhiu7azGtQULWDToFZQe0jozLlIyvoe/lY+hYxCUm9+/RCwkJcww+Y+b7L9MpL8/lOQitJ5EGkZBL08ETemKkitEaPTy2uMkM717TGU9YYwIJq5CcovHo6x70fd9L2HuL9JuqRMK7FjN9gjEsb1DTY/7d1/mvPHshJPPnU096QtBLcEhN2PR6aC01UELBDIWqnPHF0NfiHStkTPcPPmiThRIaopjLovgV0m1uQpzoVT2p0AZDhBMdXKFX9Y4yOxW6UJwGH6xhrmjgpbkP0QVx5KsYjCdxdX4C7JktTVkUNmhlm5Cp3J/uTz9Od8JYcYj3aEN0LBmbKKNuk6H1Bes0WmmpstEznretasz34EfeDxg2MRi/CgPQkOWb2VwchIQggZUZqaeT6WR35+Js9vPi+49L6CXEkMmpoUObIRi9Oqgt3Kjzyyd022b/98nfvJPwNxXRKuO5ykHrbuOKzR8kYfAFyHHieX3LGwsJ3BcO67qlyniVbN/z8Tjb7JjKZLW0WEG5UjajhFtcP/tJ7pVtuaqh8e+gn30e24AFb5LhCCivF72EBlWFaSAeI2daY6QnUa/mh7M8Tsjx0SX0/V+32usT
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Count group members"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getNumMembersInGroup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the number of users in a group, optionally filtered by a search term.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Count returned","content":{"application/json":{"schema":{"type":"integer","format":"int64"}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

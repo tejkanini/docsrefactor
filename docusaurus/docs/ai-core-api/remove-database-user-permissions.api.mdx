@@ -1,0 +1,67 @@
+---
+id: remove-database-user-permissions
+title: "Remove database user permissions in bulk (legacy)"
+description: "Removes multiple users' permissions. Deprecated: use /auth/admin/engine/removeEngineUserPermissions."
+sidebar_label: "Remove database user permissions in bulk (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VE1PGzEQ/SvWXNpKJhuqHtDe0oJUJFoQgRPKwbEnWYPXNvZs2nS1/70aZykBKuipp/16+2bevDfugdQ6Q30DqqMGFhIMZp1sJBs81HCJbdhgFm3nyEaHosuY8jsRMbU2Zxt8nohjjAm1IjQ1fxcVc1XKtNZX6NfWY5UKz0l5uM6YLvb+BwkhYlJc8tRADTvwsSK1VPk5HCQkzDH4jBnqHj5Op3x52vb5A5/IndaY86pzIEEHT+iJ8SpGZ3XBVLeZf+oh6wZbxXe0jQg1hOUtagIJMXGHZHclR8494DIEh8rD8/GdesNFMAu7EtSgCE8bQ4MGhkECWXJMdIZrpbczHt18V+VyFAvDwMBPf5P7WRmR8L7DTG+qHFkOX7Jce/YtJPsLzb/QDKz2wXmoKXUooUVqApsYQ2kmKmqghv1ImNHY6i2fM6YNJk5nD11yUENDFHNdVT9CustNiBO9Wk8MumCJcKJDW+nV+kDZA4NtqL4FH5zlutG+sOYY2yBOvInBehLXl2cwyP0ydVW5oJVrQqb6aHo0fZ3ujLHiGDfoQmx5bsOCFeguWdrOOVm78CxVtnrGy/YYH67HeguK48SYkgvrV6EAx3zMTsWXkBAk8GR2paeT6eTwYP59djH/en4Fgyyzb1XJtFeFcbfH4mH0ZY33l1hYL5aduxPvXUngh+cC+8c8/K9DYRwO4U+qolPWs7RiUD/Gajy1JBRabnnUVw6J18K1kMDGMkXfF0Byw8Cv7ztMW6hvFhI2Klm15LnfLAYJDSqDqaTxDrdshtYYOeQb5Tpu9cWecAb+bMTF+fwKhuE3O5rtZQ==
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove database user permissions in bulk (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/database/removeDatabaseUserPermissions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Removes multiple users' permissions. Deprecated: use /auth/admin/engine/removeEngineUserPermissions.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation successful","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Indicates if the operation succeeded"}},"title":"LegacyAdminSuccessResponse"}}}},"400":{"description":"Bad request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

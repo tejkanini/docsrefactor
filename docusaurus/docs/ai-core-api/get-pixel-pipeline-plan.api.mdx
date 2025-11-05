@@ -1,0 +1,71 @@
+---
+id: get-pixel-pipeline-plan
+title: "Get Pixel pipeline plan"
+description: "Returns the execution plan/pipeline for the current insight."
+sidebar_label: "Get Pixel pipeline plan"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMtu2zoQ/RVi1rTlXnRRaJc2ub0G+jDqZGV4QYtjiy1FsuQotivo34uhpMRp2lsUXYki53XOnJkOSB0SlBu4cQfjUNycsGrJeAdbCRpTFU3IvyV8QmqjS4JqFDiZiWCVK4IJaNl972N+r9oY0ZEwLplDTXOQ4ANGxS5LDSUckFbmhHY1eq6sciAh4tcWE732+gxlB5V3hI74qEKwpsoBitPseDzO9j42szZadJXXqNkoVTU2ik8cyES+3cBYxFIzJjoHhBL87jNWBBJC5MLIYGK3R9Oym0wTReMO8CMdy8FUGI2OzN5ghL6XQIYsPj4v9b8+NtDz02NNFFvMFyl4l4bU/ywW/HmaZKJHxEw+apC/IuVzYo8O8KSawCV0MLUFyk0HiTBACW+8cwNyjaSMzbkxNx9KaM56xzAezNdon1mT2mWIVZvINxgT9P22zxBf/gzE0t0ra/Qkhj+CgDH6mMturRbOk9gbp7PGzEMDYEr+4nnyO6daqn003/6QvCnzXcIoEqbEajdJmAFNztlLSFi10dA5c7xTyVRXLdVQbrb9VkKDVHvWe/Apq03xGxQD4UWegrFHHCreM5scqY0WSqiJQiqL4ujjl1T7MK/2h7lG6w0RzivfFNX+MFNmprHxxXvvvDVUFyqYZ3K9xsaLG6eDN47E3ad3wF1+TFMWhfWVsrVPVL5avFr8f7h3bCuu8R6tDw0zynAnMtY8h4OsLyh5mCjOx3izFZSDTZ4e4/Y+G45TdLUUb3xkcpiZIfVivpi/mK0/XK3W/328hV5mchuVG+hUjvgWSeT9Ih5WUxg2zBMYFxvmb9fbCI3wREWwyjguLNPbjV3fTGMm4bLvWwnMOb933U4lvIu27/n6a4uRdbWVcK+iGaZus+0l1Kg0xiyUL3geppphzG65Cja3LVfz+6XJIhhCXFUVBvqFc56PJ4JefVzfgoTduKkbr9nnIrK8/BnKVk9lMLRdjl8GMz4od76oI7MyaIhnkTvc9yDHstvxKiP5nf9KpXT0UV/4h/EK8gr7DkfceII=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Pixel pipeline plan"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/getPipeline"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the execution plan/pipeline for the current insight.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["insightId"],"type":"object","properties":{"insightId":{"type":"string","description":"Insight identifier"}},"title":"InsightIdForm"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Pipeline returned","content":{"application/json":{"example":{"pipeline":[{"step":"Connect","details":{"engine":"mydb"}},{"step":"Select","details":{"table":"customers"}}]}}}},"400":{"description":"Invalid insight","content":{"application/json":{"example":{"error":"Could not find the insight id"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"example":{"error":"User session is invalid"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

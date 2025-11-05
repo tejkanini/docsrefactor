@@ -1,0 +1,184 @@
+---
+sidebar_label: 'System Apps'
+sidebar_position: 10
+slug: "/system-apps"
+---
+
+import ReactPlayer from "react-player";
+import RemovingApp from "../../../static/Demos/RemovingApp.mp4"
+import BIToolDemo from "../../../static/Demos/BIToolDemo.mp4"
+import Text2SQLAppDemo from "../../../static/Demos/Text2SQLAppDemo.mp4"
+import PolicyVectorEngineDemo from "../../../static/Demos/PolicyVectorEngineDemo.mp4"
+import ReportGeneratorApp from "../../../static/Demos/ReportGeneratorApp.mp4"
+import PolicyVectorEngine from "../../../static/Demos/PolicyVectorEngine.mp4";
+
+# AI Core Apps
+There are several Gen AI applications and tool in App Library. BI tool is used to analyze and visualize App data and some commonly used Apps are there which can provide understanding on how user can interact with Apps in platform.
+
+
+## Using the BI Tool 
+
+### Overview
+BI tool is a data analytics and visualization platform where you can create projects, build insights and dashboards, and share them to users.
+
+* To access the BI tool, login to the [AI Core](https://workshop.cfg.deloitte.com/cfg-ai-demo/SemossWeb/packages/client/dist/#/) platform
+* Once you're in the App Library, you will see two system apps on the top - **BI** and **Terminal**.
+* Click on **BI**.
+
+![AppLibraryl](../../../static/img/Navigating/AppLibrary_BI.png)
+> App Library Home Page
+
+* Here you will find options to create Projects, Insights, and Visualizations.
+
+### Creating a Project
+
+* Click on **+ New Project** under **My Insights**.
+* Fill in the details and click on **Save**.
+
+![NewProject](../../../static/img/Navigating/CreateProject.png)
+> Create a new project
+
+* You can now create insights and dashboards inside of your project
+
+### Creating an Insight
+
+* Click on the **+Create Insight** icon on the page.
+
+![CreateInsight](../../../static/img/Navigating/CreateInsight.png)
+> Create a new insight
+
+* Choose the option from where you want to import data. You can also connect to an existing database using CSV, Excel, or any file type that is listed.
+
+![ImportData](../../../static/img/Navigating/ImportData.png)
+> Import data from a chosen source
+
+* Add all or select a few columns that you want in your insight from the data source.
+
+![ChooseColumns](../../../static/img/Navigating/Insight2.png)
+> Select the columns you want to add to your insight
+
+* You can now see your data frame on the window. Click on **Save**.
+![SaveInsight](../../../static/img/Navigating/Insight4.png)
+
+* You can preview or read your data in the **code block** window that appears.
+
+* You can also connect to **Query** to get/retrieve data. First select the database, then write the query.
+
+### Creating Visualizations
+
+* Click on the bottom-left icon that you see in your data frame.
+![DataFrame](../../../static/img/Navigating/Insight3.png)
+
+* Choose how you want to visualize your data from the multiple options available on the **Visual** panel in the left.
+
+![VisualizeData](../../../static/img/Navigating/Insight5.png)
+
+* You can then select the data you want to represent in your visualization from the **Data** tab.
+
+![Choosing Data](../../../static/img/Navigating/choose_data.PNG)
+
+* You can also customize the layout of your visuals using the **Tools** tab.
+
+![Changing Colors](../../../static/img/Navigating/colors.PNG)
+> Using the tools to change the color of the bar chart
+
+* You can also create additional panels to add more datasets from the same or multiple sources to your insights and perform various operations on those datasets like **Join**, **Concatenate** etc.
+
+![Adding a Panel](../../../static/img/Navigating/panel.png)
+> Here we added a second panel which shows our data
+
+* For dashboarding, you can move around / drag and drop your panels and visuals in a manner that you like and click on **Present** to share it within your AI Core environment.
+![Presentation Mode](../../../static/img/Navigating/Presentation.png)
+> Now we are presenting the data, which takes away the tooling for a more professional look
+
+* Click on **Export** to share your dashboard externally.
+![Export](../../../static/img/Navigating/exporting.png)
+> By going into export, we can make this into a shareable file.
+
+<ReactPlayer controls url={BIToolDemo} />
+
+## Using the Terminal 
+The Terminal serves as your sandbox for experimentation and execution, providing the flexibility and tools you need to bring your ideas to life. Whether you're developing complex algorithms, analyzing data, or automating workflows, our Terminal is designed to support your endeavors with robust performance and reliability.
+
+- **Running Python Scripts**: Execute and test your Python code seamlessly.
+- **Performing Pixel Calls**: Execute and analyze pixel call responses.
+- **Crunching Data with R**: Utilize R for data analysis and statistical computing.
+- **Executing Shell Commands**: Run shell commands for system operations and automation.
+
+## Commonly Used Apps
+
+### 1. Text2SQL App
+It is one of the most basic apps hosted on the platform. Its functionality is uploading a csv file and then asking a question which is converted into a SQL query and runs through the uploded file to get the desired response. Questions should include keywords related to data present in the file to run the query successfully. You can also run an outlier to analyze the process of running the App. It is a VanillaJS App and is coded in Node.js/HTML/CSS.
+
+![Text2SQL](../../../static/img/Navigating/CFG%20AI%20Apps/Text%20to%20SQL.PNG)
+> Text2SQL App response based on uploaded file and question asked
+
+<ReactPlayer controls url={Text2SQLAppDemo} />
+
+### 2. Policy Vector Engine
+It assists case-workers in answering complex policy, operational procedure, and system questions. This engine takes data such as policy manuals, system documents, process maps data from vector databases as inputs, and uses LLM models to provide answers. The "Policy Vector Engine" is a React App and is coded in Node.js
+
+![Policy Vector Engine](../../../static/img/Navigating/CFG%20AI%20Apps/PolicyVectorEngine.PNG)
+> Policy Vector Engine response to a question
+
+<ReactPlayer controls url={PolicyVectorEngine} />
+
+### 3. Playground
+This App is used to test various prompts with different AI models using chats. You can select type of model from drop down based on type of prompt that will be used and check if its working correctly. If a model dosn't support a particular prompt, it will provide that information in response. Its Front-end is a React App and backend is connected AI Core without any code. You can click on settings icon highlighted below to edit LLM parameters like temperature, token length etc.
+
+![Playground App](../../../static/img/Navigating/CFG%20AI%20Apps/Playground.PNG)
+> Playground App response to a prompt using text supported Model
+
+### 4. Report Generator
+This app can be used to create and view summary and reports from meeting transcripts. You can upload the meeting transcript as an input, select a persona from which you want to view the report, choose a model of your choice and generate the summary report. It will also give you status of the items discussed in the meeting as well. You can also download the report if you're satisfied with the results.
+
+![Report Generator App](../../../static/img/Navigating/CFG%20AI%20Apps/Report_Generator_Response.PNG)
+> Report Generator App response to a meetring transcript as a prompt
+
+<ReactPlayer controls url={ReportGeneratorApp} />
+
+
+## Access and Download Apps Locally
+To access all AI Core Apps or download them in your local environment, we can use below mentioned ways -
+
+### Download Apps folder using command prompt
+To use command prompt for having Apps folder locally, click on cfgai-apps. In the folder, click on code and copy the link as shown below.
+![Copy Apps Folder link](../../../static/img/Navigating/Copy%20Apps%20Folder%20code.PNG)
+> Apps folder link
+
+Now open the folder in your local environment where you want to download these Apps and run the windows terminal.
+![Github Folder](../../../static/img/Navigating/Github%20Folder.PNG)
+> Github Folder where Apps folder will be downloaded
+
+After terminal is started write **"git clone"** , paste the link copied above and run the command. It will ask you to login for authentication as below
+![Github Authnetication](../../../static/img/Navigating/Sign%20into%20Github.PNG)
+> Authenticate the Signing in
+
+After signing in, it will run next set of tasks and will successfully download the folder with all Apps in it.
+![Apps Successfully Cloned](../../../static/img/Navigating/Successfully%20Cloned.PNG)
+> Apps are successfully cloned locally
+
+You can see below, cfgai-apps folder with other Apps in the folder.
+![Apps cloned locally](../../../static/img/Navigating/All%20Apps%20cloned.PNG)
+> Apps in the Github Folder
+
+### Download zip file locally and then unzip
+In this method, go to cfgai-apps and click on code. After that, click on download and a zip file will be downloaded in the local folder you want.
+![Downloaded Zip File](../../../static/img/Navigating/Downloaded%20Zip%20File.PNG)
+> Downloaded Zip File
+
+Now unzip the file in the same folder and it will return cfgai-apps folder which will consist of all Apps in the folder.
+![Unzipped Folder](../../../static/img/Navigating/unzipped%20folder.PNG)
+> Downloaded Apps after unzipping the Folder
+
+
+### Configure SMSS File
+SMSS file allows AI Core to use resources of many different types, and allows users to configure certain properties of those resources being used. It is a file that sets the properties for resources like AI Core Engine, Project, Insight, Model, etc. It contains a list of key value pairs that set the context for AI Core objects.
+
+For example, an engine's smss file may contain the ID in the AI Core database, the alias for the engine, JDBC connection, the location of the database file, username, password, etc. This allows AI Core to know how to connect to the object that the SMSS file references.
+
+## Commonly Asked Questions
+
+* **How is the Policy Vector Engine App different than performing a Q&A directly on the same Database?**
+
+    The Policy Vector Engine allows users to select multiple models and vector databases.

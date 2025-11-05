@@ -1,0 +1,71 @@
+---
+id: reset
+title: "Reset async job"
+description: "Resets a previously submitted asynchronous Pixel job."
+sidebar_label: "Reset async job"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsGz0qc7VT4lrUF1qJbg6Y9BTnIMhMrtUVVkvOBQP99oOxuboeuwE62KZLv8T3KZwhy66FYwbXZaoPZ9RFVFzQZWAuo0Cunbfos4AE9Bp/JzDrca+p8c8p8V7Y6BKwy6U9G1Y4MdT5b6CM22Y7KKQggi05yj5sKCnDcBQQ4fOnQh29UnaA4gyIT0AR+ldY2WqWK/Dg5HA6TDbl20rkGjaIKK07yqsZW8hs30o6jK9hReVMx83CyCAVQuUPFaNYxi6DRc0mfVpxf03xw2mzh/cDz8Ug7KjNdoQl6o9FBjAKCDg2X33K7h34eiHzyh1NwHaaAt2R8D/91NuPHW7BbKrNXbT4QY+c58wx4lK1NyL5TCr1n0CjAo+qcDicoVmcopddq3oUaitU6rgW0GGpiByz5JInkM8gxGZ+/Ynt0e3Q+9ehcAwXUIVhf5PmB3LOvyU7VZjutsCE2fqqozdVmO5F6UmFL+Q8y1OhQ59LqvxS9wpaya1NZ0iZkTw93EMUYpsjzhpRsavKhuJhdzP7d7o5zsyvcY0O2ZcV40FcZlrwiveIjMX6bzng8b8qCos9JvmqzoZQ4+Du/yS7JIQhgZXro2XQ2/TJZ/pwvlt/vHyGKJGsrk0FGpo7pwvQXg9fnPf3R0v/33RpmCXgMuW2kNswk6XkeDF5Bb3C6cmzxWgDLyyfncyk9PrkmRg6/dOh4edYC9tJpWfL0q3UUUKOs0KWdeMYTFHDZM588Mj6nNx3z+Pzqst99i7lSaMMHxWnV32zt4n75CALK4X/RUsU1o85i/NHTlm8d7x0Ww5OHGQ6kOY14JFX6dXny6NjMGEEMtLshlCb5rH4hvT+Qq0b1dghBXMcYfwEs8+o7
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reset async job"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/reset"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Resets a previously submitted asynchronous Pixel job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["jobId"],"type":"object","properties":{"jobId":{"type":"string","description":"Asynchronous job identifier"}},"title":"JobIdRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Job reset","content":{"application/json":{"example":"success"}}}}}
+>
+  
+</StatusCodes>
+
+
+      

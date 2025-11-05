@@ -1,0 +1,71 @@
+---
+id: delete-admin-theme
+title: "Delete admin theme"
+description: "Deletes an admin theme (admin only)."
+sidebar_label: "Delete admin theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1v2zAM/SsCTxugxOmwQ+Fb1m5Yga4tlvQU5KBYTK3VFlVJbpoZ+u8DZQ9LP9b2ZIgi3yPfo9xDVDcByhUsa2wxwFqCxlB546IhCyWcYoMRg1BWKN0aKyInig/DgWyz/zgFCeTQKy4501CCzkVzTsm4IMHjXYchfiG9h7J/QvKNfCu0ikrsTKyF0SChIhvRRk5WzjWmyvDFw2S320225NtJ5xu0FWnUUPYpDRzG8zH6DnMgOLIBA6N8ms2eM+f2xNDvK6y/Amf3iVk+v4STZTJkBXlhrIkCvSf/XsCj54AXFIXqYk3e/EYtCmE5wIq+BzRJCFh13sQ9lKseNiqYat7FGsrVOq0ltBhrYqschQgSnOI7KLK7oXjBwID+Hn3IcJ1voIQ6RhfKotiRvw01uWm1vZlqbMjEiNOK2qLa3kyUmWhsqfhBlhoT60I5A8+3rCXx1WpHxkZx/fMckjykKYuioUo1NYVYHs+OZ6/DnXOuOMV7bMi1rBTP/FeRRTXsevlIlx7i3uHIx/PmLCiHHGBJjd1STjSx4Zv5mTghz+KwMgP1bDqbHk0WF/OrxffLJSSZFW4VGwNWZcThTR2+p6cT9P8sfu8LHLuP+BAL1yhjmTsr2I/urmBwN5M98XctgbXlpL7fqIDXvkmJw3cdel6itYR75Y3a8OirdZJQo9Lo80Lc4h5KOBl6niy5FU5vOm7p7efLZg8Q86pCF/9TnPf70fZeXS6WIGEz/lVa0lxzgCwPD0Pb6rHdg71y/PIw44Wy+4M+sirDrlwH9OxkSiDHtrsxlCd5q/5KhbAjrw/q3RiCtE4p/QErgO8f
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete admin theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/themes/deleteAdminTheme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an admin theme (admin only).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Form data with id","content":{"application/x-www-form-urlencoded":{}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Theme deleted","content":{"application/json":{}}},"400":{"description":"Deletion or init error","content":{"application/json":{}}},"401":{"description":"Not authorized / not admin","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

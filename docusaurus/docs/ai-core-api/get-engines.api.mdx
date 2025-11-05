@@ -1,0 +1,71 @@
+---
+id: get-engines
+title: "List engines available to the user"
+description: "Returns engines the current user can access, with optional filters like types, favorites, search term, and metadata options."
+sidebar_label: "List engines available to the user"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVU1P3DAQ/SvWnM1moT2g3FChLSq0VQH1gPYw60w2BsdO7dml21X+ezXJfoIES4XUUxLnzfeb5wUwThLkt4BTrmCkoaBkom3YBg85/CCeRp8U+Yn1lBRXpMw0RvKspomiMugVGkMpafVguVKhM0WnSuuYYlLO3pPieUNJqxJnIVqW10QYTaWYYq0V+kLVxFgg49JDGoCG0FBE+TovIIcJ8VmfB2hoMGJNEgHy2wV4rAly6PM8L0CDlfx/TSnOQUMyFdUI+QIkE8gBY0T5YZnqtHWeOFo/gbZt9SOn11LCm/rtO/QzxJfTXZtvrJ2tLb9oaD3ThCJoKEOskfujd0c7rkJZJnorX97NP67G/KLLcQiO0O94ECJ8ofnb9tqHS2L8p3yE59evsBxpiJSa4BN1WR0Nh/LYXawlkVVJbCoSApjgmTwLFJvGWdMRP7tLgl/sX30Y35Fhqb5tNbwfHj4NfuNl20O0f6hQISrrZ+hsoRKlJIjXJ7MbtCauwnJju1XlCnLIJGjWL1O2s8uJ4my1yNPoIIeKuUl5lj2EeJ+q0AxMORkU5IJlpoEJdWbKyQHag4LqkF0GH5zlKsPGwmMJO6U6qDNfNMF6Vjc/LkBmuwmTZ5kLBl0VEufHw+Ph8+4uBKtOaUYuNLX0SAaeyEyj5fmVNKYf+xiTNSeiqps2SbwVeTrSCEbIBtaXoQNadvLn5Fx9CJFAg3SmDz0cDAeHB1dfT75fff52Da2GJiSusRvJkqwXNvFarXGG1uHYkeLQSbdQ+XFFi82w/7fcL7vE9JuzxqH1UmM3qcWSRMt7Si81GfT2pTDSIEMU1GIxxkQ30bWtHPdbK/QqbJKGFJCX6BJpuKf57r0xQzeVLDqaPAtf3Qj7WOxo/T4GK3nfB7vW773AjwR6H5stSd4HvhbbfcAred1gR/IRrYAhvx21GirCgmI3wN7oxBhqtit+olLiZa1Dn86uoW3/AhvcCVs=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List engines available to the user"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/engine/getEngines"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns engines the current user can access, with optional filters like types, favorites, search term, and metadata options.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"engineId","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"engineTypes","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"filterWord","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"onlyFavorites","in":"query","schema":{"type":"boolean"}},{"name":"metaKeys","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"noMeta","in":"query","schema":{"type":"boolean"}},{"name":"userT","in":"query","schema":{"type":"boolean"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Engines fetched","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized or invalid session","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

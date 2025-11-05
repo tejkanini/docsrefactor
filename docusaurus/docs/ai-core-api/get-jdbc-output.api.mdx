@@ -1,0 +1,71 @@
+---
+id: get-jdbc-output
+title: "Execute SQL or pixel via JDBC bridge (binary)"
+description: "Opens (optionally) an insight and executes a SQL/pixel expression returning a binary payload."
+sidebar_label: "Execute SQL or pixel via JDBC bridge (binary)"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU8tu2zAQ/BViTy0gS0rRQ8BbGgeoC7dO6+YU+EBTa4kpxaXJVWrV0L8XlB/pAwjSngRid2Z3Z0Z7YFVHkPdwG+gBNcMqgwqjDsazIQcSFh5dFK9ofCtr+9dCOWFcNHXDQrlK4A51xxiFEsvP88KbHVqBOx8wRkNOBOQuOONqocTaOBV64VVvSVU5ZEAeg0rcswok1Mgfpu+uFx37jiEDr4JqkTGkJffgVIsgwR+WnVWQgUlLesUNZBBw25mAFUgOHWYQdYOtArkH7n0CRg7G1TAM2ZnreMkT17bD0MPLwHFr/wdGHt3Lcat0WPTkIsZUf1OW6fO7TTejCUluGrU7qo4VDBm8fR6BIVCADDQ5RsepVXlvjR59KUgz8iRyQNWC3A/DyHjxN+OdUx03FMwPrP6Fbsggou6C4X50ea2i0VcdNyDvV+n8FrmhYzzGUKQSFMcYTPbnPAzFQ7XWSU0Mj6fQdMGChIbZR1kU3yl8iw35XG/qvEJLhhlzTW2hN/VEmUmFLRUfyZE13BTKG/jzl5hiS+LGVZ6MY3H3ZQ7J26cxsigsaWUbiiwvy8vyebp56hVTfERLvk2KpZtPiixTLg7G/6LLOSVp3ik96T32pLCBcRsaGw3bVLmaiWsKCBkkZQ6jy7zMLybLT1e3y/eLrzAMPwH1oGef
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Execute SQL or pixel via JDBC bridge (binary)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/project-{projectId}/jdbc"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Opens (optionally) an insight and executes a SQL/pixel expression returning a binary payload.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}},{"name":"insightId","in":"query","schema":{"type":"string"}},{"name":"sql","in":"query","schema":{"type":"string"}},{"name":"open","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Execution output returned"},"400":{"description":"Execution error","content":{"application/octet-stream":{}}},"401":{"description":"Unauthorized","content":{"application/octet-stream":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

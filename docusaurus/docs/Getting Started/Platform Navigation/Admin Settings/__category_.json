@@ -1,0 +1,9 @@
+{
+    "label": "Admin Settings",
+    "position": 8,
+    "link": {
+      "type": "generated-index",
+      "description": "Admin Settings allows ADMIN users to manage all resources in AI Core"
+      }  
+    
+}

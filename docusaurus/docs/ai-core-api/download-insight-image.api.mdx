@@ -1,0 +1,71 @@
+---
+id: download-insight-image
+title: "Download insight image"
+description: "Returns the representative image for a specific insight within the project."
+sidebar_label: "Download insight image"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNU8tu20AM/JUFr5Utpcgh0M1oCtRA2gZxcwpy2Kwoiam03OxSdl1D/15QfiRpiyAnQeBwOJoZ7UBsk6C8g+vIj+gE7jOoMLlIQYg9lHCDMkSfjLRoIoaICb1YoTUa6m2DpuZorEkBHdXkDPlETStmQ9KSn9bCnnsOGXDAaJV5WUEJFW98x7Za7neWygcZBBttj4JRle3A2x6hhAPLsoIMSJUFKy1kEPFpoIgVlBIHzCC5FnsL5Q5kG3QxSSTfwDhmJ65YPfTpmelpwLiF961O4tL7N+9VYQrsEyadfywKfbw2+WDAwdE4WY4VjBmcF2f/wm+9HaTlSL9Rv8GxF/SiOBtCR25yOGcnKLMkEW0P5W7MXk3Tuvnwq+90ME53zv8ja5LjWUzNg3/j1GNSvDKNGSR0QyTZTuE92ERuMUgL5d29mtGjtKzhNyhT1jqC/JDubHeKeczpRS3yY1fUbIzrYzmG2EEJrUhIZZ5vOP5MLYe5q5t5hR2TCM4d97mrm5mlWYU951/Zc0fS5jYQ/N33S+zZfPZVYPJibm+uQMN/PlPmecfOdi0nKS+Ki+JtuivFmktcY8ehV+vUhKNFK63NvhcvjDqVSO8dy6XvE0bbCORrnoAknU4WS/OJo/486sz+dDEv5mez1bfF9erL9x8wjn8AdCpdog==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download insight image"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/project-{projectId}/insightImage/download"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the representative image for a specific insight within the project.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}},{"name":"rdbmsId","in":"query","schema":{"type":"string"}},{"name":"params","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Insight image returned"},"401":{"description":"Unauthorized","content":{"application/octet-stream":{},"application/svg+xml":{}}},"404":{"description":"Image not found","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

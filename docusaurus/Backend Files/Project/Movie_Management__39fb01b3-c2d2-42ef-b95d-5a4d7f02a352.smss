@@ -1,0 +1,11 @@
+#Base Properties
+PROJECT	39fb01b3-c2d2-42ef-b95d-5a4d7f02a352
+PROJECT_ALIAS	Movie_Management
+PROJECT_TYPE	prerna.project.impl.Project
+RDBMS_INSIGHTS	project/@PROJECT@/insights_database.sqlite
+RDBMS_INSIGHTS_TYPE	SQLITE
+DRIVER	org.sqlite.JDBC
+RDBMS_TYPE	SQLITE
+USERNAME	
+PASSWORD	
+CONNECTION_URL	jdbc:sqlite:C:/Users/rramirezjimenez/Documents/workspace/Semoss/project/Movie_Management__39fb01b3-c2d2-42ef-b95d-5a4d7f02a352/insights_database.sqlite

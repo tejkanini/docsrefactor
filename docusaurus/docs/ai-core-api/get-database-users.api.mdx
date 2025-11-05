@@ -1,0 +1,75 @@
+---
+id: get-database-users
+title: "Get database users (legacy)"
+description: "Gets users and permissions for a database. Deprecated: use /auth/admin/engine/getEngineUsers."
+sidebar_label: "Get database users (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VcFO20AQ/ZXVnFrJxKFCFfItKogi0YIKPaEcNvbYXrB3t7uTtKnlf6/GsR0gwSRBPSVez743u2/8XgUkMw/RPcg55TANIEEfO2VJGQ0RXCB5MffovJA6ERZdqbxXRnuRGiekSCTJmfQ4EmdoHcaSMIl4hwgZMZRJqXSIOlMawwzpvPn3kxFHEICx6CRzXSYQQYZ01uI1FRCAlU6WSPwQ3VegZYkQQcd6mUAAihv9NUe3hJftd2hCJahJpQodBODjHEsJUQW0tAznySmdQV0HPQOf+S107vEJsiAjUlXQzhwepYvzO3TlMM9tUydoVbgL8lqnYeSbvm6/zgtVKhqGvmpLdoEzaerxDbzrrmYXwNfn43Dt36fo+1Q7WJONjUoTZo3OqXGlpNXS55Md9NgHaxqAQ2+N9uh5x6fxmH82vx8vHJJTuEC+8NhoQk1cKq0tVNx4Q/jgub7a7MDMHjAmqOu6DuBkfLyFQ7MNGaf+7kCwwkl6I4OI3BwDKJFy0xpU40mUQwRPDa4buHCLhXl0i86/5q6ACHIi66Mw/G3co8+NHcVpNkqwMIoIR7EpwzjNjqQ6SrA04TejTaGYyqpNh8PSiHOdWKM0iZ8/roB1XNNEYViYWBa58RSdjk/Hw3BXXCvOcIGFsSXfFEvpMZ47Rctbvv+VoDPpVTzhzFirwXzdnPBzU8ODBUqnpilUVPCbyaX4YhxCAHwzK+rxaDw6Prr9Prm5/Xp9B3UA1ngqZaN8O5gXSH3itLH0ocBMxsuPL49SrbX+7ynWnp/wD4W2kEpz940GVTssbb4G0CBxry0jBJupNw2A5eJdVdUsu6KueXn1KfIgJcrLWcEjmsrC48Dht2fg1pYfcfnSPBeymHNhM1a7kw5F4wB177wH0j5PygGiZ0Z9INm28BygfObuB1J2oTpA08XAgQx9zA5Q9PEwzLH3NO01A3vruLcK+9znqxcz5QenuBqi+2kdQI4yQdd8xKtdkzhG+3TXRjIxSp9BF+d3UNf/AD5R/u8=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get database users (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/database/getDatabaseUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Gets users and permissions for a database. Deprecated: use /auth/admin/engine/getEngineUsers.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"databaseId","in":"query","description":"Database identifier","schema":{"type":"string"}},{"name":"userId","in":"query","description":"User identifier to filter","schema":{"type":"string"}},{"name":"searchTerm","in":"query","description":"Search term","schema":{"type":"string"}},{"name":"permission","in":"query","description":"Permission filter","schema":{"type":"string"}},{"name":"limit","in":"query","description":"Limit","schema":{"type":"string"}},{"name":"offset","in":"query","description":"Offset","schema":{"type":"string"}},{"name":"databaseId","in":"query","schema":{"type":"string"}},{"name":"userId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"permission","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,439 @@
+---
+sidebar_label: "Platform Navigation"
+sidebar_position: 8
+slug: "/platform-navigation"
+---
+
+import ReactPlayer from "react-player";
+import AppLibraryIntro from "../../../static/Demos/AppLibraryIntro.mp4";
+import ModelCatalog from "../../../static/Demos/ModelCatalog.mp4";
+import StorageCatalogDemo from "../../../static/Demos/StorageCatalog.mp4";
+import DatabaseCatalog from "../../../static/Demos/DatabaseCatalog.mp4";
+import VectorCatalogDemo from "../../../static/Demos/VectorCatalogueDemo.mp4";
+import RemovingApp from "../../../static/Demos/RemovingApp.mp4";
+
+# Platform Navigation
+
+SEMOSS is a platform to create Gen AI applications at the client level and deploy within the enterprise. It manages logging, monitoring, metering, and access management so that users can focus on business problems. It consists of App Library, Functions, Models, Database, Vector, and Storage.
+
+In this section we are going to see how to navigate and work through the platform and its different resources. When you login to Semoss, you arrive at its homepage as illustrated in the picture below.
+
+![Home Page](../../../static/img/PlatformNavigation/HomepagePN.png)
+
+Let us look at the different elements one by one.
+
+## App Library
+
+App Library is a section in SEMOSS which consists of list of Gen AI applications present on the platform and are created by user. Once you click on a particular app in the App Library, it will open the App which is ready to use.
+
+### Locating an App
+
+You can quickly navigate to the app you want to use in the library by using the **search** option present at the top right corner of the page. This is highlighted in the picture below.
+
+![App Search](../../../static/img/PlatformNavigation/AppsearchPN.png)
+
+> How to add a tag
+
+While creating a new app, you can add **tags** to enhance organization and navigation. Tags can relate to an app's functionality or design. For instance, if your app assists users in planning trip itineraries, relevant tags might include **travel planner** or **itinerary creator**. Using these tags allows you to conveniently filter and select the desired app from the entire library.
+
+*Please note: Currently, tags can be added only in an apps build using Agent Builder.
+
+
+
+### Creating a new App
+
+To create a new App, click on the top right corner of the homepage on **Create New App**.
+
+![New App](../../../static/img/PlatformNavigation/CreateNewAppbuttonPN.png)
+
+You can choose among the 3 different options of creating a new app. These are,
+
+1. Code - You can build an app by coding using a framework or even from strach
+
+How to build a Code App has been covered in detail here.
+
+*    [Edit the UI tab](../../How%20To/App%20Creation%20Guides/React%20App%20In-Depth%20Guide.md#overview)
+2. Drag and Drop - This is no-code option of creating a new app.
+
+How to build a Drag and Drop App has been covered in detail here.
+
+*    [Edit the UI tab](../../For%20Business%20Users/No%20Code%20App%20creation%20by%20Drag%20and%20Drop.mdx#Drag%20and%20Drop%20Blocks%20to%20Build%20UI%20for%20your%20new%20App)
+
+3.  Agent Builder - This is also a no-code solution.
+
+How to build an Agent Builder App has been covered in detail here.
+
+*    [Drag and Drop](../../For%20Business%20Users/No-code%20App%20creation%20by%20Agent%20Builder.mdx)
+
+![App Search](../../../static/img/PlatformNavigation/CreatenewappPN.png)
+
+**Browse Templates**
+If you don't want to start from strach in building your app, you can choose one template from the list of templates provided in the Browse Templates section.
+
+Click on 'Open' to select the template of your choice.
+
+![Browse Templates](../../../static/img/PlatformNavigation/Browsetemplates.png)
+
+### Manage App Access
+
+You can control the type of access other users have to the apps you create. To manage the access of a particular app, open the app and click on **edit** on the top right corner of the app page.
+
+> To be added
+
+Then click on Settings on the leftmost column. If you can see this column, click on the 3 horizontal lines at the top left corner of the page, the column should appear then.
+
+![Home Page](../../../static/img/PlatformNavigation/Settings.png)
+
+You can either give access as,
+a read-only - who can only use the app and can make no changes to its working
+an editor - Read only + who can make changes to the app UI and functioning and tweak the app access settings, or
+an author - Editor + Delete the app
+
+![Home Page](../../../static/img/PlatformNavigation/appaccessnew.png)
+
+Others can even ask for access to your app and these requests will be visible in **Pending request**. Similarly, you can even ask for permission for access of a particular app. All the apps you don't have access to will appear in Discoverable Apps. Click on **Discoverable** tab on the home page to see the list.
+
+> To be added
+
+## Adding a Model
+
+Models are LLMs (Large Language Model) which is a type of AI (Artifical Intelligence) algorithm that uses deep learning techniques and massively large data sets to understand, summarize, generate and predict new content. Gen AI Apps created on SEMOSS are built on these models.
+
+To connect to existing Models or add new Models, click on the **vector** icon on the left side of SEMOSS portal which will take you to Model catalog.
+
+![App Library](../../../static/img/Navigating/CFG%20AI%20Walkthrough/ModelCatalogIconHighlight.PNG)
+
+Once you're in the current Model Catalog, you will find a list of LLMs that already accessible to you. If you do not have any existing LLMs in your current model catalog, you can go to **Discoverable models**, browse through the available models and request access:
+
+> To be added
+
+> _"Add Model" Button_
+
+Click on **Add Model**, chose your model of choice from the list and fill in the details to connect to the model.
+
+![Add Model](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Connect_To_Model.PNG)
+
+> _Various Model Options_
+
+<ReactPlayer controls url={ModelCatalog} />
+
+There are primarily three types of models available with different characteristics:
+
+**Commercially-hosted -** These are managed by an external vendor and comes with a subscription or licensing fee. The vendor handles hosting and maintenance. These models are highly scalable and customizable.
+
+**Locally-hosted -** These are installed and managed on the organization's own servers attached with a subscription or licensing fee. This means the organization is in full control of the model and can customize the model as per the requirements.
+
+**Embedded -** These kind of models are integrated with other softwares or platforms focused on specific functions. These can be blended seamlessly into the existing system.
+
+## Adding a Storage Source
+
+Storage is used to store data that is created while using Gen AI Apps on SEMOSS. There are a number of options on which Storage can be hosted (eg- Amazon S3, Google Cloud Storage, Dropbox etc).
+
+To connect to existing Storage or add new Storage, click on the **box** icon on the left side of SEMOSS portal which will take you to Storage catalog.
+
+![Storage icon](../../../static/img/Navigating/CFG%20AI%20Walkthrough/StorageCatalogIcon.PNG)
+
+Once you're in the Storage Catalog, you will find Storage if they are already present and accessible by you as shown below.
+
+![Storage Catalogue](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Add%20Storage.PNG)
+
+> _"Add Storage" button_
+
+For adding, click on **Add Storage** and it will take you to **Connect to Storage** page where you will find number of Storage options to chose from as illustrated below.
+
+![Add Storage](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Storage%20Options.PNG)
+
+> _Various Storage Options_
+
+Click on the **Storage option** which you want for your instance. In this case, we will click on **MINIO** and it will take you to the page where you have to fill out the Storage details.
+
+![Enter Storage Details](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Storage%20Details.PNG)
+
+> _Storage Details Required_
+
+Please fill in the details below to connect a test MINIO storage source.
+
+**Name** - CFG-demo
+
+**Region** - us-east-1
+
+**Access Key** - Insert Access Key
+
+**Secret Key** - Insert Secret Key
+
+**End Point** - http://34.118.228.102:9000
+
+**Root Bucket Path** - demo-bucket
+
+Click on **Add Storage** shown at the bottom of details page and Storage will be added to the Storage Catalog as shown in below snapshot.
+
+![Storage Catalogue 2](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Storage%20Catalogue.png)
+
+> _Newly added Storage_
+
+<ReactPlayer controls url={StorageCatalogDemo} />
+
+### Using a Storage Source
+
+These commands demonstrate how to use the storage engine via the Terminal app and within any apps that you create. These commands are not to be confused with the SDK which are seperate.
+
+```
+# Initialize the storage engine
+from gaas_gpt_storage import StorageEngine
+storageEngine = StorageEngine(engine_id = "2d905aa3-b703-4c98-8133-5bcaefddac1e", insight_id = '${i}')
+```
+
+```
+# List the files on your storage path
+storageEngine.list(storagePath = "my_s3_storage_path")
+```
+
+```
+# List the files on your storage path with extra details
+storageEngine.listDetails(storagePath = "my_s3_storage_path")
+```
+
+```
+# Sync'ing your local folder to the specified storage directory
+# Space can be the project id, "user" or "insight"
+# This is where the local path starts
+# So in this case, the local path starts in the project directory
+storageEngine.syncLocalToStorage(storagePath="my/s3/storage/path", localPath="/my/local/dir", space="my_project_id")
+```
+
+```
+# Sync'ing your storage directory to the local folder
+# Space can be the project id, "user" or "insight"
+storageEngine.syncStorageToLocal(storagePath="my/s3/storage/path", localPath="/my/local/dir", space="my_project_id")
+```
+
+```
+# Upload a folder or file from your local project/insight/user directory to the specified storage directory
+storageEngine.copyToStorage(storagePath="my/s3/storage/path", localPath="/my/local/dir", space="my_project_id")
+```
+
+```
+# Download a folder or file from the specified storage directory to your local project/insight/user directory
+storageEngine.copyToLocal(storagePath="my/s3/storage/path", localPath="/my/local/dir", space="my_project_id")
+```
+
+```
+# Delete a folder or file from the specified storage directory
+storageEngine.deleteFromStorage(storagePath = 'your/storage/file/path', leaveFolderStructure=False)
+```
+
+## Adding a Database
+
+Databases are organized data that is linked with Gen AI Apps on SEMOSS and can be used by those Apps to use data. Databases enable Apps to provide results as per requirement. You can create a new database or add locally available databases to SEMOSS which can be then connected to Apps.
+
+### Pre-requisites
+
+- Before adding a Database to your SEMOSS instance, it must be detached from any existing instance otherwise it might return an error.
+- When you attach a Database, all data files for the Database must be available
+
+To connect to an existing Database or add a new Database, click on the **cylinderical** icon on the left side of SEMOSS portal which will take you to Data catalog.
+
+![Database icon](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Database%20icon.PNG)
+
+> _Highlighted icon for Database Catalogue_
+
+Once you're in the current Data Catalog, you will find a list of Database that are already accessible by you as shown below.
+
+![Database catalog](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Add%20Database.PNG)
+
+> _"Add Database" button_
+
+To connect to a Database, click on **Add Database** and you will be directed to the **Add Source** page which will have various options within the Database section mentioned below.
+
+![Add Database](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Database%20Options.PNG)
+
+> _Different Options of using Database_
+
+Click on **Connect to Database** icon and it will take you to a page where you will have different Database file types to upload and Types of **Connections** to chose from (shown below).
+
+![Connect to Database](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Various%20Database%20type.PNG)
+
+> _Various Database types to choose from_
+
+You can choose the type of file to upload and then choose the **Connections** type based on your Database or requirements. Once you click on the Connections type, it will direct you to a page where you can fill all the required details as shown in the below image. Click on **Connect** at the bottom of the page.
+
+![Database Connection Double Click](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Database%20Details%20required.PNG)
+
+> _Database details required to be filled_
+
+<ReactPlayer controls url={DatabaseCatalog} />
+
+## Adding a Vector Database
+
+A vector database is a specialized solution designed for the storage, indexing, and retrieval of massive datasets containing unstructured data. These databases leverage machine learning models and their embeddings to facilitate searching across various forms of unstructured data, including images, video, text, audio, and more. This is done with the help of pixel calls.
+
+To connect to a vector database, go to **App Library > Vector Catalog** and then manually add the vector database.
+![Vector_icon](../../../static/img/Navigating/CFG%20AI%20Walkthrough/vectordbnew.png)
+
+> Click on vector icon
+
+Click on **Add Vector** on the top-right section and it will take to different type of connections for Vector.
+
+> To be added
+
+> Adding vector manually
+
+Choose an appropriate **Connection** based on your requirements.
+![ConnectYourVector](../../../static/img/Navigating/CFG%20AI%20Walkthrough/vectordbnew2.png)
+
+> Choosing connection
+
+Fill in the required details. Click on **Add Vector**.
+![AddDetails](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Add%20Vector%20Details.PNG)
+
+> Fill in the details and click create vector
+
+Your vector database is now ready to use.
+
+Now to embed your vector database with some data, **Click** on it to open. You will see 4-5 tabs within your database depending upon your access privileges. Go to **Files**.
+
+Click on **+ Embed New Document** to upload your data file. It only accepts files with .txt, .csv, ,pdf, .doc, .ppt extensions.
+![Embed Data](../../../static/img/Navigating/CFG%20AI%20Walkthrough/vectordbnew5.png)
+
+Click on **upload files** to select and upload your data and click on **Embed**. You can also drag and drop your file to the same window.
+![Upload Files](../../../static/img/Navigating/CFG%20AI%20Walkthrough/vectordbnew6.png)
+
+You should now be able to see your file inside the vector database.
+![Data Files](../../../static/img/Navigating/CFG%20AI%20Walkthrough/vectordbnew7.png)
+
+If you have questions regarding the policies or your datasets, go to **Q&A** tab and type in your query in the space provided.
+![Q&A Tab](../../../static/img/Navigating/CFG%20AI%20Walkthrough/vectordbnew9.png)
+
+Once the file is uploaded, run the following command.
+
+`CreateEmbeddingsFromDocuments ( engine = "80a482d5-06b7-4ff6-bedc-0d0570b7bfeb" , filePaths = [ "TestFile.csv" ] , paramValues = [ { "columnsToIndex" : [ "content" ] } ] ) ;`
+
+![EmbedDB](../../../static/img/VectorDatabase/EmbedDB.png)
+
+> Execute this command to embed your vector database with the .csv file
+
+- This will take a while to run. Once completed, your vector database is ready to use.
+
+> **Note**
+> The engine ID above needs to match the engine ID of the vector database you just created.
+
+- To do so, go back to App Library > Vector Catalog by clicking the vector icon on the left-side.
+
+> To be Added 
+
+> Look for the database you just created.
+
+<ReactPlayer controls url={VectorCatalogDemo} />
+
+## Access to resources
+
+**Discoverable items** in catalogs are the resources which are created by other users and present on SEMOSS portal. You need to request access to those resources to use them.
+
+![Discoverable Items](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Discoverable%20Items.PNG)
+
+> _Discoverable Models_
+
+To get access to any Model, Database, or Storage, click on that resource and it will direct you to that resource page as shown below.
+
+![Request Access](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Request%20Access.PNG)
+
+> _Request access to Model_
+
+Click on **Request Access** near the top-right corner and a pop-up will provide you with 3 options to choose from - Author, Editor & Read-Only. You can choose the option based on your role and request.
+
+![Grant Permission](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Permission%20Levels.PNG)
+
+> _Permission Levels_
+
+### Inside the resource
+
+Once you click on the resource (Model, Database, Storage etc.), you will be directed into the resource page where you will see **Overview**, **Usage**, **Metadata** and **Settings** tabs.
+
+**Overview**  
+This tab consists of information related to the resource, like technical details, versions, and model type. Tagging and Domain details are also included in this section.
+
+**Usage**  
+This tab consist of code in **Pixel**, **Python** and **Java**. You can copy and use the code in any of the languages based on your Application code.
+
+**Metadata**  
+This tab is present in **Database** only and consists of information related to data present in the Database.
+
+**Settings**  
+This tab is present in **My Resources** and consists of adjustable settings related to resource. You can also add or remove members and give them permissions by their role. There is also an option to edit SMSS properties within the **Settings** tab.
+
+## Custom Chunking/Loading Into a Vector DB
+
+Custom chunking refers to the process of breaking down large pieces of data, such as documents, audio, or images, into smaller, manageable chunks before loading them into a vector database. This process optimizes the storage, retrieval, and processing of data within the database. Learn more about Custom Chunking [here](../../How%20To/Vector%20Databases/Custom%20Chunking.mdx) 
+
+
+## Commonly Asked Questions
+
+- **What should we do if we encounter errors while using the platform?**
+
+  For immediate issues, please take a screenshot of the error and share it via Teams, including the URL bar for context. If the error message is related to system capacity, such as limited GPU space, try again later or opt for a managed model.
+
+- **Can models and other endpoints be called from outside environment like AWS compute or local system?**
+
+      Yes, you can use the SDKs to set up authentication to access the resources in another environment. Please refer to the following page for more information:
+
+  [How to establish connection to CFG Portal](../../../How%20To/Establish%20Connection%20to%20CFG%20Portal/OpenAI%20Endpoints%20with%20Python.md)
+
+- **In models, can we edit parameters like temperature, etc.?**
+
+      Yes, temperature and other parameters can be set up for models. Please refer to the following page for more information:
+
+  [Playground App](../../../Get%20Started/Navigation/Apps%20in%20CFG%20AI.mdx#3-playground.md)
+
+- **How can we find descriptions of each model available?**
+
+  Model descriptions are available in the metadata of each model.
+
+- **How do we access different models and choose the most relevant one as per our needs?**
+
+  It is recommended to experiment with various models to see which aligns best with your data. Navigate Model Overviews and use Tags to narrow your selection based on specific use case.
+
+- **What is the difference between 'Commercially Hosted', 'Locally Hosted', and 'Embedded' models?**
+
+  **Commercially Hosted**: Models like OpenAI and AWS Titan are closed systems.
+  **Locally Hosted**: Ideal for clients who wish to use open-source models and maintain control over their data.
+  **Embedded**: Typically involves fine-tuned models running directly within the same container, useful for specific data processing tasks.
+
+- **How long does model response typically take?**
+
+  Response times vary based on server load and the complexity of the query.
+
+- **How do we select the appropriate embedder for our documents?**
+
+  Choose an embedder based on the type of documents you are working with and prior data on which embedder has been trained to ensure accuracy and relevance in results.
+
+- **Can we extract a string of text from an image in a document (e.g., a PDF)?**
+
+  There is an optional routine we can run with a image to text model which not just extract the text but can also interpret the image so one can semantically search images. However, due to poor GPU capabilities, it is not exposed yet.
+
+- **How many files/documents can be ingested into a vector database?**
+
+  This depends on the size of the files, specific hardware and the environment.
+
+- **How do we add documents to a vector catalog? Is it similar to training a RAG?**
+
+  Adding documents involves embedding and indexing them within the catalog, its different from training a RAG (Retriever-Answer Generator).
+
+- **Can vectors created in one model be utilized across other models?**
+
+  Yes, vectors are typically interoperable across models, but effectiveness can depend on the similarity of the data types they were trained on.
+
+- **Does each vector database connection (like Pinecone, FAISS etc.) use their own embedding methods like TFIDF or bag of words?**
+
+  One can define the embedding method they want to use when creating a vector database.
+
+- **Can a vector database be moved to a GCP environment or we should use a cloud native tool for that?**
+
+  One can utilize a vector database hosted within a VPC or a cloud native tool as well.
+
+- **Do vector databases support CSV/Excel files directly or do we need to consider additional things if we are using CSV/Excel files in vector database?**
+
+  CSV/Excel files can be uploaded to a vector database, but there are some additional things that need to be provided for how these should be parsed. E.g, is it a column with text that you want to add? Are all columns concatenated together?
+
+- **Can a new document be added to an already available database?**
+
+  Yes, in the "Files" tab of the vector database, one can add or remove documents. Please see the following page for more information: [Adding a vector Database](../../For%20Administrators/Adding%20and%20Managing%20Catalog.mdx#adding-a-vector-database)

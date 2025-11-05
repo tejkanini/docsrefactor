@@ -1,0 +1,20 @@
+Reactor Name
+NewAppAssetsDirectoryReactor
+
+Description
+Create a new empty directory in the projects assets folder
+
+Required keys
+PROJECT, FILE_PATH
+
+Key description
+PROJECT: The unique id for the project/app
+FILE_PATH: Names of the file to create. This relative path should assume the prefix of '/version/assets/' and not include the prefix in the string value.
+COMMENT_KEY: Comment to add while creating and saving the new file within the git repository for the project
+
+Optional keys
+COMMENT_KEY
+
+Usage
+NewAppAssetsDirectory(project="myProjectId", file_path="newdir", comment_key="Created new directory")
+NewAppAssetsDirectory("myProjectId", "newdir", "Created new directory")

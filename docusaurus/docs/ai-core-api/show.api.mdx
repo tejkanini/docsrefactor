@@ -1,0 +1,63 @@
+---
+id: show
+title: "Get current user information"
+description: "Returns information about the currently authenticated user"
+sidebar_label: "Get current user information"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v3DgM/SsCz8p4UnSBwregCdoA2W3RJKdgDhqbM1YjS1qSnuys4f9eUOM0kzTYLNCTbImPH4+PHEHclqG+g7NBOoziGyc+RVhZaJEb8rn81vANZaDIxsdNor4YGbdOgxjp0DQDEUYJe+Oe/GBrBkYCCykjFchlCzVwlx7AAiHnFBkZ6hHeLZd6PI95y0jPAhIKedxha3hoGmTeDCHswUKTomAUdeFyDnMV1XdWPyNw02Hv9Ev2GaGGtP6OjYCFTJqb+EMW2DsfjsxYyMctvOTiQs2Ma1tCZpgs+PZt0KGYVrnZeCSFRdfj28Bzzzm4vSnWk4WM1HtmnyIfgR2R2/+CvfIsJm3MMcaCF+z57cCvgafJzqj/VW8xsYBx6FVkru19BAuzLFz2sCoevQScMZdxk85vvsA06cv75ekruoiqskT+X2yVkT9eE89lFKTogmGkHZJBokQlf8ZmIC97qO9GWDv2jYof6rvVZEcQGliwvUn3GMvdykKP0iWV7haLaJyaQ6VZVA9dcr0HdatxuHgdKEANnUjmuqoeEt1zl/Ki2WwXLYbkRXDRpL5qNtsT509a7FP1Z4opeOkqpeUXEWCfzEVsc/JRzO23K9Bcn8LUVRVS40KXWOoPyw/L/3Z3pbbmHHcYUu51crTMR2KudVwOE3FEz8+Gazytt1hBfbApzOqsFsO5n2eX5mMiVYAycwi9XCwXpyfXf519vf785aYIOrH0rgzqYSLgE8rjSikr5HgJvKxlfBr+31tSc3WC/0iVg/NRcysMj3PH70CBYGHu+cqC8q0P47h2jLcUpkmv/x6QVF8rCztH3q2VDtUXdOhapCKSe9wrR02DWVW1c2Eok/xygT1T4KeLG52c5x05dMDOp/p+3Apxf+S5JHlop06akj1NYOdEhvmqKOst/FfH/JCoPcLn+Qqm1TRNPwDSijYb
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get current user information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/whoami"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns information about the currently authenticated user
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User information retrieved successfully","content":{"application/json":{"schema":{"type":"object","properties":{"email":{"type":"string","description":"Email address"},"id":{"type":"string","description":"User identifier"},"name":{"type":"string","description":"Display name"},"permissions":{"type":"array","description":"List of permissions","items":{"type":"string","description":"List of permissions"}},"type":{"type":"string","description":"User type","enum":["admin","user","api"]}},"title":"UserInfoDTO"}}}},"401":{"description":"Unauthorized"},"500":{"description":"Internal server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

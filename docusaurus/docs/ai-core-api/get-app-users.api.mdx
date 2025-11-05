@@ -1,0 +1,75 @@
+---
+id: get-app-users
+title: "Get app users (legacy)"
+description: "Gets users and permissions for a database. Deprecated: use /auth/admin/engine/getEngineUsers."
+sidebar_label: "Get app users (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VcFu2zAM/RWBpw1w43QohsG3YC26At06rO2pyIGxaVutLWkSky0L/O8DHSdNmsxLOiwXRzL1HkU+Pi+AsQiQPABOuYRxBBmF1GvH2hpI4JI4qGkgHxSaTDnytQ5BWxNUbr1ClSHjBAMN1Dk5TykyZYmcULEgxpjV2sRkCm0oLogv2n/3gjiACKwjj8J1lUECBfHIufYlRODQY00si+RhAQZrggTQuasMItCS3vcp+Tm8TPq8y0npjAzrXJOHCEJaUo2QLIDnTpACe20KaJpoDR4IfVreka/7GW7bOMXLwEOQK11r7ge97kIOgbN5HugveDermEMA95b130r26rLsHNSGqWibmFtfIy+33p8dUJJjsMYReArOmkBBTrwbDuWxXdVWncoTe00zkpKl1jAZllB0rtJpK+j4MUj8YjcD9B4lNc1Uh419O3mklKGRXwRnw9M95EaGynr96wDmJU62HktI2E8pgpq4tN24tWPGJSSwOa7oXLw9i4H8bDWIU19BAiWzC0kc/7D+KZTWDdK8GGRUWc1Mg9TWcZoXJ6hPMqpt/NkaW2khcHp3Xqm26sJkzmrD6v7bNUhbn2mSOK5silVpAycfhh+G/XDXEqvOaUaVdbXURzobKJ16zfNbaceyvxMMOh2J7z03QfhWspF1GyM6A21y2wZqruTN6Ep9tJ4gAqnMkno4GA5OT26/jL7efrq5gyYCZwPX2Aqh0+klsULnOld9U1GB6fzty1ssnpv73024uzrTT45dhdpI4m35F506us9DBC2SPJ1UaVMj4wikPxK7WEgy975qGtlejqIoJ9MBJ5UoMccqUM+V91v43kSfaL7hXzOsphLTSuhwvm1D7+HZsrtXkq2Mvodm5YuvZFhbfw/F2i/7OY4p79ElOuayf8x6LAuvJRqSh3ETQUmYkW8ltzw1SlNym6d27FJQ1sZ4eXEHTfMb+t8YUA==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get app users (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/app/getAppUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Gets users and permissions for a database. Deprecated: use /auth/admin/engine/getEngineUsers.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"appId","in":"query","description":"Database identifier","schema":{"type":"string"}},{"name":"searchTerm","in":"query","description":"Search term","schema":{"type":"string"}},{"name":"limit","in":"query","description":"Limit","schema":{"type":"string"}},{"name":"offset","in":"query","description":"Offset","schema":{"type":"string"}},{"name":"appId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

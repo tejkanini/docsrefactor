@@ -1,0 +1,71 @@
+---
+id: partial
+title: "Get async job partial output"
+description: "Returns partial outputs produced so far for an asynchronous Pixel job."
+sidebar_label: "Get async job partial output"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVEuP2zgM/isCz0qc3dPAt2w76M6iOw3mcQpyUGQmVsYWVYmeJDD83xeUPW3SRR+Hnmzz8ZH8+NE9sNknKNdw6/fOo7o9oe3YkYeNhgqTjS7kzxIekLvokwomsjONoo5Dx0mFSFVnsVKJ1M5EtaOojFcmnb2tI3nqklq5EzbqQNs5aKCA0QjoXQUlTHCgIeLnDhP/RdUZyh4seUbP8mpCaJzNOcVpdjweZzuK7ayLDXpLFVYSlGyNrZE3AXJRrGs40PaukmH4HBBKoO0BLYOGEKUPdpgkZQwr+7ewxNH5PXzLwfJyqANtlavQs9s5jDAMGthxI+n/CNzDOA8M4vnaE8cOsyEF8mks/+diIY/rYqsrolXM/GMF+nvUHJLk9YAn0wbpo4fEhrsk23u+v7+7/wAaWkzJ7LP3jfsSXk3ToXSam01ou+j4DOW6h61Jzi47rqFcb4aNAHBNeXWUMpNGfFBgllDxdaEJ4yvGlFG6KGVq5pDKojhSfEk1hbnd7ecVNuSYcW6pLexuPzNuVmFLxb/kqXFcFya4/63iPbakbn0VyHlWzw8fYdCXZcqiaMiapqbE5c3iZvFjuI8Sq97jKzYUWiFXRn0j4lG0Na7qgo4vapF6Mm+OgnKMyYJwfkc5cBLG8k69o4igQZgZSy/mi/kfs8f75erx709PMOhMbGvyLr3JiB+Qx4vKqrs+wW9nuTid33e006SMJy5CY5yXPjPb/SSANYwCyIoYJbDRIPSLr++3JuFzbIZBzJ87jCKvjYZXE53ZCjvrzaChRlNhzJp5wTOU8G4cZvYkHehJqeUv/BNEDyPE0loM/J3kfDVXul59enwCDdvpR9RSJTkXyPryY2zbXCtiVICenjLM5DD+fNFHZmWU03PCKMseBtBT291kypP8LH9lUjpSrC7yw2SCYTMMw3/XmxED
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get async job partial output"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/partial"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns partial outputs produced so far for an asynchronous Pixel job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["jobId"],"type":"object","properties":{"jobId":{"type":"string","description":"Asynchronous job identifier"}},"title":"JobIdRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Partial output returned","content":{"application/json":{"example":{"status":"RUNNING","message":{"partial":"value"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

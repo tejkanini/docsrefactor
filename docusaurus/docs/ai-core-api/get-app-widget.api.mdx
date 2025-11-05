@@ -1,0 +1,71 @@
+---
+id: get-app-widget
+title: "Download project widget file"
+description: "Retrieves a binary widget asset within the project widget directory."
+sidebar_label: "Download project widget file"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNkkFv2zAMhf+KwLNju8MOhW/BWmABuq1oNuxQ5KDKjM3OllSKThAE/u8DnTjthmHoyZBJPj69T0cQ2ySoHuGewzM6gU0GNSbHFIWChwoeUJhwh8lY80Te8sHsqW5QjE0JxexJWvJGWjTxpDHXa2J0EviQQwYhIluVXNVQQYOyjPHn1AcZRMu2R0FWK0fwtkeo4Cy3qiEDUivRSgsZML4MxFhDJTxgBsm12FuojiCHqINJmHwD45hdtPbzqknoZUA+wPsmt9Th++c2ai/F4BMmrX8oS/38Genp3kaVDaMM7LGGMYOP/2q+ZQ5sEvqafDNHezblghf0okM2xo7clHDxnHTyOI7jmEFCNzDJYUr2ySZyy0FaqB43arZHacOZyARCS1Cco18cLwzG+d8FWkLezcQG7qCCViSmqij2gX+lNsTcbZu8xi6QCOYu9IXbNgtLixr7UHwJPnQkbWEjwd+v7gb7YG59HQN5MT8e7kCRvK6piqILznZtSFJdl9fl/+XutNfc4A67EHuNTC8/R7NWnCdebwK6wNV9M3Q9Tz36RoD8NkyNJJ1WlivzKbCS0WROq8u8zK8W66/L+/Xnb99hHH8DJcoxKw==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download project widget file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/project-{projectId}/projectWidget"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves a binary widget asset within the project widget directory.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}},{"name":"widget","in":"query","schema":{"type":"string"}},{"name":"file","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Widget file returned"},"400":{"description":"Error sending widget file","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

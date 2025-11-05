@@ -1,0 +1,9 @@
+{
+    "label": "Settings",
+    "position": 7,
+    "link": {
+      "type": "generated-index",
+      "description": "AI Core Settings allows you to manage your resources"
+      }  
+    
+}

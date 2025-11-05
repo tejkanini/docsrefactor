@@ -1,0 +1,19 @@
+
+Reactor Name
+EchoReactor
+
+Description
+This reactor returns back the input the user enters
+
+Required keys
+VALUE
+
+Key description
+VALUE: The value to echo back
+
+Optional keys
+None
+
+Usage
+Echo(value="Hello World")
+Echo("Hello World")

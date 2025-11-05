@@ -1,0 +1,75 @@
+---
+id: get-user-app-permission
+title: "[LEGACY] Get user app permission"
+description: "Legacy endpoint. Use /auth/engine/getUserEnginePermission instead."
+sidebar_label: "[LEGACY] Get user app permission"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU8Fu2zAM/RWDZ8V2hx0K34I26ApkW7E2h6HIQZEZW60saRKdLTP07wMdd0mXbZftZMh65KPeexyAZBOhegTZUwtrATVGFbQn7SxUsMRGqn2GtvZOW8qzVcSsYGyBttEWiwZpFTEsxtMdhk7HqJ3NtI2Ess5BgPMYJDe8raGCqWDu/RENArwMskPCwNMMYGWHUIH0/rYGAZqH+dJj2IOAqFrsJFQD0N4zKlLQtoGU1gICRu9sxMj3b8qSP6/fdDJkQAoad8gUyllCS4yX3hutxpGLp8hFwzmp2zyhIkgpJQFvy4tzopVloVzQ3/+VILEvPqCShDVUFHoU0CG1blJ0FJBaqOBgjvS++IPQEcPuReU+GKigJfKxKoqvLjzH1vlcbZu8RuM0EebKdYXaNjOpZzV2rnjvrDN65NDwa16usXPZYkpLtvq0hCROaaqiME5J07pI1WV5Wf693ZKx2TXu0DjfsXhscUTVB037e1bsYPRGRq3mHOGjfsz3khY+jxhgLbXduhGoyfDN/Da7cgFBACtzoC7zMr+Y3X+Y392/+/gASYB3kTo5ejWl83G5uJlffV5nN0hZHzFk0vvMn6r96j3DMQP/Z7OmlxJ+o8IbqS3POao9THmYFltw5ED8fvnWAtgPBg/DRkZcBZMS/z5sHCel1lFuDIdvK01EAc+4P9nPnTQ9TzL6s5NBMxiqx3US0KKsMYxdDkVzpdDTSdXZOnCXn/G+WTxASj8AaaCdcw==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"[LEGACY] Get user app permission"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/app/getUserAppPermission"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Legacy endpoint. Use /auth/engine/getUserEnginePermission instead.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"appId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Permission retrieved","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

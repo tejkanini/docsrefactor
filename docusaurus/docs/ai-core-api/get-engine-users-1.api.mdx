@@ -1,0 +1,71 @@
+---
+id: get-engine-users-1
+title: "List engine users and permissions"
+description: "List engine users and permissions"
+sidebar_label: "List engine users and permissions"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMtu2zAQ/BVhz4ylFEER6GY0QRsgfaBJToVR0NTKYkKRLHeV1hX078VKjl0nfRjJyZA8s0vNDKcH1iuC8gvojhtYKAgRk2Yb/EUFJayQz/3KerwhTPT1GBREnXSLjEloPXjdIpSAI+qiAgXWQwnfOkxrUECmwVZD2QOvowCJk/UrGAa15XaE6XlMQp1Mc42pfQ47YmotkQ3+OWxnW8v/JVrPuMIECuqQWs3Tq9cne6NCXRO+aNZCQUKKwROSMF4VhfxUSCbZKHZCCaOHWY1sGhS5TfCMngWoY3TWjL7ntyTo/un+sLxFwzAMw6DgpDj+wwYvMQrJ/sQqCynzIdPGINHLtg3q0Z5LS5xNkcu68au0r7Kdn7KvRW7CJsNjbLmBEnI5YD5R8/10i+SY7h+C3SUHJTTMkco8/x7SHTUhzky9mlXogmXGmQltburVkbZHFbYhfx98cJabXEcLjw99hm3Izn0Vg/Wc3Xy+BInAbk2Z5y4Y7ZpAXJ4Wp8W/x10KNjvDe3QhtqKspIDQdMny+krknLKw1GTNXK73TlzZ9xAxeR4xkkmwvg4j0LKTf+YX2ZuQEBSIMtPqYlbMjo+uPsw/Xb37eA2DghiIWz0aucn0IRbtfdD2bIw/OI9OWy+TR336jX2bmlKbugH1qKCkwEQ+Qfb9UhPeJDcM8nq6VWJsZUkvHVZQ1toRKrjD9X6D3WvXyUlGg/4C35bWIeC9njqEsFdNhxAe2ugQ7LZuduCFPCQraCi/LAYFDeoK0yjYxJobg/F31pNbLFO2t+7t+TUMwy8kMyko
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List engine users and permissions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/engine/getEngineUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+List engine users and permissions
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"engineId","in":"query","schema":{"type":"string"}},{"name":"userId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"permission","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users fetched","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized or no access","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,9 @@
+Reactor Name: MigrateImagesToCouchReactor
+Description: Reactor to migrate images from remote image folders to CouchDB
+Required.keys: None
+Key description:
+- verifyMissing: Boolean flag indicating if we should check if images are already uploaded to CouchDB (default true)
+- repull: Boolean flag indicating if we should re-pull image files from the remote repo (default false)
+- filterInvalidIds: Boolean flag indicating if only images with identifiers matching existing databases and projects should be uploaded (default true)
+Optional keys: verifyMissing, repull, filterInvalidIds
+Usage: Migrate images from remote folders to CouchDB.

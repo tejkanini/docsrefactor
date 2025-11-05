@@ -1,0 +1,71 @@
+---
+id: get-jdbccsv-output
+title: "Execute SQL or pixel via JDBC bridge (CSV)"
+description: "Executes a query and returns CSV formatted results."
+sidebar_label: "Execute SQL or pixel via JDBC bridge (CSV)"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNUl1v00AQ/CvWPju2i3iIjHgISSWCCq0w7UsVoet5Y1+xby93e6Eh8n9H6zSh4qP0ybJ3d2Y8M3tg1QQob+HK0z1qhlUKNQbtjWNDFko4f0AdGUOikk1Ev0uUrROPHL0Nyby6Sdbke8WM8jXEjkMGKZBDrwRhWUMJDfKHxbv5vLq5jOwiQwpOedUjoxf2PVjVI5TgDiqWNaRghN0pbiEFj5toPNZQso+YQtAt9grKPfDOyWFgb2wDw5CesIwNpmmfYI3y4WXHYdO9/GwlAoMjGzDI/FVRyONvPhqyo2kHA1G0abKMlkdgfODcdUp498MwpPD6eSj0nvz/Mc7+xLi2KnJL3vz4t4g3ulU+IL+NvJ5MD3BDCgF19IZ3Y3B3Khg9i9xCebsSJ3rklh5DH3OWEeSPyU72p4iH/L6+01912Iq56LfHLkTfQQktswtlnn8n/y205DK9brIaOzLMmGnqc71uJspMauwp/0iWOsNtrpyB3yu8wJ6Sc1s7MpaT688XIEn/oinzvCOtupYCl9NiWjwPdyG7yQK32JHrxTX576MrldTk0IMn3pxKI3zHMsn7uCPVA2PXNC4a7mQyWyZz8ggpiDMH6iIrsrNJ9Wl2Vb2//ALD8BN4F0rC
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Execute SQL or pixel via JDBC bridge (CSV)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/project-{projectId}/jdbc_csv"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Executes a query and returns CSV formatted results.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}},{"name":"insightId","in":"query","schema":{"type":"string"}},{"name":"sql","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Execution CSV returned","content":{"text/plain":{}}},"400":{"description":"Execution error","content":{"text/plain":{}}},"401":{"description":"Unauthorized","content":{"text/plain;charset=utf-8":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

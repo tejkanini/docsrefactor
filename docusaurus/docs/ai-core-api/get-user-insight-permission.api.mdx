@@ -1,0 +1,71 @@
+---
+id: get-user-insight-permission
+title: "Get current user's permission for an insight"
+description: "Get current user's permission for an insight"
+sidebar_label: "Get current user's permission for an insight"
+hide_title: true
+hide_table_of_contents: true
+api: eJylU8Fu2zAM/RWDl12U2B12KHwL1qIL0G3F2pyKHBSZidXKoibR2TJD/z7QSZuuRQsUOxmy3tMj3yMHYL1JUN+C7rmFpQIKGDVb8vMGatggLxLGuU920/IVxs6mZMmDgqCj7pAxCn0ArzuEGkKkOzQ8b0CB9VDDzx7jDhQk02KnoR6Ad0GQiaP1G8hZPZLtXuY95KWCiCmQT5jk/mNVyafBZKIN0gfUcKy7WCObFkXAkGf0LGgdgrNm7Lq8S0IZXkrSShqDnHNW8Kk6eSmz8GIiRfsHm4Ji4anQxmBK/6eW1TOdC+TC9DGi56JPGD+kIjzpkGKhfXHwEhR0yC0dwhxz4xZqKKXW8oAq38g5Ydw+hNxHBzW0zCHVZfmL4n1qKUzNejNt0JFlxqmhrjTrzUTbSYMdlV/Jk7PcljpYeN7KGXZUnPsmkPVcLH5cgozDUaYuS0dGu5YS16fVafX2c5eCLc5wi45CJ37LgCQ0fbS8uxaT92Oy0smamYz80XLRe5g1OY8YmU+wfk0j0LKTm9m8+EwRQYE4s5euptX0ZHL9bXZ1/eX7DWQFgRJ3eoz3MN/vDO6f3h7LZPzNZXDaehEZrRoOoR62WMHxjVeDXSoQU4U0DCudcBFdzvJ7v3QSd2OTXjlsoF5rl1DBPe6e7fhWu16qGnN7Bf90rY/4pRyiFQLUt8usoEXdYByV98SZMRj4CevF6sgrj/N9cX4DOf8FbHarEg==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get current user's permission for an insight"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/insight/getUserInsightPermission"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get current user's permission for an insight
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"query","schema":{"type":"string"}},{"name":"insightId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Permission fetched","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized or no access","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

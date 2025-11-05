@@ -1,0 +1,75 @@
+---
+id: update-smss-file-1
+title: "Update database SMSS file (legacy)"
+description: "Updates the SMSS configuration file for the specified database. Deprecated: use /database-{databaseId} or /e-{engineId} equivalent."
+sidebar_label: "Update database SMSS file (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNUtFu1DAQ/BVrn3PJFfFQ5a3QIk66AmqoeKgq5LM3iUviNfamqJzy72iTu2vLIdqnWPF4Zmd2tsC6SVDewLlmvdEJ1YVvnEe4zcBiMtEFduShhOtgNWNS3KKqLqtKGfK1a4aoBaBq16GqKU73KaBxtUOr7I42V+cYIhrNaEs1JFTF/mqx3Z9WdlQUVYGLLU5TyA/8Obh73aHnHDKggLPgykIJwzRT1af0wXX4/QQyCDrqHhmjuNqC1z1CCY8KkIETO0FzC397PITgLHoWBxEyiDJCRAslxwEzSKbFXkO5BX4Iwp44Ot/AOGYvC76e7FbAKZBPmOT+zXIpn+cTT5uYsp+zEDlDntGzgHUInTNTYMVdkhfbY0Xa3KFhyS5KvOxmvTQYgyk9AW6IOtT+KLZvLXKL8+oPC1LTe7RoJRhgx51wrLHR5mEu09XOHoyjQN7+y+A7bZVkholftLZjOTlmufZ64Jai+/2KhOZp7KGvh1WhGaLjh6lYG52cORu4hfLmVnbVI7ckpQw0jTrtu4RCh/Cs4cXz0oLwxvt9X4fYQQktc0hlUfyi+CO1FHJTN7nFjhwz5ob6wtTNQruFxZ6KS/LUOW4LHdxxpbEndeFtIOdZXV+tQVr6KFMWRUdGdy0lLk+Xp8v/060Fq87xHjsKvWQo3vfJVFKtuT1P8jn0R/RgV/mpT4KZ2uF8TRNw15KzlXpPUcKRZGbpZb7MTxbVp7Mv1cfPX2Ec/wBiaKbZ
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update database SMSS file (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/app-{databaseId}/updateSmssFile"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Updates the SMSS configuration file for the specified database. Deprecated: use /database-\{databaseId\} or /e-\{engineId\} equivalent.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"databaseId","in":"path","description":"Database identifier","required":true,"schema":{"type":"string"}},{"name":"databaseId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMSS file updated","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Whether the operation succeeded"}},"title":"LegacyUpdateResponse"}}}},"400":{"description":"Bad request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

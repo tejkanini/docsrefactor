@@ -1,0 +1,71 @@
+---
+id: get-group-members
+title: "List group members"
+description: "Returns members of a group with optional search and pagination."
+sidebar_label: "List group members"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtO20AQ/ZXVPC9xqFCF/JYWRJGgrQo8oTxs7LG9sDd2x6Gp5X+vxg4JIb0gWr+sdn3OXM9MB6TqBPktqJYamEsoMRVRB9LeQQ7fkNrokrBoFxiT8JVQoo6+DeJRUyP8AFRGJFSxaIRypQiq1k7x+wQk+IBxuJyXkEONdMbsy9EeSAgqKovEl/y2A6csMo5B5yVI0BzGQ4txBRJS0aBVkHdAq8C4RFG7GvpebqhjJNcY7VvYRltNfyVqR1hjBAmVj1bR+PT+aMeUr6qE/2RrLiFiCt4lTMx4N53ysduidSlFRIoal8hFK7wjdMRgFYLRxdCB7C4xo9uPQcWoODhNaNOzd7+4w4Kg50/C0a/cf1CliPjQYqI3OH7mgO0f7tu/caxMH/WPN2W2m4FFavxah4P2qIEcMvaQqdJqlw3Cy/ZlmjAunzTaRgM5NEQh5Vn26ON9anyYFFU9KdF4TYSTwtusqOoDpQ9KtD679M4bzW6ChpdTdoLWi1NXBq8diZtvF8Ay2rrJs8z4QpnGJ8qPp8fTP5u7YKw4wSUaHyxXi5WUsGijptUVl2jU00IlXcx48LcFY39PMuX7gGFdg3aVH4CaDP+ZnYuPPiJI4MqMrqeT6eTw4Orz7OvVpy/X0EsIPpFVQ3PWc3GhE613iN3UdyeDbtvm/7CB1okRfqcsGKUdhzUUt1srYL39JAwaADmuHz5f6GAugXvAjK5bqIQ30fQ9P4/jzeoodVILgyXklTIJJdzjamejLZVpOaChyb9B7yyx1xCe9tZrsJvFtAXP+RI1oyG/nfcSGlQlxiGjkTUrCgzPWXvzx1Y2E3Z2eg19/xOUfC2h
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List group members"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getGroupMembers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns members of a group with optional search and pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Members retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

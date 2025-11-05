@@ -1,0 +1,71 @@
+---
+id: get-project-users
+title: "List project users"
+description: "Returns users and permissions for a project, with total and pagination."
+sidebar_label: "List project users"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1P20AQ/SvWnJc4VKhCvqUFtUi0RQVOKIeNPbYX9ovdcWhq+b9XYztJQ2gbQU/Wrt+bmZ1581ogWUXI7kA2VMNcQIExD8qTchYy+I7UBBuTJmKIibRF4jEYFaNyNialC4lMfHD3mJNInhTVCTmSekDKSlnJgSYgwHkM/eGigAwqpKuBdsuRQYCXQRokPmR3LVhpEDIYY18UIEBxQY8NhhUIiHmNRkLWAq08IyMFZSvoOrEhc9GvY0aUIa9vMJjXsLcteg1bK6Pon0RlCSsMIKB0wUgart6f7IRyZRnxTbHmAgJG72zEyIx30yl/dkXSjzAJSEHhErnhubOElhgqvdcq7yef3kfGt/sVuAVPGbqu6wScvJTjgyySgI8NRnp7/OMX3mB5AVxQP9/6gE6AQardKPNe2lRDBilnSGVhlE1HXaf7exAxLNdL0AQNGdREPmZp+uTCQ6ydn+RlNSlQO0WEk9yZNC+rI6mOCjQu/eKs04oTeQXP1/kMjUvObeGdspTcfr8EVss2TZam2uVS1y5Sdjo9nf493CVjkzNconbecL9YMBHzJihaXXOTBtksZFT5jB1m2zLOt1Yjn3sMyxeULV0PVKT5z+wi+egCggDuzJB6OplOjo+uv86urj9/u4FOgHeRjOzHM8r/UkVau9PgYM9f0G4H/R+tbnwg4Q9KvZbKcnl9k9tRC6PdCujVwBIZAoPYc8a5AJ4Gc9p2ISPeBt11fD3sM+ukUFEuNBaQlVJHFPCAq2fmuZS64aL6gf8Bv/HLQ8A7FnkIYccVDyGsjfAQ7MbptuA5H4JiNGR3805AjbLA0HdsYM3yHP3vrL1d5yibbf50fgNd9wuPr3UR
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List project users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/project/getProjectUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns users and permissions for a project, with total and pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"query","schema":{"type":"string"}},{"name":"userId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"permission","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"object"}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

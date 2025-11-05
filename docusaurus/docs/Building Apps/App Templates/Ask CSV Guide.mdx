@@ -1,0 +1,63 @@
+---
+sidebar_label: "Ask CSV App"
+sidebar_position: 1
+slug: "/askCSV-guide"
+---
+
+import ReactPlayer from "react-player";
+import AskCSVTemplateDemo from "../../../static/Demos/AskCSVDemo.mp4";
+
+<ReactPlayer controls url={AskCSVTemplateDemo} />
+
+<br/>
+For users like analysts, the **Ask CSV Guide** makes it easy to get insights from data files without writing complex SQL queries. Just upload a CSV file, ask a question in plain language, and the app will automatically generate and run the right SQL query to give you the answers you need. This helps you analyze data quickly and make informed decisions with less technical effort. 
+
+The following steps walk us through how to use the **Ask CSV** template to build and run a query-ready app:
+
+To begin, navigate to the **App Library** homepage and click on **Create New App**.
+
+![CreateApp](../../../static/img/Navigating/Create%20New%20App/LandingPage1.png)
+
+Scroll down to **Browse Templates**, select **Ask CSV**, and click **Open**.
+
+![Ask CSV Template](../../../static/img/Navigating/Create%20New%20App/AskCSV1.png)
+
+Enter a name for the app and then click on **Create**.
+
+![Create CSV App](../../../static/img/Navigating/Create%20New%20App/AskCSV2.png)
+
+Once the template loads, start by clicking the **Show** button at the top right. Next, click on the **Upload** block and select the file you want to query. 
+
+![Upload CSV File](../../../static/img/Navigating/Create%20New%20App/AskCSV3.png)
+
+Locate the input block labeled **Question** and type your question into it; this will generate the CSV query behind the scenes.
+
+![Ask Question](../../../static/img/Navigating/Create%20New%20App/AskCSV4.png)
+
+Finally, click on the **Ask** button to generate results.
+
+![Run Query](../../../static/img/Navigating/Create%20New%20App/AskCSV5.png)
+
+If successful, it will return the SQL query generated from your question.
+
+![Query Results](../../../static/img/Navigating/Create%20New%20App/AskCSV6.png)
+
+Save your app when you finalize the changes and share with other users.
+
+
+### Pixel Deep Dive
+To better understand how Text2SQL is leveraged, let's delve into the 2 main Pixel reactors powering it.
+
+1. **PredictDataTypes**
+
+    To best model the data, the dataset must first be preprocessed to identify the headers and data types of each column. The PredictDataTypes reactor is responsible for performing this. It parses the dataset to identify if each column falls into one of the following AI Core data type categories:
+    - BOOLEAN
+	- INT
+	- DOUBLE
+	- STRING
+	- DATE
+	- TIMESTAMP
+
+2. **NLPQuery2**
+
+    The key to Text2SQL's functionality lies in the NLPQuery2 reactor, which is responsible for funneling the inputs (your dataset and the predicted data types from the previous step) into your selected LLM model. Based on the LLM's response, it parses the SQL query output and runs it against the uploaded dataset to generate the final output.

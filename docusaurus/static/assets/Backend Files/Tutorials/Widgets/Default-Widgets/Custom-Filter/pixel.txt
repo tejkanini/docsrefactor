@@ -1,0 +1,42 @@
+/*add panel for the visualization*/
+AddPanel ( panel = [ 1 ] , sheet = [ "0" ] ) ;
+Panel ( 1 ) | AddPanelConfig ( config = [ { "type" : "golden" } ] ) ;
+Panel ( 1 ) | AddPanelEvents ( { "onSingleClick" : { "Unfilter" : [ { "panel" : "" , "query" : "<encode>(<Frame> | UnfilterFrame(<SelectedColumn>));</encode>" , "options" : { } , "refresh" : false , "default" : true , "disabledVisuals" : [ "Grid" , "Sunburst" ] , "disabled" : false } ] } , "onBrush" : { "Filter" : [ { "panel" : "" , "query" : "<encode>if((IsEmpty(<SelectedValues>)),(<Frame> | UnfilterFrame(<SelectedColumn>)), (<Frame> | SetFrameFilter(<SelectedColumn>==<SelectedValues>)));</encode>" , "options" : { } , "refresh" : false , "default" : true , "disabled" : false } ] } } ) ;
+Panel ( 1 ) | RetrievePanelEvents ( ) ;
+
+/*add data for the visualization*/
+Database ( database = [ "2555ec1b-e1a2-4905-91e0-022dc57fc564" ] ) | Select ( Title__MovieBudget , Title__Revenue_Domestic , Title__Revenue_International , Title__RottenTomatoes_Audience , Title__RottenTomatoes_Critics , Title__Title , Studio__Studio , Nominated__Nominated , Genre__Genre , Director__Director ) .as ( [ MovieBudget , Revenue_Domestic , Revenue_International , RottenTomatoes_Audience , RottenTomatoes_Critics , Title , Studio , Nominated , Genre , Director ] ) | Join ( ( Title , inner.join , Studio ) , ( Title , inner.join , Nominated ) , ( Title , inner.join , Genre ) , ( Title , inner.join , Director ) ) | Distinct ( false ) | Import ( frame = [ CreateFrame ( frameType = [ NATIVE ] , override = [ true ] ) .as ( [ "Movies_FRAME725000" ] ) ] ) ;
+Panel ( 1 ) | SetPanelView ( "visualization" ) ;
+
+
+/*add panel for custom filter*/
+AddPanel ( panel = [ 0 ] , sheet = [ "0" ] ) ;
+Panel ( 0 ) | SetPanelView ( "default-handle" , "<encode>{ "param": true, "json":[
+    {
+        "query": " ##ScatterPlot## if ( ( HasDuplicates ( <groupCol> ) ) , ( Frame ( ) | Select ( <groupCol> , Average ( RottenTomatoes_Critics ) , Average ( RottenTomatoes_Audience ) ) .as ( [ <groupCol> , AverageofRottenTomatoes_Critics , AverageofRottenTomatoes_Audience ] ) | Group ( <groupCol> ) | With ( Panel ( 1 ) ) | Format ( type = [ 'table' ] ) | TaskOptions ( { \"1\" : { \"layout\" : \"Scatter\" , \"alignment\" : { \"label\" : [ \"<groupCol>\" ] , \"x\" : [ \"AverageofRottenTomatoes_Critics\" ] , \"y\" : [ \"AverageofRottenTomatoes_Audience\" ] , \"z\" : [ ] , \"series\" : [ ] , \"tooltip\" : [ ] , \"facet\" : [ ] } } } ) | Collect ( 2000 ) ) , ( Frame ( ) | Select ( <groupCol> , RottenTomatoes_Critics , RottenTomatoes_Audience ) .as ( [ <groupCol> , RottenTomatoes_Critics , RottenTomatoes_Audience ] ) | With ( Panel ( 1 ) ) | Format ( type = [ 'table' ] ) | TaskOptions ( { \"1\" : { \"layout\" : \"Scatter\" , \"alignment\" : { \"label\" : [ \"<groupCol>\" ] , \"x\" : [ \"RottenTomatoes_Critics\" ] , \"y\" : [ \"RottenTomatoes_Audience\" ] , \"z\" : [ ] , \"series\" : [ ] , \"tooltip\" : [ ] , \"facet\" : [ ] } } } ) | Collect ( 2000 ) ) ); Panel ( 1 ) | SetPanelLabel(\"Critic vs Audience score, grouped by <groupCol>\") ",
+        "label": "Label",
+        "description": "",
+        "params": [
+            {
+                "paramName": "groupCol",
+                "view": {
+                    "displayType": "dropdown",
+                    "label": "Pick your dashboard",
+                    "attributes" : {
+                        "change" : "execute"
+                    }
+                },
+                "model": {
+                    "defaultOptions": [
+                        "Title",
+                        "Studio",
+                        "Genre",
+                        "Director"
+                    ],
+                    "defaultValue": "Title"
+                }
+            }
+        ]
+    }
+]}</encode>" ) ;
+Panel (0) | SetPanelLabel ("Change x axis");

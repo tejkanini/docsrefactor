@@ -1,0 +1,71 @@
+---
+id: get-available-engines-for-group
+title: "List available engines for group"
+description: "Returns engines that can be assigned to the group."
+sidebar_label: "List available engines for group"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsCz2qcDsVQ+Ja1XVeg+0CbnoocFJm21cqSKtHZMsP/faCTNE07ZEWWS2DpPZIiH18HpKoE+T2olmqYSSgw6WgCGe8ghxukNrok0FXGYRJUKxJaOTFHoVIylcNCkBdUo6iib8MIJPiAUXGAqwJyqJAmC2Wsmlu8WIX57OMlg0FCUFE1SBi5iA6capA5fHtVgATDVTy1GJcgIekaGwV5B7QMjEsUjaug7+UudcrXB5ATqqjrKcbmELY1jaF/Eo0jrDCChNLHRtHq6OPJTihflgn/K9ZMQsQUvEuYmPFhPOa/3fGu5yEiUjS4QO649o7QEYNVCNboYZTZQ2JG97YGFaPi4gxhk16c+/kDaoKefxJO/pb+kypExKcWEx2Q+EUCjn/8Nv6dY1X7aH4f9LLdFzRItV8LehAu1ZBDxhkyVTTGZYP0sv16TxgXG7G30UIONVFIeZb99PEx1T6MdFmNCrTeEOFI+ybTZXWkzFGBjc++euet4ZTBwOttPcfGiwtXBG8cibuba2BJbdPkWWa9Vrb2ifLT8el4f7hrxopzXKD1oeHOsaoS6jYaWt5yu1bamqtk9IQNZNs8zreRLH8PGNY4GFf6AWjI8s3kSpz5yPvKnVmlHo/Go+Oj22+TH7dfvk+hlxB8okYNg1rvyLVJJNSm1c8WVfq4sqLX7+m2AjjM19YvI/xFWbDKOK5r6G63lsPaRiUMggAJm0L2iWImgQfC7K6bq4R30fY9H6/2nqVSmMTUAvJS2YQSHnG545MLZVsubpj4PvTaGt+D33HD9xA2Bvge7LPDbcEz/oiG0ZDfz3oJNaoC49CBFWuiNYaXrDeLzFGeV/XyYgp9/wdx0VrK
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List available engines for group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getAvailableEnginesForGroup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns engines that can be assigned to the group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"groupType","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Engines retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

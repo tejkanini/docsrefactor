@@ -1,0 +1,71 @@
+---
+id: get-insight-users-1
+title: "List insight users and permissions"
+description: "List insight users and permissions"
+sidebar_label: "List insight users and permissions"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMtu2zAQ/BVhz4wlF0ER6GY0QWsgfaBJToFR0NRKYiJxWXKV1hX078XKr8Tpw0hOhuSZHWpnOD2wriLkt6A7rmGhgDwGzZbcvIAcKuS5i7aq+SZiiN+moMDroFtkDMLrwekWIQcf6A4NzwtQYB3k8L3DsAIF0dTYash74JUXZORgXQXDoHZku9Z4GbmLGF7G9BhaG6Ml9xJ2Y1vL/yVax1hhAAUlhVbz+tXb0yejqCwjvmrWQkHA6MlFjMJ4k2XyU2A0wXrxE3IYPUxKZFOjLMyQY3QsQO19Y81ofHoXBd0/16elWAzDMAwKTrPpHxSc5IiC/YVFQiFxlGhjMMbXqQ3qQOfSRk42qUm68bO0K5K9oSLYIte0SfGYW64hh1ROmG646UHAZesYHrbZ7kIDOdTMPuZp+oPCfazJT0xZTQpsyDLjxFCbmrI60fakwJbSj+SosVyn2ls4PPc5tpRcuMKTdZzcfL0EScFeJk/Thoxuaoqcn2Vn2b/HXQo2OccHbMi3slwJQkTTBcurK9noOg5LHa2ZyRXf71f0timT5xEjsQTrShqBlhv5ZzZP3lFAUCCbWUtnk2wyPbn6NPty9eHzNQwKPEVu9ejlJtZHufTki3aHY/zJqW+0dTJ6XFC/cXDTVWrbGqAOa0p6TDYo2L5f6og3oRkGeb2+W+JtYaNeNlhAXuomooJ7XB302INuOjnMaNJf8I+r6xj8rq2OAT8pqGMI2046BrsrnT14IQ/BChry28WgoEZdYBgXtmbNjEH/mPXsLsuU3dV7f3ENw/AbsFgs1A==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List insight users and permissions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/insight/getInsightUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+List insight users and permissions
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"query","schema":{"type":"string"}},{"name":"insightId","in":"query","schema":{"type":"string"}},{"name":"userId","in":"query","schema":{"type":"string"}},{"name":"permission","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users fetched","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized or no access","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

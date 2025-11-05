@@ -1,0 +1,8 @@
+{
+    "label": "App Creation Guides",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Framework-Specific App Guides"
+    }
+  }

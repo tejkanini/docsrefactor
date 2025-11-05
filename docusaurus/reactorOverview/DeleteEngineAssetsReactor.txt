@@ -1,0 +1,9 @@
+Reactor Name: DeleteEngineAssetsReactor
+Description: Delete a single or multiple files in the engine folder
+Required.keys: engine, file_path
+Key description:
+- engine: The unique id for the engine
+- file_path: Names of the file(s) to delete
+- comment_key: Comment to add while removing the files within the git repository for the engine
+Optional keys: comment_key
+Usage: Delete files from an engine's asset folder.

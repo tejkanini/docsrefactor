@@ -1,0 +1,71 @@
+---
+id: get-available-projects-for-group
+title: "List available projects for group"
+description: "Returns projects that can be assigned to the group."
+sidebar_label: "List available projects for group"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWDZzVOh2IofMvWrivQbcWanoocFJu21cqiKtHZMsP/PtBJmqYd2iBYLkakx0eKfHwdsK4iZHegW65hpqDAmAfj2ZCDDH4it8HFxAe6x5xjwrXmJNcumWOiYzSVwyJhSrjGpArU+hEoII9BC8NlARlUyJOFNlbPLV6veb5QuBA0KPA66AYZg5TRgdMNSpDcXhagwEgdjy2GJSiIeY2NhqwDXnrBRQ7GVdD3ajd0KtcHBEfUIa+nGJpDoq1pDL8baBxjhQEUlBQazaujjyc7VFSWEf8Xl7PLiffxXbY5kUXtoO9nCgJGTy5iFMCH8Vg+u+rYTDMJyMHgAmVeOTlGx4LW3luTD0pI76OEdK9z6hC0FGMYm/jsnObCDb38FJz8K/8nXSQBH1uMfEDiZwmE//g1/62TraBg/hz0st0XNMg1rfdhkD3XkEEqGVJdNMalg3DTd9YlYlhsdqUNFjKomX3M0vQXhYdYkx/lZTUq0JJhxlFOTZqX1ZE2RwU2lH4jR9ZITm/g5bqfYUPJuSs8GcfJ7c8rEBVt02RpainXtqbI2en4dPw23ZVgkzNcoCXfSOtEVxHzNhhe3ki/Vuqa62jyiTjQtnuSb6PRQZuCEVmDcSUNQMNWbiaXyWcKsu7SmVXq8Wg8Oj66+T65vvn6Ywq9Ak+RGz1Mar0WVyZyoje93npcSWHlZS8f1G0lcKAzrt/G+JtTb7VxUtnQ326tiLUTKxg0AQo2lbypi5kCmYmEd91cR7wNtu/leLXropbCRIktICu1jajgAZc7TrvQtpXqhqG/hV6b6z74HT/dJ2BjoftgnzxyL/DWBLfwmfwJRvCQ3c16BTXqAsPQsFXcJM/RP0/yaveF5Wm7L86n0Pd/AYg4gh0=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List available projects for group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getAvailableProjectsForGroup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns projects that can be assigned to the group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"groupType","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"onlyApps","in":"query","schema":{"type":"boolean"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Projects retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,234 @@
+---
+sidebar_label: 'Admin Query'
+sidebar_position: 5
+slug: "/admin-query"
+---
+
+The Admin Query allows administrators to use SQL queries to update the platform's databases. This can ensure the platform aligns with organizational branding, data and a consistent user experience.
+
+## Navigating to the Admin Query
+Only admin users can modify the theme settings. 
+
+To access the Admin Query:
+1. Open up the side menu. Click on Settings.
+
+
+![SettingsButton](../../../../static/autoImg/PlatformNavigation/Admin%20Query/Settings.png)
+
+
+
+
+2. Once on the Settings page, enable the Admin mode. 
+
+
+![Enable Admin Mode](../../../../static/autoImg/PlatformNavigation/Admin%20Query/Admin%20On.png)
+
+
+3. Click on the **Admin Query** tile.
+
+
+![AdminTile](../../../../static/autoImg/PlatformNavigation/Admin%20Query/Admin%20Query.png)
+
+## Local Master Database
+Admin query allows you to track and edit the user credentials, applications, projects, engines and functions within the AI Core platform. 
+### Track Engines
+1. To run the Admin Query and to see available engines, use the following SQL command as an example:
+```sql
+SELECT * FROM Engine
+``` 
+2. Select **LocalMasterDatabase** from the Database dropdown.
+![LocalMasterDropdown](../../../../static/autoImg/PlatformNavigation/Admin%20Query/LocalMasterDatabase.png)
+
+3. Paste the query into the text area and click **Run**.
+![ExecuteLocalMaster](../../../../static/autoImg/PlatformNavigation/Admin%20Query/LocalMasterDatabaseQuery%20Results.png)
+
+## Security Database
+Admin query lets you manage members and their permissions within the platform.
+### Track Engine Permissions
+1. To run the Admin Query and to see engine permissions, use the following SQL command as an example:
+```sql
+SELECT * from ENGINEPERMISSION
+``` 
+2. Select **security** from the Database dropdown.
+![SecurityDropdown](../../../../static/autoImg/PlatformNavigation/Admin%20Query/security.png)
+
+3. Paste the query into the text area and click **Run**.
+![ExecuteSecurity](../../../../static/autoImg/PlatformNavigation/Admin%20Query/securityQuery%20Results.png)
+
+
+## Scheduling Database
+Admin query allows you to track and manage automated jobs within the platform.
+### Track Jobs
+1. To run the Admin Query and to see job details, use the following SQL command as an example:
+```sql
+SELECT * FROM QRTZ_JOB_DETAILS
+``` 
+2. Select **scheduler** from the Database dropdown.
+![SchedulerDropdown](../../../../static/autoImg/PlatformNavigation/Admin%20Query/scheduler.png)
+
+3. Paste the query into the text area and click **Run**.
+![ExecuteScheduler](../../../../static/autoImg/PlatformNavigation/Admin%20Query/schedulerQuery%20Results.png)
+
+## Themes Database
+Admin query allows you to customize the look and feel of the AI Core application
+
+### Customizing AI Core Theme
+1. To run the Admin Query and update the theme settings with the specified keys and values, use the following SQL command as an example:
+
+```sql 
+UPDATE ADMIN_THEME
+SET THEME_MAP = '{
+  "name": "SEMOSS",
+  "logo": "",
+  "isLogoUrl": false,
+  "includeNameWithLogo": true,
+  "loginAndSignupTextCustomHtml": "",
+  "loginCenterHTML": "",
+  "loginImage": "",
+  "isLoginImageUrl": true,
+  "backgroundImage": "",
+  "homeIntroImage": "",
+  "isHomeIntroImageUrl": false,
+  "homeIntroObj": {
+    "infoCards": [
+      {
+        "title": "%theme.name% 101",
+        "description": "What %theme.name% is and how to leverage it for intelligent business",
+        "image": "logo",
+        "click": "101",
+        "color": "blue"
+      },
+      {
+        "title": "Use Cases",
+        "description": "Explore how %theme.name% helps solve real-world business problems",
+        "image": "briefcase",
+        "click": "uses",
+        "color": "purple"
+      }
+    ],
+    "homeIntroHtml": ""
+  },
+  "backgroundImageOpacity": 0.95,
+  "visualizationBackgroundColor": "#FFFFFF",
+  "visualizationColorPalette": "Two",
+  "helpDropdown": {
+    "showUserGuideSection": true,
+    "showContactUsHeading": true,
+    "showContactUsSection": true,
+    "contactUsIcon": "",
+    "contactUsLink": "semoss@semoss.org",
+    "isContactUsLinkUrl": false,
+    "contactUsTitle": "Email Us",
+    "contactUsDescription": "",
+    "descriptionFontSize": "regular"
+  },
+  "homeLeftNavItems": {
+    "preLeftMenuBtnOptions": [],
+    "postLeftMenuBtnOptions": []
+  },
+  "helpBannerOrder": [
+    "documentation",
+    "tutorials",
+    "privacy-notice",
+    "platform-tour",
+    "github",
+    "feedback"
+  ],
+  "helpBannerValues": {
+    "documentation": {
+      "label": "Documentation",
+      "src": "https://workshop.semoss.semoss.com/docs/"
+    },
+    "tutorials": {
+      "label": "Tutorials",
+      "src": "https://workshop.semoss.semoss.com/docs/category/app-creation-guides"
+    },
+    "privacy-notice": {
+      "label": "Privacy Notice",
+      "src": "https://dev.eu.aijumpstart.semoss.com/SemossWeb/packages/client/dist/#/privacy-notice",
+      "disabled": false
+    },
+    "platform-tour": {
+      "label": "Platform Tour",
+      "src": "",
+      "disabled": true
+    },
+    "github": {
+      "label": "Github",
+      "src": "",
+      "disabled": true
+    },
+    "feedback": {
+      "label": "Feedback",
+      "src": "",
+      "disabled": true
+    }
+  },
+  "termsHeaderReact": "Attention",
+  "cookiePolicyOrderReact": ["Strictly Necessary Cookies"],
+  "cookiePoliciesReact": {
+    "Strictly Necessary Cookies": "These cookies are essential for you to browse the website and use its features, such as accessing secure areas. Without these cookies, services like LLM usage or secure logins cannot be provided."
+  },
+  "cookiePolicyBannerReact": "<div><p><b>This site uses strictly necessary cookies and similar technologies to operate this website and to provide you with a more personalized user experience.</p><p>For more information, please review the <a href=\"https://dev.eu.aijumpstart.semoss.com/SemossWeb/packages/client/dist/#/cookie-notice\" target=\"_blank\">Cookie policy</a>.</p></div>",
+  "privacyNoticePage": "<div><h2>AI Core Platform Privacy Notice</h2><p><strong>Last revised: 12/2/24</strong></p><p>This notice covers your use of this system and the limited processing of personal information that AI Core Global Services Limited with registered office at 1 New Street Square, London, United Kingdom, EC4A 3HQ (SGSL, AI Core Global) performs as a data controller. This notice does not apply where AI Core Global processes your personal information as a processor. When used in this Privacy Notice, we, us and our refers to AI Core Global.</p><p>This system is intended for use by organizations such as entities of the AI Core Network. If such organization (e.g., a AI Core Member Firm or a client of a AI Core Member Firm) decided to grant you access to use this system or is involved in the provision of professional services, then AI Core Global acts as a processor for all processing of your personal information through this system, other than the limited uses mentioned below. If you have questions about or wish to exercise your personal information protection rights in connection with the personal information processing by this system that are not covered by this privacy notice, please contact the organization that decided to grant you access to use this system or is involved in the provision of professional services or refer to its privacy notice.</p><p>AI Core Global is committed to protecting your information by handling it responsibly and safeguarding it using appropriate technical, administrative, and physical security measures. Although we use appropriate security measures once we have received your personal information, the transmission of data over the internet (including by e-mail) is never completely secure. We endeavour to protect personal information, but we cannot guarantee the security of data transmitted to us or by us over the internet.</p><h2>Personal information which we process as a controller through this system</h2><p>When you access this system, AI Core Global automatically collects information and online identifiers from your device such as: IP address, usage actions, and access times. This information is collected using cookies and similar tracking technologies, as explained further in the Cookie Notice available here <a href=\"https://dev.eu.aijumpstart.semoss.com/SemossWeb/packages/client/dist/#/cookie-notice\" target=\"_blank\">Cookie policy</a>.</p><h2>How we use information about you</h2><p>Your personal information collected by this system as mentioned above will be used for the following purposes: (i) to capture internal metrics related to AI Core Network and usage of the system by entities of the AI Core Network; and (ii) to analyze and understand overall system traffic information.</p><h2>Disclosure of personal information to third parties</h2><p>For one or more of the purposes outlined in the paragraph above, we may transfer personal information to other members of the AI Core Network and/or third parties that provide services to us and/or the AI Core Network.</p><p>Please note that some of the recipients of your personal information referenced above may be based in countries outside of the UK or the European Economic Area (EEA) whose laws may not provide the same level of data protection. In such cases, we will ensure that there are adequate safeguards in place to protect your personal information that comply with our legal obligations. The adequate safeguard might be a data transfer agreement with the recipient based on standard contractual clauses approved by the applicable authority (e.g., for personal information subject to the UK GDPR, the UK Information Commissioners Office) for transfers of personal information to third countries.</p><p>Further details of the transfers described above, and the adequate safeguards used by us in respect of such transfers are also available from us. For such information, please contact us by using the \"Contact information\" section below.</p><h2>The lawful basis for processing information as a Controller</h2><p>We use your personal information for the purposes outlined above because of: (a) our legitimate interests in the effective delivery and improvement of the system; (b) our legitimate interests in the effective and lawful operation of the system; and (c) our legitimate interests in measuring content usage and understanding system performance impacts; so long as such interests are not outweighed by your interests.</p><h2>Information retention</h2><p>We will hold your personal information on our systems for as long as is necessary for the relevant activity or services.</p><h2>Your rights</h2><p>Under your local law, you may have various rights in relation to your personal information. In particular, you may have a right to:</p><ul><li>obtain confirmation that we are processing your personal information and request a copy of the personal information we hold about you;</li><li>ask that we update the personal information we hold about you, or ask that we correct such Personal Information that you think is incorrect or incomplete;</li><li>ask that we delete personal information that we hold about you, or restrict the way in which we use such personal information;</li><li>object to our processing of your personal information;</li><li>obtain a copy of the personal information protection clauses governing data transfers in circumstances where we transfer personal information referenced above to countries that do not offer adequate personal information protection under applicable law; and</li><li>if you are unsatisfied with the way in which we have handled your Personal Information or any privacy query or request that you have raised to us, you have a right to complain to the UK Commissioner.</li></ul><p>If you are located in the EEA and are unsatisfied with the way in which we have handled your personal information or any privacy query or request that you have raised to us, you have a right to complain to the relevant data protection authority in your jurisdiction.</p>'
+```
+
+2. Select **themes** from the Database dropdown
+![ThemesDropdown](../../../../static/autoImg/PlatformNavigation/Admin%20Query/themes.png)
+
+3. Paste the query into the text area and click **Run**.
+![ExecuteQuery](../../../../static/autoImg/PlatformNavigation/Admin%20Query/themesQuery%20Results.png)
+
+### Important Theme Values
+Below is an explanation of each important key used in the Admin Query:
+
+- **termsHeaderReact**
+  - **Description**: This key sets the header text for the terms and conditions section.
+  - **Key**: `"termsHeaderReact":"Attention"`
+  - **Purpose**: Displays the header "Attention" in the terms and conditions section.
+
+- **termsReact**
+  - **Description**: This key contains the HTML content for the terms and conditions.
+  - **Key**: `"termsReact": "Please adhere to the member firm and geography GenAI guardrails and consult your risk team for your specific use case & data usage..."`
+  - **Purpose**: Provides detailed terms and conditions for platform users.
+
+- **cookiePolicyBannerReact**
+  - **Description**: This key holds the HTML content for the cookie policy banner.
+  - **Key**: `"cookiePolicyBannerReact":"This site uses strictly necessary cookies and similar technologies to operate this website and to provide you with a more personalized user experience..."`
+  - **Purpose**: Displays a banner informing users about the use of cookies and links to the cookie policy.
+
+- **cookiePolicyOrderReact**
+  - **Description**: This key specifies the order of cookie policies.
+  - **Key**: `"cookiePolicyOrderReact":["Strictly Necessary Cookies"]`
+  - **Purpose**: Determines the sequence in which cookie policies are presented to users.
+
+- **cookiePoliciesReact**
+  - **Description**: This key contains the descriptions of various cookie policies.
+  - **Key**: `"cookiePoliciesReact": {"Strictly Necessary Cookies": "These cookies are essential for you to browse the website and use its features, such as accessing secure areas..."}`
+  - **Purpose**: Provides detailed descriptions of each cookie policy type.
+
+- **cookiePolicyNoticePage**
+  - **Description**: This key holds the HTML content for the cookie policy notice page.
+  - **Key**: `"cookiePolicyNoticePage":"Last revised: 12/2/24Cookie NoticeWhat is a cookie?A cookie is a small text file placed on your device by the websites that you visit..."`
+  - **Purpose**: Displays the full cookie policy notice to users.
+
+- **privacyNoticePage**
+  - **Description**: This key contains the HTML content for the privacy notice page.
+  - **Key**: `"privacyNoticePage":"AI Core Platform Privacy NoticeLast revised: 12/2/24This notice covers your use of this system and the limited processing of personal information..."`
+  - **Purpose**: Provides users with detailed information about the platform's privacy practices.
+
+- **helpBannerOrder**
+  - **Description**: This key specifies the order of items in the help banner.
+  - **Key**: `"helpBannerOrder":["documentation","tutorials","privacy-notice","platform-tour","github","feedback"]`
+  - **Purpose**: Determines the sequence in which help banner items are displayed.
+
+- **helpBannerValues**
+  - **Description**: This key contains the labels and URLs for the help banner items.
+  - **Key**: `"helpBannerValues":{"documentation":{"label":"Documentation","src":"https://workshop.semoss.com/docs/"},"tutorials":{"label":"Tutorials","src":"https://workshop.semoss.com/docs/category/app-creation-guides"},"privacy-notice":{"label":"Privacy Notice","src":"https://dev.eu.aijumpstart.com/SemossWeb/packages/client/dist/#/privacy-notice","disabled":false},"platform-tour":{"label":"Platform Tour","src":"","disabled":true},"github":{"label":"Github","src":"","disabled":true},"feedback":{"label":"Feedback","src":"","disabled":true}}`
+  - **Purpose**: Provides labels and links for each item in the help banner.
+
+- **materialTheme**
+  - **Description**: This key defines the theme settings for the platform, including colors, typography, and component styles.
+  - **Key**: `"materialTheme":{"palette":{"mode":"light","primary":{"main":"#26890D","dark":"#86BC25","light":"#046A38","hover":"#F5F9FE","selected":"#EBF4FE","border":"#9FCFFF"},"secondary":{"main":"#D9D9D9","dark":"#757575","light":"#F2F2F2"},"text":{"primary":"#000000","main":"#000000","secondary":"#666666","disabled":"#9E9E9E"},"error":{"main":"#DA291C","light":"#FBE9E8","dark":"#BF0D02"},"warning":{"main":"#FA9F2C","light":"#FDF0E5","dark":"#EF8326"},"info":{"main":"#0471F0","light":"#22A4FF","dark":"#1260DD"},"success":{"main":"#348700","light":"#EAF2EA","dark":"#006500"},"background":{"paper":"#FFFFFF","default":"#FAFAFA"},"primaryContrast":{"50":"#E7F4E5","100":"#C6E4BF","200":"#A1D396","300":"#7AC36B","400":"#5CB649","500":"#3EA924","600":"#349B1B","700":"#26890D","800":"#167800","900":"#005A00","shadow":"#E7F4E5"},"green":{"50":"#DEF4F3","100":"#ABE4E0","200":"#6FD4CB","300":"#07C2B6","400":"#00B4A4","500":"#00A593","600":"#009785","700":"#008674","800":"#007664","900":"#005946"},"darkBlue":{"50":"#EAE4F2","100":"#C9BCE0","200":"#A690CC","300":"#8364B8","400":"#6944AA","500":"#4F249B","600":"#471F96","700":"#3A188E","800":"#2D1286","900":"#150578"},"pink":{"50":"#FFE6F0","100":"#FFC0D9","200":"#FF97C0","300":"#FF6DA6","400":"#FF4E90","500":"#FF337B","600":"#ED2F77","700":"#D62C71","800":"#C0286C","900":"#992263"},"purple":{"50":"#F1E9FB","100":"#DAC9F5","200":"#C3A5F0","300":"#AA7EEA","400":"#975FE4","500":"#8340DE","600":"#783BD7","700":"#6A32CE","800":"#5D2BC7","900":"#481EB8"}},"shape":{"borderRadiusNone":0,"borderRadius":12,"borderRadiusSm":4,"borderRadiusLg":20,"borderRadiusCircle":64,"borderRadiusChip":64},"spacing":8,"typography":{"fontFamily":"\"Inter\", sans-serif","body1":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400","lineHeight":"150%","letterSpacing":"0.15px"},"body2":{"fontSize":"14px","fontStyle":"normal","fontWeight":"400","lineHeight":"143%","letterSpacing":"0.17px"},"subtitle1":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400","lineHeight":"175%","letterSpacing":"0.15px"},"subtitle2":{"fontSize":"14px","fontStyle":"normal","fontWeight":"500","lineHeight":"157%","letterSpacing":"0.1px"},"caption":{"fontSize":"12px","fontStyle":"normal","fontWeight":"400","lineWeight":"166%","letterSpacing":"0.4px"},"overline":{"fontSize":"12px","fontStyle":"normal","fontWeight":"400","lineHeight":"266%","letterSpacing":"1px","textTransform":"uppercase"},"h1":{"fontSize":"96px","fontStyle":"normal","fontWeight":"300","lineHeight":"116.7%","letterSpacing":"-1.5px","textTransform":"none"},"h2":{"fontSize":"60px","fontStyle":"normal","fontWeight":"300","lineHeight":"120%","letterSpacing":"-0.5px","textTransform":"none"},"h3":{"fontSize":"48px","fontStyle":"normal","fontWeight":"400","lineHeight":"116.7%","textTransform":"none"},"h4":{"fontSize":"34px","fontStyle":"normal","fontWeight":"400","lineHeight":"123.5%","letterSpacing":"0.25px","textTransform":"none"},"h5":{"fontSize":"24px","fontStyle":"normal","fontWeight":"500","lineHeight":"133.4%","textTransform":"none"},"h6":{"fontSize":"20px","fontStyle":"normal","fontWeight":"500","lineHeight":"160%","letterSpacing":"0.15px","textTransform":"none"},"button":{"textTransform":"none","fontWeight":"600"}},"components":{"MuiCssBaseline":{},"MuiAlertTitle":{"styleOverrides":{}},"MuiContainer":{"styleOverrides":{"maxWidthSm":{"maxWidth":200},"maxWidthMd":{"maxWidth":320},"maxWidthLg":{"maxWidth":500},"maxWidthXl":{"maxWidth":1271}}},"MuiCard":{"styleOverrides":{}},"MuiCardHeader":{"styleOverrides":{}},"MuiCardContent":{"styleOverrides":{}},"MuiCardActions":{"styleOverrides":{}},"MuiPaper":{"styleOverrides":{}},"MuiButton":{"styleOverrides":{}}}}`
+  - **Purpose**: Customizes the visual appearance and user interface elements of the platform. For more details on [Material UI](https://mui.com/).
+

@@ -1,0 +1,71 @@
+---
+id: run-reactor
+title: "Execute a reactor in the project context"
+description: "Runs a named reactor with a JSON body representing noun store input and returns pixel runner output."
+sidebar_label: "Execute a reactor in the project context"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU8FOGzEQ/RVrzptsqHpAe0OlUlNRQKScEAfjnWRNd2fc8RhIo/33apIQEJUQ6smyZua98XvPG1C/ytDcwKXwPQaF2wpazEFi0sgEDVwVys478gO2TtAHZXGPUTvn3ffFxbm743btBJNgRtJIK0dcyGVlQRcpFXWebFSLUHYpPmHvpBChOC6aik6hAk4o3ijnLTQgha52VFBB8uIHVBRbdAO2CTSQdgvPW6gg2qLJawcVCP4uUbCFRqVgBTl0OHhoNqDrZINZJdIKxrE6YO2fdW63/0W7teacmDJmq3+azex4I+ZeP3zCUBRbl0sImPOy9P0aKghMiqQ26FPqY9hKUt9nm96M41jB5/dwidUtuVDrDiSRyaHIVskPwR/9C39NvmjHEv9g62oX6cH3sXUZc7aGDwCPFWQMRaKutybe+RzDSdEOmptb025A7disT5x1a7rVoN7bPNkc/B7rl3TUm1fWjWAk8vAclCI9NNCpptzU9SPLr9xxmoblatpiz1EVp4GHOixXEx8nLQ5c/2DiPmpX+xTh7Vc4xYHdV2oTR1J3fXUGlqEXmqauew6+7zhrczw7nr0Pd2a97hQfsOc0mHwmxLNMC0vaLkqvxDrkzvhgn0e7b3ss1BBpydvGqL1VTubuC4sF25TZUc+ms+nRZHF+crn4dvETxvEvh9xqEg==
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Execute a reactor in the project context"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/project-{projectId}/runReactor/{reactorName}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Runs a named reactor with a JSON body representing noun store input and returns pixel runner output.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}},{"name":"reactorName","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Reactor executed successfully","content":{"application/json":{}}},"400":{"description":"Reactor not found or execution error","content":{"application/json":{}}},"401":{"description":"Unauthorized / invalid session","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

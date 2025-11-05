@@ -1,0 +1,18 @@
+{
+  "name": "docusaurus-plugin-semoss-api-explorer",
+  "version": "1.0.0",
+  "description": "API explorer for SEMOSS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "axios": "^1.11.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.6.1",
+    "@types/node": "^24.3.0"
+  }
+}

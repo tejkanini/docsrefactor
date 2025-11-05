@@ -1,0 +1,102 @@
+---
+title: "Vitest Unit Tests"
+description: "A guide to writing unit tests in SEMOSS UI"
+---
+
+
+# How To Write Unit Tests in SEMOSS UI
+
+
+Unit testing helps ensure code is reliable, maintainable, and functions as expected in isolation. In SEMOSS UI, we use **Vitest** for testing while following a consistent folder structure to keep tests organized and discoverable.
+
+This guide will walk through:
+
+- SEMOSS UI's expected test directory structure
+- How to write unit tests using Vitest
+- Where to find good examples in the existing codebase
+
+---
+
+## Test Directory Structure
+
+SEMOSS UI tests are inside of each corresponding library or package within their own testing folder. The folders are named according to what is being tested and 
+the test file name is the same as the component being tested.
+
+```plaintext
+semoss/
+└── libs/
+    └── renderer/
+            ├── src/
+            |    └── components/
+            |           └── block-defaults/
+            │                   └── block/
+            |                           └── Block.tsx
+            | 
+            └── testing/
+                    └── block-defaults/
+                            └── Block.spec.tsx
+       
+```
+By default, tests must contain .test. or .spec. in their file name.
+
+⸻
+
+**Writing Unit Tests with Vitest**
+
+Vitest is a modern framework designed for speed and simplicity. Vitest uses a syntax similar to Jest where certain
+key words make organizing tests easy.
+
+The documentation can be found here https://vitest.dev/guide/
+
+Here’s a basic example that will test a Block within the SEMOSS drag-and-drop application and test whether the block is correctly 
+rendering:
+
+```plaintext
+
+import { Block } from "@/components/block-defaults/block/Block";
+import { render, screen } from "../utils";
+
+const blocks = {
+	"block": {
+		data: {},
+		id: "block-test",
+		widget: "block",
+		listeners: {},
+		slots: {},
+	},
+};
+
+describe("Block default", async () => {
+	it("Should render the  block", async () => {
+		const { container } = await render(<Block id="block-test" />, {
+			blocks: blocks,
+		});
+
+		const element = container.querySelector("[data-block='block']");
+		expect(element).toBeInTheDocument();
+	});
+});
+
+```
+Key words used within the test:
+	1.	**Describe** groups tests together
+	2.	**It** defines an individual test case and is used when a test "should" do something
+	3.	**Expect** asserts the expected outcome
+
+⸻
+
+**Existing Test Examples**
+
+SEMOSS UI already includes a rich set of unit tests. If you’re unsure how to test something, look around:
+	1.	Go to the testing folder
+	2.	Find the package matching your component, or a related one
+	3.	Open an existing *spec.tsx or *test.tsx file
+
+⸻
+
+**Next Steps** \
+	•   Start by writing a small test for any new component you write. \
+	•	Review existing test files when you’re stuck. \
+	•	Reach out to your team or the CFG AI support group at [CFGAI@deloitte.com](mailto:CFGAI@deloitte.com) if you’re not sure how to test a specific component.
+
+⸻

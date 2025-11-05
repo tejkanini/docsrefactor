@@ -1,0 +1,71 @@
+---
+id: run-pixel-async
+title: "Execute Pixel asynchronously"
+description: "Submits a Pixel expression to run asynchronously and returns a jobId."
+sidebar_label: "Execute Pixel asynchronously"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktv40YM/isDXtwCkmUnjuOoJzcJUBfZ3SCPQxEYxUii7UmkoXZmFNsx9N8XHGkTOZttukWPe9Jj+PhIfuRwB04uLcR3cK6XSqM432BaOUUa5gFkaFOjSv8Zw3WVFMpZIcWl2mAucFMatFaRFo6EqbSQdqvTlSFNlc23QupMGHSV0ax0T8ks60MAVKKRbHOWQQym0t7clHUhAIOfK7Tud8q2EO8gJe1QO36VZZmr1GtG95Yh7cCmKywkv7GeMphxLC/IOAq3LRFioOQeUwcBlIYROIWW9TJD5QUtl0ov+bMVTohylBpe52C2EM5UGAhWEylpSzmKvNEXcuHQcCYgANzIoswRYpavgy6mFzfWGfb72stb+UVfGOxahlPSGlP3C/raxb1imyW9X3+DOgClrVquHKf4PW+zRlSoDLVTC4WmL24tip7GdY9dpwalQyGFxrVoDQsyggrlxIKMcFiUZKTZ9vfgJYuDw6PJ0WE4GSfH4WhyuAjlQB6FEkeTk2SB2clxwljd0/sgT3OF2gmnCnwijWJ2tudqWqBRqYw+4vrvv8g8QM12lfOHVy3Frhpq+bMumTbher0OF2SKsDI56pQyzH6y6ye7/iO76qDDl7ZABm1J2jasOBgMPDn2MPxJibB+xDrMIHhv8j2j24GfrBDD8OAQR0fj4xAnJ0k4PMgOQzk6Goejg/F4OBoejwaDAcOrAxi9hWCmH2WueGY3kfwIBjSGDMTwobJOlNJaobTovZCs9+x4+K3jWy0rtyKjnn4w8q9eby0aYVs6K/btI/E+6wAsppVRbgvx3Q4SaVU6rdwK4rt5PQ+gQLcizl9JPuhS8hlEDe+j1xeURfOIxnpblckhhpVzpY2jaE3mwa6o7KeLZT/DnLiU/ZSKKF0sQ6nCDAuKPpCmXLlVJEv1DRHPsCBxrrOSlHbi9uoC6qDrJo6inFKZr8i6eDKYDP7Z3AXLijN8xJzKgnPKAX9NxzWPt4aRnaQ89wr743i9FDccy3jqcyWuXu7p85eC7M07P8v2RtN3Z8reSPl3rd109hu9ybYW5ANpW3Q6E6dkeLpx5Rokg/6gPwyvP04vr//4dMNaXP5Ceopp6SNuliFs95397eZ1rjuryv+2KbWFcLhxUZlLpRmmJ8OuZekdNJnkxWmPp/MAmCMssdsl0uKtyeuaf3+u0HAnzAN4lEbJhFN0N68DWKHM0HhiP+C2qRZHFN4wDhbPK8bz/t3JpG1MTNMUS/cdZd/Rey14+en6BgJI2u2voIx1OpaD7kcDW+7TtqFp0D45mPZA6m0Hh89Kw3meHlzxuoaghV21v3wk7+lfSmvXZLKOftn+gnpe1/UX0T7wNQ==
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Execute Pixel asynchronously"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/runPixelAsync"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Submits a Pixel expression to run asynchronously and returns a jobId.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["expression"],"type":"object","properties":{"dropLogging":{"type":"boolean","description":"If true, drop console logging after run","example":true},"expression":{"type":"string","description":"Pixel expression to execute","example":"Connect(engine:'mydb');"},"insightId":{"type":"string","description":"Insight identifier. Use 'new' to create a new insight or omit for temporary.","example":"bf235853-86b7-483f-a0a5-ae489bfed97b"},"tz":{"type":"string","description":"Client timezone ID","example":"America/New_York"}},"title":"RunPixelRequest"}},"application/x-www-form-urlencoded":{"schema":{"required":["expression"],"type":"object","properties":{"dropLogging":{"type":"boolean","description":"If true, drop console logging after run","example":true},"expression":{"type":"string","description":"Pixel expression to execute","example":"Connect(engine:'mydb');"},"insightId":{"type":"string","description":"Insight identifier. Use 'new' to create a new insight or omit for temporary.","example":"bf235853-86b7-483f-a0a5-ae489bfed97b"},"tz":{"type":"string","description":"Client timezone ID","example":"America/New_York"}},"title":"RunPixelRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Job submitted","content":{"application/json":{"example":{"jobId":"123e4567-e89b-12d3-a456-426614174000"}}}},"400":{"description":"Invalid request","content":{"application/json":{"example":{"error":"Must pass in 'expression'"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"example":{"error":"User session is invalid"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

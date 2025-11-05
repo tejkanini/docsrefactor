@@ -1,0 +1,369 @@
+---
+sidebar_label:  "Python SDK"
+sidebar_position: 1
+slug: "/semoss-sdk"
+---
+
+# AI Server SDK for Python
+
+Developers can use the AI Server SDK for Python to seamlessly integrate with the AI Core platform, enabling them to leverage powerful AI and machine learning capabilities directly within their Python applications. This SDK simplifies the process of connecting to a AI Core server, managing insights, and utilizing various engines such as ModelEngine, VectorEngine, DatabaseEngine, FunctionEngine, and StorageEngine. 
+
+By using this SDK, developers can efficiently perform tasks such as creating and managing insights, querying databases, performing advanced inferencing, managing documents, and executing custom functions, all while maintaining a streamlined and scalable workflow. This integration empowers developers to build robust AI-driven solutions with ease, enhancing their applications with sophisticated data analysis, genAI, and machine learning functionalities.
+
+
+## Install Dependencies
+
+```Python
+%pip install --upgrade ai-server-sdk
+%pip install python-dotenv
+```
+
+## Server Connection & Insights
+
+Here we connect to the demo instance of AI Core, but you would connect to your own instance. In AI Core, an **Insight** is best described as a temporary space that allows you to create what you want. Put simply, it is a hosted workspace where you are able to upload your app and access your hosted data. 
+
+
+```python
+import os
+from ai_server import ServerClient
+from dotenv import load_dotenv
+
+load_dotenv('../.env')
+# Local creds
+SECRET_KEY = '7d1238af-32ba-4cf4-802a-5afd5b07e618'
+ACCESS_KEY = 'd0283ac7-fb36-4295-b4b8-b011420fd6df'
+connection_url = 'http://localhost:9090/Monolith/api'
+
+# This object creates a connection to the AI Core server
+server_connection = ServerClient(base = connection_url, access_key = ACCESS_KEY, secret_key = SECRET_KEY)
+
+# Check if you are connected to the server
+is_connected = server_connection.connected
+print(f"Am I connected to the server? {is_connected}")
+
+# Initilizing the server creates a new insight which is accessible through .cur_insight
+my_insight = server_connection.cur_insight
+print(f"This is my current insight ID: {my_insight}")
+```
+
+#### Using Python to execute a pixel
+
+This Python code utilizes the AI Core library to create an instance of `Insight` and executes a pixel operation.
+
+```python
+from ai_server import semoss
+from semoss import Insight
+insight = Insight(insight_id = '${i}')
+insight.run_pixel("MyEngines()")
+```
+
+- **Insight Object Creation**: The line `insight = Insight(insight_id = '${i}')` creates an instance of the `Insight` class by passing an `insight_id`. This ID references a specific insight within the AI Core platform.
+
+- **Executing Pixel**: The `insight.run_pixel("MyEngines()")` function call executes the pixel, `MyEngines()`, on the associated insight.
+
+- **Please Visit**: [Frequently Used Pixel Calls](../Understanding%20Development/Java%20Development/Pixels.md#list-of-useful-pixel-calls) for more information about commonly used pixels
+
+
+## Create New Insights
+
+```Python
+# You can create new insights by calling the .make_new_insight() method
+new_insight = server_connection.make_new_insight() # This becomes your active insight
+
+print(f"My current insight is now: {server_connection.cur_insight}")
+```
+
+## Listing Open Insights
+
+```python
+my_open_insights = server_connection.get_open_insights()
+
+print(f"These are my open insights: {my_open_insights}")
+```
+
+## Dropping Insights
+
+```python
+# You can drop all of your insights with the .drop_insights() method and passing in the list of insights
+# Here we drop all of our open insight ids 
+server_connection.drop_insights(my_open_insights) # This will create a new insight id since there must be an active insight
+
+print(f"Here are my insight IDs after dropping: {server_connection.get_open_insights()}")
+```
+
+## Check Attributes
+
+```python
+attributes = dir(server_connection)
+# Find all of the attributes available to the server connection object
+attributes = [attr for attr in attributes if not attr.startswith('__')]
+
+print(f"Here are the attributes of the server connection object: {attributes}")
+```
+
+## Using LLMS
+
+Here's how we can use the `ModelEngine` object to interact with a LLM
+
+### Basic Inferencing
+
+In this example, we create a `ModelEngine` object with specific IDs, ask it a question, and then print out the response along with some additional details about the interaction.
+
+```python
+from ai_server import ModelEngine
+
+# An ID for the specific LLM you want to interact with
+engine_id = '4801422a-5c62-421e-a00c-05c6a9e15de8'
+
+# We need to pass the engine id and an insight id to the ModelEngine object
+llama3_model = ModelEngine(engine_id=engine_id, insight_id = server_connection.cur_insight)
+
+question = "How many ping pong balls can fit into an olympic swimming pool?"
+
+# The ask method sends a question to the model and returns the response
+try:
+    answer = llama3_model.ask(question)
+except Exception as e:
+    print(f"An error occured: {e}")
+
+print(answer['response'])
+
+print("We also get acess to: ")
+print(f"messageId: {answer['messageId']}")
+print(f"roomId: {answer['roomId']}")
+print(f"numberOfTokensInPrompt", answer['numberOfTokensInPrompt'])
+print(f"numberOfTokensInResponse", answer['numberOfTokensInResponse'])
+```
+
+### Advanced Inferencing with Parameters
+
+When working with advanced inferencing in language models, you can fine-tune the responses by adding various parameters. These parameters can control how the model generates its answers, making it more tailored to your specific needs. For example, you can set the "temperature" to make the responses more creative, or provide a "context" to guide the model's tone and style.
+
+```python
+# We can add parameters to our requests such as context, history, max_new_tokens, repetition_penalty, seed, temperature, top_k, top_p, truncate, typical_p
+params = {
+    "temperature": 0.9, 
+    "max_new_tokens": 200,
+    "context": "You are a first grade teacher that uses language and explanations easy for children to understand."
+    }
+
+# Pass your parameters as a dictionary to the ask method using the param_dict argument
+new_answer = llama3_model.ask(question, param_dict=params)
+
+print(new_answer['response'])
+```
+
+### Using Chat history
+
+```python
+
+# We can pass our own history to the ask method
+# You can use as many dictionaries as you want in the history list but each one will add tokens to the request
+history = [
+    {"role": "user", "content": question},
+    {"role": "assistant", "content": new_answer['response']}
+]
+
+# Here we change the context to a college professor and pass our chat history
+params = {
+    "temperature": 0.9, 
+    "max_new_tokens": 200,
+    "context": "You are college professor who provides complex answers backed by science.",
+    "history": history
+}
+
+# Our new question references the chat history
+new_question = "Can you explain your previous answer in more detail?"
+
+new_answer = llama3_model.ask(new_question, params)
+
+print(new_answer['response'])
+```
+
+## Using Vector Databases
+
+When working with vector databases, you often need to add documents to the database so that it can store and retrieve information efficiently. A vector database uses vectors (arrays of numbers) to represent data, making it easier to search and analyze large datasets.
+
+### Adding Documents
+
+In this example, we use a FAISS vector engine to add documents to our database.
+
+```python
+from ai_server import VectorEngine
+
+# Using a FAISS vector engine
+vector_engine_id = 'DEV_VECTOR_ENGINE_ID'
+
+# We initialize the VectorEngine object with the engine id and the current insight id
+faiss_vector_engine = VectorEngine(engine_id=vector_engine_id, insight_id=server_connection.cur_insight)
+
+file_path = "./ai-whitehouse.pdf"
+
+# We can add documents to the faiss index with the addDocument method
+faiss_vector_engine.addDocument(file_paths = [file_path])
+```
+
+### Listing Uploaded Documents
+
+```python
+# Fetch a list of uploaded documents
+my_documents = faiss_vector_engine.listDocuments()
+
+print(my_documents)
+```
+
+### Performing a Nearest Neighbor Search
+
+```python
+query = "How does the document define machine learning?"
+
+# Find the closest match(es) between the question bassed in and the embedded documents using Euclidena Distance.
+nearest_neighbor = faiss_vector_engine.nearestNeighbor(search_statement=query, limit = 3, insight_id = server_connection.cur_insight)
+
+for index, result in enumerate(nearest_neighbor):
+    print(f"Result {index + 1}")
+    print(f"SCORE: {result['Score']}")
+    print(f"TOKENS: {result['Tokens']}")
+    print(f"CONTENT: {result['Content']}")
+```
+
+### Removing Documents
+
+```python
+# Names of the files we want to remove
+file_names = ['ai-whitehouse.pdf']
+
+faiss_vector_engine.removeDocument(file_names = file_names)
+
+print(faiss_vector_engine.listDocuments())
+```
+
+## Using Databases
+
+### Querying a Database
+
+```python
+from ai_server import DatabaseEngine
+
+# An example H2 diabetes database
+db_engine_id = 'DEV_DATABASE_ENGINE_ID'
+
+# Connect to the database by passing the engine id and the current insight id
+db = DatabaseEngine(engine_id=db_engine_id, insight_id=server_connection.cur_insight)
+
+query = db.execQuery(query = "SELECT height, weight, location FROM diabetes WHERE height < 62 AND weight > 200")
+
+print(query)
+```
+
+### Inserting Data
+
+```python
+insert = "INSERT INTO diabetes (height, weight, location) VALUES (65, 200, 'Rosslyn')"
+
+# NOTE you will need to be an author or editor of the database to insert or delete data
+db.insertData(query = insert)
+
+query = db.execQuery(query = "SELECT height, weight, location FROM diabetes WHERE location = 'Rosslyn'")
+
+print(query)
+```
+
+### Deleting Data
+
+```python
+remove = "DELETE FROM diabetes WHERE location = 'Rosslyn'"
+
+db.removeData(query = remove)
+
+query = db.execQuery(query = "SELECT height, weight, location FROM diabetes WHERE location = 'Rosslyn'")
+
+print(query)
+```
+
+## Using Function Engines
+
+A Function Engine is a powerful tool for executing specific functions in a modular, reusable, and scalable manner. It simplifies the process of integrating and managing functions within your application.
+
+```python
+from ai_server import FunctionEngine
+
+# Weather function engine
+weather_id = 'DEV_FUNCTION_ENGINE_ID'
+
+function = FunctionEngine(engine_id=weather_id, insight_id=server_connection.cur_insight)
+
+# Parameters will change based on the function you are using
+output = function.execute({"lat":"37.540","lon":"77.4360"})
+
+print(output)
+```
+
+## Using Storage Engines
+
+Connect to storage resources in a centralized, scalable, and efficient manner. `StorageEngine` simplifies the process of listing files, retrieving their details, and performing other storage-related tasks.
+
+
+### Listing files
+
+```python
+from ai_server import StorageEngine
+
+# Example S3 bucket
+storage_engine_id = 'DEV_STORAGE_ENGINE_ID'
+
+storageEngine = StorageEngine(engine_id = storage_engine_id, insight_id = server_connection.cur_insight)
+
+s3_storage_path = "/my-new-test-folder/"
+
+# A list of the files in the given path
+my_dir = storageEngine.list(storagePath = s3_storage_path)
+
+for file in my_dir:
+    print (f"-- {file}")
+
+# A list of details about the files in the given path
+my_dir_details = storageEngine.listDetails(storagePath = '/my-new-test-folder/')
+
+for file_details in my_dir_details:
+    print (f"-- {file_details}")
+```
+
+## Using Pixels
+
+A **pixel** is a AI Core specific term that references a backend call. It is similar to a standardized API call, though it does not require you to specify the type of API call (i.e POST/PUT/GET/DELETE). The pixel call generally specifies a **reactor** that is being called, and then any input variables that the reactor needs. When discussing pixel calls in this documentation we will also include a sample of the pixel string structure required. 
+
+
+```python
+# You can use the active server connection to run pixels
+
+simple_pixel_response = server_connection.run_pixel('1+1')
+
+print('Simple Response --')
+print(simple_pixel_response)
+
+full_pixel_response = server_connection.run_pixel('1+1', full_response=True)
+
+print('Full Response --')
+print(full_pixel_response)
+```
+
+### Running a Pixel 
+
+```python
+from semoss import Insight
+insight = Insight(${i})
+insight.run_pixel(pixel="LLM ( engine = [ '4acbe913-df40-4ac0-b28a-daa5ad91b172' ] , command = [ '<encode>What is the capital of Connecticut</encode>' ] )")
+```
+
+### LLM Chat with Pixels
+
+```python
+engine_id = 'DEV_LLM_CHAT_ENGINE_ID'
+
+chat = server_connection.run_pixel(
+    f"LLM ( engine = [ '{engine_id}' ] , command = [ '<encode>What is the capital of Connecticut</encode>' ] , paramValues = [ {{ 'max_new_tokens' : 200 , 'temperature' : 0.3 }} ] )"
+)
+print(chat)
+```
+For detailed documentation, please visit [here](https://pypi.org/project/ai-server-sdk/).

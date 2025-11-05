@@ -1,0 +1,9 @@
+{
+    "name": "docusaurus-plugin-reactor-docgen",
+    "version": "1.0.0",
+    "main": "index.ts",
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "path": "0.12.7"
+    }
+}

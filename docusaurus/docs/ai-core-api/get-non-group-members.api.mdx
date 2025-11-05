@@ -1,0 +1,71 @@
+---
+id: get-non-group-members
+title: "List non-members"
+description: "Returns users not assigned to the specified group."
+sidebar_label: "List non-members"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVNtO20AQ/RVrnjdxqFCF/JYWRJGAVlyeUB429the8F7YGadNLf97Nc6NFNqi1C/W7p65njPTAeuKIHsA3XINMwUFUh5NYOMdZHCD3EZHSUsYKXGeE01kKodFwj7hGhMKmJvSYJFU0bdhDAp8wKjFwUUBGVTI196dy+MV2jlGAgVBR22R5ZA9dOC0RYEK6KIABUaCP7cYl6CA8hqthqwDXgbBEUfjKuh7tTUl1DGv7zDaQ6wbYw3/09A4xgojKCh9tJpXVx+P91z5siT8L18zBREpeEdIYvFhMpHfPjH3AyERORpcoLQs947RsUB1CI3JBwrSRxJ89zoDHaOW1AyjpRf3fv6IOUMvn4Ljt4J/0kUS8blF4gMCvwgg/o/eKM6JGn00Pw+qbL8Ci1z7tRAH5XENGaQSIdWFNS4dZJe+qVPCuNiItI0NZFAzB8rS9LuPT1T7MM7Lalxg4w0zjnNv07ysRtqMCrQ+vfLON0YiBQO/D9cpWp+cuSJ44zi5v7kE0dEuTJamjc91U3vi7GRyMvm7u0vBJqe4wMYHKw0TKRHmbTS8vJUurQQ112Tyqcz7rmcSb6NTOQ8YETYYV/oBaLiRl+lF8tlHBAXSmVXoyXgyPhrdXk+/3X75ege9guCJrR74WQ/GpSFOnHcju+3uXv7djufD1s66EsYfnIZGGyd5DN3s1qyvt5yCgXdQq4Uj/9fczxRI38Wo6+aa8D42fS/Xq5kWRRSG9LzBArJSN4QKnnC5t8YWumklp4HYP6D3Ntd7DDbL6j3Y7TbagWdyiEbQkD3MegU16gLjUNHKaprnGF5avRo78bIdrPOzO+j7XwQIJio=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List non-members"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getNonGroupMembers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns users not assigned to the specified group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

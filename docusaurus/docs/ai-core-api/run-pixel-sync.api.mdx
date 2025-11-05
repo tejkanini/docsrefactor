@@ -1,0 +1,71 @@
+---
+id: run-pixel-sync
+title: "Execute Pixel synchronously"
+description: "Executes a Pixel expression and returns the full result in the response."
+sidebar_label: "Execute Pixel synchronously"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVt9v2zYQ/lcIvmQDJMtt0tXVnrIkwAxkbRAnD0NgDDR1sthQPJakYjuG/vfhKCWRnXQJhj72ST/Iu/vuu++O3PIglp7nN/zMLJUBdrYG2QSFhs8TXoCXTtn4mfNuCTwT7EKtQTNYWwfeKzRMmII5CI0znoUKWNlozRz4RgemTPzlwFs0HkY84WjBCXI7LXjOXWOiw9nGSJ5wB98a8OEPLDY833KJJoAJ9Cqs1UpGw+yrJ1Bb7mUFtaA3slMOCsrmCRrlETYWeM5x8RVk4Am3jgAEBZ7sCof2HJdLZZb02W9eIGoQhu+zMC1ZcA0kjMyYRONRA9OdPRNlAMdcQ3awFrXVwHPa3yZDTE9hfHAUdz/KM4IDMuj4H3rmJ2gMyPALxOrlB/WmWBz8+jtvE66MV8sqEMOvRZt2W5kqwARVKnAjdu2BHRhYHVBo6UAEYIIZWLHeMUPHsFaBlehYgNqiE24z2oG3KN8ffph8OEwnvy0+pkeTwzIVY/EhFXA0+bQoofj0cUFYw/3rIE+0AhNYUDXcowE2Pd0JdVyDU1Jkn2H1z9/obnlLflWIi5e9wi47acW1oZjW6Wq1Skt0ddo4DUZiAcVPdf1U1/9UV5sM9NIX6GH+RVW8H4+jOF4sSyxEwZO3j759CT4C33IfRGg8Jd5ICd5T5iL0kqb5vBeY5IBNsE2fR+8qop7FV3bZZ/I8g/0NCb8TuvkBONqI5egl1qbmTmhFx0/H/mu09Z7ePfd0bUQTKnTq/g3sd4g8yMapsOH5zZYvhFfyuAkVz2/m7TzhNYQK6YSzGIFZQWs86/opezj3OPlxd+B8dNM4zXNehWB9nmUrdLe+QjuS5XJUgEYVAowk1pksl6lQaQE1Zn+hQa1ClQmrnmn7FGpkZ6awqExg15fnvE2GYfIs0yiFrtCHfDKejP/b3TntZadwBxptTQxRrg9MzEiUnVwGfDxKlOJRvnEX9TDtid1EvF4+Hf1nTxLeGaFxPO5Mu++OqZ0p9bZp0Q2LF9qdfJUYE+m7/njKTtBFjYPrkYxH49G7dPb5+GL255crsqLK1yK2qxEx4/4a1d+h/MbIyqHBxuvNPtWDy8+PvH31pQiwDpnVQhkCGuWw7SV6wzsu6Tb2INJ5wkkgtLjdLoSHa6fbln5/a8BRB8yp3Z0SC+LnZt4mvAJRgIuqvoVNVyrKJ70iCI/T4Q1nMSm2c3EsJdjwHePYnDutd/FldsUTvuhvkzUWZDPwnAw/OthiV7OdRpP+Scn0C8JsBjgiK53grz04Knfb8qSH3fS/Yiav2V8I71foioG97X/xdt627b9N2xJ4
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Execute Pixel synchronously"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/runPixel"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Executes a Pixel expression and returns the full result in the response.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["expression"],"type":"object","properties":{"dropLogging":{"type":"boolean","description":"If true, drop console logging after run","example":true},"expression":{"type":"string","description":"Pixel expression to execute","example":"Connect(engine:'mydb');"},"insightId":{"type":"string","description":"Insight identifier. Use 'new' to create a new insight or omit for temporary.","example":"bf235853-86b7-483f-a0a5-ae489bfed97b"},"tz":{"type":"string","description":"Client timezone ID","example":"America/New_York"}},"title":"RunPixelRequest"}},"application/x-www-form-urlencoded":{"schema":{"required":["expression"],"type":"object","properties":{"dropLogging":{"type":"boolean","description":"If true, drop console logging after run","example":true},"expression":{"type":"string","description":"Pixel expression to execute","example":"Connect(engine:'mydb');"},"insightId":{"type":"string","description":"Insight identifier. Use 'new' to create a new insight or omit for temporary.","example":"bf235853-86b7-483f-a0a5-ae489bfed97b"},"tz":{"type":"string","description":"Client timezone ID","example":"America/New_York"}},"title":"RunPixelRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Pixel executed","content":{"application/json":{"schema":{"type":"object","example":{"status":"success","data":{"result":"Pixel execution output"}}},"examples":{"Sample Response":{"description":"Sample Response","value":{"status":"success","data":{"result":"Pixel execution output"}}}}}}},"400":{"description":"Invalid request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

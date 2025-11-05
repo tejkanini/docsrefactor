@@ -1,0 +1,71 @@
+---
+id: search-term
+title: "List users"
+description: "Returns all users filtered by an optional search term with pagination."
+sidebar_label: "List users"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMlu2zAQ/RVhzozlFEER6GY0QRsgXZAFPQQ+0NJIYsKtw5FTV9C/FyM5dpZuaKuLQPLNvOF7M+yBdZOguAHdcQtLBRWmkkxkEzwUcIHckU+ZtjbrElLKamMZCatstcm0z8KI1DZLqKlsM0Zy2b3hNou6MV7L6QwUhIg0Ls4qKGACXyE5UBA1aYeMJHX04LVDKGDi+RyoAgVGavnSIW1AQSpbdBqKHngTBZqYjG9gGNQu2hpn+LeBxjM2SKCgDuQ0T1uvj56kCnWd8J9yLRUQphh8wiQRr+Zz+T1V+npUl5DJ4Brl0mXwjJ4FqmO0phz1y2+T4PuXFWgiLaUZRpce7YfVLZYMg3wKjuaHPyD3Yn8g8+2vmJ8yOOQ2iMvNKFvU3EIBuTDkunLG59JJeYO8sHa8tuiJtH7ogI4sFNAyx1Tk+X2gu9SGOCvrZlahDYYZZ2VweVk3B9ocVOhC/j74YI0wRAPPu/gEXchOfRWD8ZxdX5yD+LunKfLchlLbNiQujufH81+nOxdsdoJrtCE6EUosTlh2ZHhzKepMRq90MuVCBmuvlfA99I+sR4w0HBhfhxFo2MrJ4ix7EwhBgSgzUc9n89nhweWHxafLdx+vYFAQQ2KnR1+2DXtuEk/D+rzyfu/s/5vs7b0Yv3IerTZeqhq17bfebx8XBaP7oED4QMHjDlgqEPUF3PcrnfCa7DDI9jRx0heVSXplsYKi1jahgjvcPH8p1tp2Us7o8E8CHh6HP8Hupn8PXsqCjKChuFkOClrUFdJY4xS1KEuMj6NejJFk2Q3K29MrGIbvj13laA==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/user/getAllUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all users filtered by an optional search term with pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filterWord","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

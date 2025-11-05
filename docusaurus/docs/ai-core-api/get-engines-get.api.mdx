@@ -1,0 +1,71 @@
+---
+id: get-engines-get
+title: "Get engines"
+description: "Returns engines with optional filters."
+sidebar_label: "Get engines"
+hide_title: true
+hide_table_of_contents: true
+api: eJylV01v2zAM/SsCz26cdjsUvhVr1wVr16Ef2KHoQbGZWI0seRLTNgv83wfaTvqRxLHdUxCLfI8mn0h6CSSnHqJ7kHNK4SGABH3sVE7KGojgGmnujBdopsqgF8+KUmHLU6nFRGlC5wcQgM3RSX48SiCCKdJZ5XF+dgsB5NLJDNkWovslGJkhRFCBjhIIQDHZ3zm6BXwM4XtJIsYL8cbexylmEqIl0CJnLE9OmSkURfAB/naRo+/GIKj2acNS5eCPdXte4wali1NB6LKWyFplippBL2qTNnB2MvG4B+9qZdMGMEOSP3GxJ7mXSFLMcOEFWaFMrOcJtiQwlp2b4c9eSkTBwSSytG4DPffobpuRR1Wsgk0FORnPGKSL9DaVveErnZN8oAgzvw2znZ4/hbtbwb1VuuGoDOEUHQQwsS6TVD36ctRCof2wdonzU5naLsgNyLG1GqXZL7gGz4cAHPrcGo9lVEfDIf98EH/dlR2SU/iEXMDYGkJDbCzzXKu47Mrho2eP5SalHT9iTPyeRQBfh4ebLHeGZ4N16l8LggonQ0ptPQjK9k8pRBAyTiiTTJmwEnP4Oig4HeieViNi7jREkBLlPgrDZ+tmPrX5IJ5MBwlqq4hwENssjCfTA6kOEsxseGmN1YopcrVxnU8xs+LMJLlVhsTd9QVwdV5pojDUNpY6tZ6i4+HxsBnugm3FKT6htnnG+eCSeYznTtHihrNcFW4svYpPeLi+5pz5VuUvy842LBdQZmJLQ0WaT05G4pt13DA5MxX1cDAcHB7c/Dr5ffPj6haKAHLrKZNlfWu5nSOtZvbH0JevFWw/3uvACV8ozLVUhmnL5C3r6tYbRABlfSGo2xUEb5YB3i84v2y9XI6lxzuni4IfV1eCK58oL8caE4gmUntsiH7rZrA10hku3nflJ6nnbFaKoD/jelPYy7pq2z2J328PDWzvmnlPstVW0UCz6vo9GdZ7RgPFehr05NixeDQwvpkZPTm3bCMNfOtx0pNt14bSQLkaQ82MHa9Ld5131moX1XWST8fKdyrcrpQ/8B+n2Bii+4cigBRlgq5sf5XTSRxj/jb6jVHLKOsxy19ZRfEfPc2sLQ==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get engines"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/engine/getEngines"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns engines with optional filters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"engineId","in":"query","description":"Filter by engineId","schema":{"type":"string"}},{"name":"engineTypes","in":"query","description":"Filter by engine types","schema":{"type":"string"}},{"name":"filterWord","in":"query","description":"Search term","schema":{"type":"string"}},{"name":"limit","in":"query","description":"Limit","schema":{"type":"string"}},{"name":"offset","in":"query","description":"Offset","schema":{"type":"string"}},{"name":"metaKeys","in":"query","description":"Meta keys to include","schema":{"type":"string"}},{"name":"noMeta","in":"query","description":"Exclude metadata","schema":{"type":"string"}},{"name":"userT","in":"query","description":"Include user tracking","schema":{"type":"string"}},{"name":"engineId","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"engineTypes","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"filterWord","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"metaKeys","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"noMeta","in":"query","schema":{"type":"boolean"}},{"name":"userT","in":"query","schema":{"type":"boolean"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Engines retrieved","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

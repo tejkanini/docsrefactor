@@ -1,0 +1,71 @@
+---
+id: download-project-image
+title: "Download project image"
+description: "Returns the representative project image file (auto-generated or uploaded)."
+sidebar_label: "Download project image"
+hide_title: true
+hide_table_of_contents: true
+api: eJx9kk9v2zAMxb+KwNOGObY77FD4FqwFFqDbinY9FTmoEmOrs0WNotN1gb/7QCfp2v07GfKj3hN/5A7EthmaW7hkukcnsC7AY3YckgSK0MAVysgxG+nQMCbGjFGshC2atL9jwmBbNJvQo3llR6FFixHZCnpDbMbUk/XoX5dQACUVAsWVhwY8PUQVD+Er9YECkmU7oCDry3YQ7YDQwCFt5aGAoC9LVjoogPHbGBg9NMIjFpBdh4OFZgfymPRiFg6xhWlaa3FOFDNm1d/WtX5e9rv61QzPraOHqYB3f6s9ZyY2GaMPsd1jgAIcRcEoWm5T6oObG67us97ZTdPsdvKn2020o3TE4Qf6f9uQE5RFFkY7qF3xQs3b9s33od/nTAVkdCMHeZxB3tkc3HKUDprbtdIYUDrSQbQoM3eVoDqQXuyekE/HfzOd6jg30ADeHgc1cg8NdCIpN1X1QPw1d5RKt2lLjz0FESwdDZXbtAsbFh4Hqj5SpD5IV9kU4PfdO8OBzHn0iUIUc3N1AVPxPKapqp6c7TvK0pzWp/X/7S601pzhFntKg7JVCEdE17o3+8V4BuppizQPDtul57kGlHGIG5oLg/SqLFfmPbFugpLZR9dlXZ4srj8tL68/fP4C0/QTqik3Aw==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download project image"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/project-{projectId}/projectImage/download"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the representative project image file (auto-generated or uploaded).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Image file returned"},"400":{"description":"Error sending image","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/octet-stream":{},"application/svg+xml":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

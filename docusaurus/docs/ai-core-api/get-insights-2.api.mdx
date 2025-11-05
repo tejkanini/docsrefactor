@@ -1,0 +1,71 @@
+---
+id: get-insights-2
+title: "List insights available to the user"
+description: "Search and list insights optionally filtered by project, search term, and pagination."
+sidebar_label: "List insights available to the user"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsCz2rsFjsUvgVrsQXoPrC0pyIYFJm21cqSJjHZMsP/faDjfLXY0BaYL4ak90Tq8ZEdkKoTFPegVtTAQkKJSUcTyHgHBcxRRd0I5UphTSJhXDJ1Q0n4AaGs3YjKWMKIpVhuRIj+ATVJkbZEwtjKgR5UbZxi0gQk+IBxWMxKKKBGmo0Xf78ACUFF1SJh5Mw6cKpFKGC8e1aCBMPJ/Vhh3ICEpBtsFRQd0CYwMlE0roa+l3vyNp9bjO1b2Na0ht5C9FWV8BXMhYSIKXiXMPH5RZ7z77QoO61EhaQbZD20d4SOGKtCsEYP4mYPiQnd84AqRsWZGMI2He37JUsMPX8S3uXnz6PfObaKj+Y3lsJHYdxaWVOKhCkx4vXJnAZtkRo/umLwAjVQQMZBs9F+2ZFhWE6M651XVtFCAQ1RSEWW/fTxMTU+THRVT0q03hDhRPs201V9psxZia3PPnnnraEmU8HA0w64wtaLa1cGbxyJu283wOU9hCmyzHqtbOMTFZf5Zf7v624YK65wjdaHllXimifUq2hoM2dptpVfqmT0lJvyIBTH29mH1wOG/QbGVX4AGrJ8Mp2J9z4iSGBltqHzST45P5t/nn6df/xyC72E4BO1aijK6NebkyZXa2WsWloU5AU1KFYJ49MndYd6/7dxMb6f8BdlwSrjOPuhBt1okHGAsRJDSJDHU4UHGxeIcV23VAnvou173t72JFunNInfWkJRKZtQwiNunoydtbIrTmTwwF/wJ5PmJYTdcHkJdj9PDuAFL6JhNBT3i15Cg6rEOLxpy5pqjeGY9awt+ZZ94324voW+/wMaChis
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List insights available to the user"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/insight/getInsights"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Search and list insights optionally filtered by project, search term, and pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"string"}},{"name":"offset","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Insights fetched","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized or invalid session","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

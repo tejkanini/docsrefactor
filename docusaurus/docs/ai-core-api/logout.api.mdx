@@ -1,0 +1,71 @@
+---
+id: logout
+title: "Logout from specific provider"
+description: "Logs out the user from the specified authentication provider"
+sidebar_label: "Logout from specific provider"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsCTxvgxGm3Q+FbthZbgewD/TgVOSgybQuVRVeis2WB//tAx8nSpela7GRIfhQfHx+5BtZlhOwOpi1X6NkazZY8zBPIMZpgm/6YwYzKqKhlxRWqNmJQRaC6P8UGjS0s5ko/ekQ1gZY2xwAJUIOhv7zMIQNHJbUMCTQ66BoZg3BYg9c1QgZ7cVZyN5or+JvQ9GiugA+tDZhDxqHFBKKpsNaQrYFXjbwfOVhfQgLo21qKd2S0gwRKotIhJFBbEyhSIRxLy1W7kBruWUMCUdeCnc5mMO+6ZMc6t1EvHF5hbgMa3pJ/aDGsDthfFqonp4aoqMIQp3TBGNROogP2CyKH2vdPFrp1DFmhXcR9LkcUfKkyryjrKL2um0vC2JCPGAVwOpnI58BX4qrYGoMxFq2DLoF3k9ND5JaBYhrUUbdXM4G/f+rhDzpXUi9GViPlaWNa61XEGAXSB54cBt56sTEF+wtzUQJq5IrEtiVuPMsVZJAKKt0QSddbwTuRBMNy6+g2OMigYm5ilqY/KNzHipqxKcpxjo4sM44N1akpypG2oxxrSr+QJ2e5SnVjD4xzjjWpC583ZP1WgP00WZr2bq4ocnY2OZs8/9xMsOocl+ioqdEzSNsimjZYXl1LczfNW+hojczcXqsl39YCfesF00tmfUE90LKTP9NL9ZGCTJYos0k9GU/GJ6Prr9Pv15+/3Ug7Gopcay+Bg/kGd/SrZlgzZn/UHxWzBkOepYb/XldDgYw/OW2ctr1bepHXQ//vQKIh+bPLsl38PAGRX0Dr9UJHvA2u6+R6MzVijGGs8mF4nynl5aviSdb3uHpyipfatYLu/XPA5t9RczkEK/9fWdCbq2ENvVXHSA+X2q/2c25p7YTu5vvj+eniBrruN+ywWQA=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Logout from specific provider"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/logout/{provider}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Logs out the user from the specified authentication provider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"provider","in":"path","description":"Authentication provider","required":true,"schema":{"type":"string","enum":["local","google","microsoft","github","okta","saml","ALL"]}},{"name":"disableRedirect","in":"query","description":"If true, disables redirect after logout","schema":{"type":"boolean","default":false}},{"name":"provider","in":"path","required":true,"schema":{"type":"string"}},{"name":"disableRedirect","in":"query","schema":{"type":"boolean"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Logout successful"},"302":{"description":"Redirect to logout URL"},"400":{"description":"Bad request - no user in session"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

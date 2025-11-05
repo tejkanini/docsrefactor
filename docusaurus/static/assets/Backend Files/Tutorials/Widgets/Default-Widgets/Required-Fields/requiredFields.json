@@ -1,0 +1,34 @@
+[
+    {
+        "query": "Database(\"2555ec1b-e1a2-4905-91e0-022dc57fc564\") | Insert (into=[Title__Title,Title__MovieBudget], values=[(\"<Title>\"),(<Movie__Budget>)]);",
+        "description": "The ability to make certain fields optional. By default all fields are required.",
+        "params": [
+            {
+                "paramName": "Title",
+                "view": {
+                    "displayType": "freetext",
+                    "description": "",
+                    "label": "Movie Name"
+                }
+            },
+            {
+                "paramName": "Movie__Budget",
+                "view": {
+                    "displayType": "number",
+                    "label": "Movie Budget:",
+					"description": "This is an optional value! The database will insert this as NULL if left blank",
+                    "attributes": {
+                        "multiple": false 
+                    }
+                },
+                "model": {
+                    "defaultValue": 0,
+					"min": 0,
+					"max": 10000000
+				},
+                "required": false
+            }
+        ],
+        "execute": "Submit"
+    }
+]

@@ -1,0 +1,75 @@
+---
+id: get-user-apps
+title: "Get apps (legacy)"
+description: "Returns engine settings for database-type engines. Deprecated: use /auth/admin/engine/getEngines with engineTypes."
+sidebar_label: "Get apps (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVE1v2zAM/SsCTyvgxOmwQ6FbsHZdge4DbXMqclBkxlYrS5pEp8sM//eBttN0TVHktpMh65F85HtUC6TKBPIeVEMVLDMoMOloAhnvQMINUhNdEuhK41AkJDKuTGLtoygUqZVKOKFtwBGRpuIcQ0StCAspmoQi58y5Kmrj8gGUl0gXA1w8GarG2LttwDSFDHzAqJjAVQESSqRFwjgPIUEGQUVVI2Fk0i04VSNI2FG5KiADw8R/NRi38LqdL8YSRrHain2E+BAxIB8tnkAGSVdYK5AtcF8gIVE0roSuy46odxCtYlR8YQjr9FbWbplBxBS8S9gDPs5m/PmXObcvIlI0uEGuqr0jdMRIFYI1up9Y/pAY3h7Pw68eUBPz6LoMPs1OD2svHEvoo/lzROUhT/FsApAUG8ygRqr8qGevI1Ug4aU5VAjsjFHohHGzU7mJFiRURCHJPH/y8TFVPkz1upwWaL0hwqn2da7X5USZSYG1z795563h5MEc+OAcay8uXBG8cSQWN9fA4u7LyDy3Xitb+UTybHY2ez/dNWPFOW7Q+lDzbFjUhLqJhra3LMUg7Uolo+e8aXsBuN7OOHzuMew2MG7te6AhyzfzK/HZR4QMeDJD6dl0Nj2d3H6f/7z9+uMOugyCT1Sr3gSjWy+RhGL/fLBYKr09ed1Au9f0/2z8OArC35QHq4zjRno52tEp4wOVQZ+Wv4GntvPLMgPWinFtyxQX0XYd/x4Wk11UmMQ7XoBcK5vwnRkc80y8SfkRt69fh42yDQN7hx1QeDdgyYdoOALk/bLLoEJVYOy7GSLnWmOgF1EHG8lZnnfv8uIOuu4vKDsN2g==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get apps (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/app/getApps"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Returns engine settings for database-type engines. Deprecated: use /auth/admin/engine/getEngines with engineTypes.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"databaseId","in":"query","description":"Filter by databaseId (repeatable)","schema":{"type":"string"}},{"name":"databaseId","in":"query","schema":{"type":"array","items":{"type":"string"}}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Apps retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

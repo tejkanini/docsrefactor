@@ -1,0 +1,71 @@
+---
+id: get-num-projects-for-group
+title: "Count projects for group"
+description: "Returns the number of projects assigned to a group, with optional filters."
+sidebar_label: "Count projects for group"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVFFP2zAQ/ivWPZumTGhCeeuAMSTG0IAn1Ac3uSYGx2fsC6yL8t+nSwulMBiq9hTF/r77znffXQdsqgT5NZiWa5hqKDEV0Qa25CGHn8ht9Elxjcq3zQyjorkKkW6w4KRMSrbyWComZVQVqQ1aPViuFQ0RjFNz6xhjGoEGChiNHJ+UkEOFfNY256tQXykeCx00BBNNg0KC/LoDbxoUuNyelKDBSmJ3LcYFaEhFjY2BvANeBMEljtZX0Pd6k3op11uQE5pY1JcYm23Y5N1iEkL6J3dG5NB46PuphogpkE+YBPBpPJbPZl8OqPWs4tAdlKIU5Bk9C9KE4GwxFDq7SQLvXutZz1hhBA1zio3h5dHnPej7vtew9zfRL6ZUEe9aTLyFIs2k0U/xd1/Hv/JiQor291ZPeibQa2iQa1r5bDAV15BDJgqZKRvrs8EW2Zs2TBjvHz3YRgc51Mwh5Vn2QPE21RRGxbwalejIMuOooCYr5tWOsTslNpR9J0/Oilqw8HKuDrEhdeTLQNazuvp5CmKatUyeZY4K42pKnO+P98fvhzsVrDrEe3QUGima2Chh0UbLiwup1NJMM5NsMZFRX9dN9B4tOVhRMOJisH5OA9Cyk5vJiTqgKGMklVlKj0fj0e7Oxdnk/OLbj0voNQRK3JihR6spWLr1aWvMKS53xct3dOue/9/Ns3op4y/OgjPWS55DtbuVM1YLUMPgDdDwmOAb/phqkN4IsetmJuFVdH0vx8sRF9eUNpmZwxLyuXEJNdziYmOT3RvXSl5D899Dr5bXR/Ab++ojhGcrag2fyk+0gof8etprqNGUGId3LXmTosDAz1ivhlSiPI3h8dEl9P0fML826A==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Count projects for group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getNumProjectsForGroup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the number of projects assigned to a group, with optional filters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"groupType","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"onlyApps","in":"query","schema":{"type":"boolean"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Count returned","content":{"application/json":{"schema":{"type":"integer","format":"int64"}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

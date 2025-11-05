@@ -1,0 +1,67 @@
+---
+id: get-all-user-databases
+title: "Get all user databases (legacy)"
+description: "Lists engines a user has access to. Deprecated: use /auth/admin/engine/getAllUserEngines with engineTypes."
+sidebar_label: "Get all user databases (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9U8Fu2zAM/RWBpw1QY3fYodAtWIqtQLcWS3sqcmBkNlYrW5pEp/MM//tAJ22yohh2mi8WKPJRfO9xAMZNBnMH2HENKw0VZZtcZBdaMHDpMmdF7ca1lBWqLlNSNWaF1lLOisNMLSgmsshUGblXhUAVWDWuLXaVxYZ47v1tpnS+h3pyXO9xb/pIeQYaQqSE0viiAgOHmgUyrjFTBg2JcgytnM0AH8pSfn8+WSpU9VyiEnFytKUKNNjQMrUsNRijd3bqVjxkKRwg25oalBP3kcAApoQ9aHBMTT6Kh/UDWYZRPg0fy9M3XtEKCyG5X//QeYdTvfAIhlNHGhriOggXMWQGDRG5BgPHBD8PWrxNV6a0pSQCD9AlDwZq5phNUTyF9JjrEGf2fjOryAfHTDMbmsLeb07QnVTUhOJraIN30i06eG2OBTVBnbdVDK5ldfv9EkZ93MYUhQ8WfR0ym7PyrPw73KXkqgVtyYfYCFvjSiawXXLcL0WcnexrzM7Oxa8HSaSfzDtlgdnlgNDq2vswJTr2cjO/UJ9CItAgzOxal7Nydnqy/Da/Xn65uoFRT4w3ONmixQnxM7FC73crcPDXO08btP371+MMB83/7xbtCWH6yUX06FoZZxJl2Btov+waJnR5+H4a0G9u3UqDSCiFwyCh2+THUcI/Oko9mLuVhi0mh2th+G41aqgJK0qT7x6pF9qtpSgm3qLvpuV6vQei9ovjr6+WNzCOvwFo9Juv
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get all user databases (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/database/getAllUserDatabases"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Lists engines a user has access to. Deprecated: use /auth/admin/engine/getAllUserEngines with engineTypes.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User databases retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

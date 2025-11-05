@@ -1,0 +1,75 @@
+---
+id: image-download-1
+title: "Download database image (legacy)"
+description: "Downloads the database image for the specified database. Deprecated: use /e-{engineId}/image/download."
+sidebar_label: "Download database image (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUl1v00AQ/CvWvuLYCeKhurdAKhGpfIjQp6pCl7uNfWDfHnfrlBD5v6N144QotMCTZe94ZnZ29sC6SqDuYKFZr3XC7NpXziPc52AxmegCO/KgYEEPviFtU8Y1ZnaEu1ZXmG0oDp9TQOM2Du0RUGQLDBGNZrQq6xJmJU72OIgsbV8O/5f2QF5ADhQwahFdWlAwzEftLzPIIeioW2SM4nsPXrcICka9pYUcnBgOmmu42OLo26JnsRohh4jfOxfRguLYYQ7J1NhqUHvgXRD2xNH5Cvo+/7vgv5PdCzgF8gmTzF9Op/I4d7wcAh4DQlEz5Bk9C1aH0DgzxFWSYeRJ4oi6ldlTwjlsKLaaQcHaeR13stcZU9pWL360zf+SCM2rP+3wWttMYsHET9v/mgS7P7DMLlluve64puh+PpfCiaaX44/dO14DTRcd74burHVyZt5xDeruXs7RItcktauQh6rJCEodwmR/OngvH5ZnxQVhjtuxlF1sQEHNHJIqyweK31JNoTCbqrDYkGPGwlBbmk010W5isaXyHXlqHNelDu6yt9hSdu1tIOc5u/10A1LFk4wqy4aMbmpKrK6mV9Pn6W4Emy1wiw2FVlKU7cdsVnLzx0r+ltCxAaIHh17L+4AZOuT8hgag40Ym82X2hiJCDpLMo/S0mBazyer9/OPq7YfP0Pe/AEcHkWw=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download database image (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/app-{databaseId}/appImage/download"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Downloads the database image for the specified database. Deprecated: use /e-\{engineId\}/image/download.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"databaseId","in":"path","description":"Database identifier","required":true,"schema":{"type":"string"}},{"name":"databaseId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Image downloaded","content":{"application/octet-stream":{"schema":{"type":"string","format":"binary"}},"application/svg+xml":{"schema":{"type":"string","format":"binary"}}}},"400":{"description":"Bad request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

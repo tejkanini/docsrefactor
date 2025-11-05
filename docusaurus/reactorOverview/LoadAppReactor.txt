@@ -1,0 +1,19 @@
+Reactor Name
+LoadAppReactor
+
+Description
+Set the context for the insight in order to have access to app assets including custom reactors and python scripts
+
+Required keys
+PROJECT
+
+Key description
+PROJECT: The unique id for the project/app
+loadPath: Boolean if the path of the project should be loaded into the users process
+
+Optional keys
+loadPath
+
+Usage
+LoadApp(project="myProjectId", loadPath=true)
+LoadApp("myProjectId", true)

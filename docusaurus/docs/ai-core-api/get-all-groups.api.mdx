@@ -1,0 +1,71 @@
+---
+id: get-all-groups
+title: "List groups"
+description: "Returns groups matching an optional search term with pagination."
+sidebar_label: "List groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMlu2zAQ/RVhzozlFEER6OYmQRogXZDlFPhAU2OJCbeQI6euoH8vhnLsLN2QVhdB1Jt5wzdvpgeSTYLqBmRHLcwF1JhU1IG0d1DBBVIXXSqa6LuQCitJtdo1hXSFzxhpioQyqrYgjLZ40NQWQTbaSf47AQE+YMwfZzVU0CDNjDnN6UBAkFFaJIxcQw9OWoQKxoxXGC0I0FzHfYdxDQKSatFKqHqgdchQito1MAxiG2201fTHQO0IG4wgYOmjlTQevT94lsovlwn/KddcQMQUvEuYOOLddMqv5yqPchQRKWpcYQ0ClHeEjhgrQzBaZQnL28QB/esSZIySa9OENj0594tbVAQDPwIOfsb+QdZFxPsOE72B+AkB599/nf/asbd81N/fdLPnN7BIrd8YKfuHWqigZIZS1la7Mlu1bJC2JksYV48O66KBClqikKqyfPDxLrU+TNSymdRovCbCifK2VMtmT+q9Gq0vP3nnjWaCoOHlhByj9cWJq4PXjorri3Ng/+xoqrI0XknT+kTV4fRw+vt054wtjnGFxgfLOrGFEqoualpfsjijkRYyaTXjod1JxXyP/uTvjGFDg3ZLn4GaDP+ZnRVHPiIIYGVG6ulkOtnfu/w8+3r58csVDAKCT2RlbstmIM51os0yeFl6v+vs/1gbmysRfqMyGKkdF5Rl7Tdd3+wsAbnvICCz8Xvb+7kA1p2xfb+QCa+jGQY+HmeZHVHrJBcGa6iW0iQUcIfrlztoJU3H1eTe/iLgce38DXa7V3bgOX9EzWiobuaDgBZljTHXOEbNlMLwNOrV/HCW7YScnlzBMPwARDYD5g==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getGroups"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns groups matching an optional search term with pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Groups retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

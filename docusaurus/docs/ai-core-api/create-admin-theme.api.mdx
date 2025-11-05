@@ -1,0 +1,71 @@
+---
+id: create-admin-theme
+title: "Create admin theme"
+description: "Creates a new admin theme (admin only)."
+sidebar_label: "Create admin theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWBpw1Q4nTYofAtazesQNcWS7tLkIMiMbFWW1IlOWlm6N8Hyl6Xpu3anWxL5ON7fKQ7iGIdoJzDdYUNBlhwUBik1y5qa6CEE48iYmCCGdwyoRptWKRY9q7/sKbevR8DB+vQC8o6U1CCzHlTCsnQwMHjXYshfrJqB2V3UOeL9Q1TIgq21bFiRjTI2c9gDWc6TGXUG4KQ1kQ0kdKFc7WWuWBxP9put6OV9c2o9TUaaRUqCgqywkbQW9w5hBJC9Nqs4VBlpsh6zoxwIKXUM9aeoKJvMR8EZ03AQJAfJpOnOvaR1MuMSRmUXa7y8TmcH6LWKscy65k2OjL03vq3Qh49hbywkYk2VtbrX6hYwQwdkENvAU0cAsrW67iDct7BUgQtp22soJwv0oJDg7GyZL2zIQIHJ+gOijwtoXhmIAL6DfqQ4VpfQwlVjC6URbG1/jZU1o3laj1WWFsdI46lbQq5Wo+EHilsbPHNGlvrWBXC6SeWnmJj2WejnNUmspvv55D4fpmyKGorRV3ZEMvjyfHk33DnFMtOcYO1dQ11ijT/6chM9utTPurLw9RRPdKbo6DsY4Baqs3K5kAda7qZnrET66k51Jm+9GQ8GR+NZhfTq9nXy2tIPHe4EWQM0KI8rOn+fh4q6P5a/B9LPQiIeB8LVwttqHxuYjcYPIfeYJqhQ4sXHKi9FNR1SxHwxtcp0fFdi57maMFhI7wWS1I/XyQOFQqFPs/ELe6IbE97dE1UKLxuidLr+09+9xBTKdHFF5LziD8a4KvL2TVwWA4/qsYqytlD5vsfPW3x2PHeYT48ScxwIcxuj0fuSj8uNwE9mZkS8IF2OxxlJa/lX4kQttarvXw3HEFapJR+A7tODVE=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create admin theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/themes/createAdminTheme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new admin theme (admin only).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Form data with name, json, isActive","content":{"application/x-www-form-urlencoded":{"schema":{"type":"string","description":"Theme create form"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Theme created","content":{"application/json":{}}},"400":{"description":"Validation or init error","content":{"application/json":{}}},"401":{"description":"Not authorized / not admin","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

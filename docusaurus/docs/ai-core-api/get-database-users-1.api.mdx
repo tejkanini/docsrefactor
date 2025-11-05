@@ -1,0 +1,75 @@
+---
+id: get-database-users-1
+title: "[LEGACY] List database users"
+description: "Legacy endpoint. Use /auth/engine/getEngineUsers instead."
+sidebar_label: "[LEGACY] List database users"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVF1vm0AQ/Ctony9AqqiKeLMSK43kfqhJHqrIqs7HApfA3fVucesi/nu1gO066YeVPNkcM7vL7Nx0QLIMkN2DbKmCpYAcg/LakbYGMlhgKdUmQpM7qw3F0V3AKGFsgqbUBpMSaT78uwvoQ6RNIJR5DAKsQy+5znUOGZRIl5LkSoYR+fUUBDjpZYOEnkfowMgGIYN8wl3nIEDzGN9a9BsQEFSFjYSsA9o4hgby2pTQ92LHbgP6lzEDSq+qW/TNS9gOfaNDYN1ewK51o+m/RG0IS/QgoLC+kTQevT07KGWLIuCrai0FeAzOmoCBGW/SlH8OrTHu2yN5jWtkwZU1hIYYKp2rtRq2nzwExnfPJ7CrB1QEfd/3As7S0z/0MGw16/XP1zbo2dnOo5KEOWTkWxTQIFV2MufgRqogg9HeWxMmT43LWqJfbz3b+hoyqIhcyJLku/WPobIuVkUZ51hbTYSxsk2iivJE6pMcG5u8t8bWmqpEOg1Pr9wlNjaaTxcuuvu8AN7tvk2WJLVVsq5soOw8PU//XW7B2OgS11hb17B6vN6AqvWaNjcs2bjklQxazTgF9gJyv613+HnAsNlAm8IOQE01v5ldRxfWIwhgZcbWaZzGpyc3H2afbt59vIVegLOBGjksazLr/WJ+Nbv4sowWOlC0FT1qJ6UPvqXbG+BVwTR9HOEPSlwtteHRBoG7yQNTHIpdFIF4FmAclrwDRnfdcOzrvufj8c6xO3Id5KpmxxWyDijgETdPE24t65bnGfb8F8Iu1I4BH+TYMYSD6DqGsE2rY7C7ONqDl/zgNaMhu1/2AiqUOfpBspE1Uwrd76xnF56r7C7w1fwW+v4XFMJPng==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"[LEGACY] List database users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/database/getDatabaseUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Legacy endpoint. Use /auth/engine/getEngineUsers instead.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"databaseId","in":"query","schema":{"type":"string"}},{"name":"userId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"permission","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

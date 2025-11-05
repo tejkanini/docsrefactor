@@ -1,0 +1,67 @@
+---
+id: grant-all-databases
+title: "Grant all databases (legacy)"
+description: "Grants a user permissions to all database-type engines. Deprecated: use /auth/admin/engine/grantAllEngines."
+sidebar_label: "Grant all databases (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMtu2zAQ/BViTy1AW07RQ6CbUwetgbQJ4uQU+ECTa4sJRTLkyq0r6N+LleXm4aDtqScRwnBmd2eWLZDaZCjvQDVUwVKCwayTjWSDhxI+J+UpCyWajElETLXN2QafBQWhnBNGkVqpjCPaRRToN9ZjHosZxoRaEZqSr4qC6QtlauuLPajYMPXUufPhDkgIEZNi5bmBEg6A2SCRQULCHIPnc9nCh8mEPy8rvjxwiNxojTmvGwcSdPCEnhivYnRW95jiPvOlFrKusFZ84j6ghLC6R00gISauiuxecuB8BlyF4FB5eD25uTcsglnYtaAKRXhZGBo00HUSyJJjogvcKL2b8ogWe5XroVnoOgZ+fKvdM2VEwscGM/21y4Hl5Jjl1rM/IdmfaP6FpuNuDw5DSalBCTVSFdi4GPpioqIKSnhu/SEtxVveZkxbTBzGFprkoISKKOayKL6H9JCrEMd6vRkbdMES4ViHutDrzUjZkcE6FF+DD86yVrRHdsywDuLcmxisJ3F7fQGdfC5TFoULWrkqZCpPJ6eTP9NdMFbMcIsuxJpn1S25A90kS7sFp2kfmJXKVk95t54iw3rcb4/iCDGmz4L169ADh0xM5+JTSAgSeDJ76cl4Mj4ZLb5NrxZfLm+gk/28a9Xn2KuesV/bF/uZxTvXB+z9617aJ7v/87oP4yD8QUV0ynpuprekHcIzPEsSeiqufNAH+cbzsJTA9vG1tuVft8l1Hf9+bDDtoLxbStiqZNWKp3u37CRUqAymPnMPuOORa42R47tVruHyjjaAnf6d9avLxQ103S8waNi+
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Grant all databases (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/database/grantAllDatabases"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Grants a user permissions to all database-type engines. Deprecated: use /auth/admin/engine/grantAllEngines.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation successful","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Indicates if the operation succeeded"}},"title":"LegacyAdminSuccessResponse"}}}},"400":{"description":"Bad request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

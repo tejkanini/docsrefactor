@@ -1,0 +1,71 @@
+---
+id: kill-job
+title: "Kill comet job (legacy)"
+description: "Terminates a legacy comet job."
+sidebar_label: "Kill comet job (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFUk1PGzEQ/SurObWSyaY9oRWqFJWohdIWFTihHBzvZNfgtV17NiRa+b9X491A4FBOlufrzbz3BiDZRKjuYWkbbbFY7lD1pJ2FlYAaowra528Ftxg6bSVhLGRhsJFqXyjXIRUPbj0DAc5jkFx8UUMFj9qYS7cGAV4G2SFhYKABrOwQKnhw64saBGie/bfHsAcBUbXYSagGoL3nqkhB2wZSWgkIGL2zESPnP8/n/Lxe8dKtCzqsycOVs4SWuFJ6b7TK+5W7znAId7LzhmHOIknq45eX5rNyCkFKKQmIqPqgaZ9PWMuo1aKnFqr7Fa/WIbWOr26Q8sWcghIzqeUDc8HXYdgeWOiDgQpaIh+rsnxy4TG2zs/UppnVaJwmwplyXak2zYnUJzV2rvzprDOa2lJ6DW/lOcfOFUtbe6ctFXd/riCJY5iqLI1T0rQuUnU6P53/f9wV1xbnuEXjfMcc8p0HFm5Yp1GIIy6eVWO8g5r8zzXANGq7cblQUyZ+cVF8dQFBADMzQs9n89mnk5tfi+ub779vIQnwLlInLTdO7vmhjXlxX/Fh9OPHt2cMLw5437/T8oQ7Kr2R2jJ0JnCYFL2HUVEQMGq6EsB8cmYY1jLiXTApcXh0NCtd6yjXBmuoNtJEFPCI+yP/b6XpGTbzu5VBc3H2lYAWZY0hTxmbFkqhp6Out65+ZcZvy1sQIF9rM2ohppdHTwlp90eD8zmjsHcRA9OeEhyW76dQ9th7/dcyxicX6qN+P4UgrVJK/wCOvIu6
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Kill comet job (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/engine/jkill"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Terminates a legacy comet job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"jobId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Job terminated","content":{"application/xml":{"example":"<status>terminated</status>"}}}}}
+>
+  
+</StatusCodes>
+
+
+      

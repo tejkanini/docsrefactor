@@ -1,0 +1,71 @@
+---
+id: get-project-insights
+title: "List project insights"
+description: "Returns insights belonging to the specified project."
+sidebar_label: "List project insights"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVEtv2zAM/isGz0qcDjsUvmVrsQXotqKPU5GDIjM2W1lSJTpbZvi/D3Scpq8NQ3wxJJH8+Pg+dsC6SlDcgW65hqWCEpOJFJi8gwKukNvoUkYuUVVzylZovavIVRn7jGvMUkBDa8IyC9Hfo+EpKPABo5YQixIKqJAvd2+LMQwoCDrqBhmjoHfgdINQwBhjUYICkgQeW4xbUJBMjY2GogPeBrFMHMlV0PfqyTmhjqa+wdj8v/dSQcQUvEuY5P3DbCa/l13Yp51F5Ei4QUnPeMfoWKx1CJbMUHB+n8SlewupY9SSCzE26dm9X0nF0Mun4ON7+J90mUV8bDHxEcDPACT+ydv4t06m7yP9PqqylxU0yLUfxz7MmWsoIBeEXJcNuXwkU/4uLxLGzZ4UbbRQQM0cUpHnP318SLUPU7OupiVaT8w4Nb7JzbqaaJqU2Pj8m3fekmAFgtd0PsPGZ+euDJ4cZ7dXFyD0OcAUeW690bb2iYvT2ens3+EuxDY7ww1aHxppmfApoWkj8fZa+rRj1UonMnNR2KFrgrenppwHG+EzkFv7wZDYyst8kX32EUGBdGYHPZvOpieT6+/zy+uvP26gVxB84kYPExr1cEGJ96p8UvDrIrrDuI9V+1gQ4y/Og9XkJJ2hqd04/nG9KBgIMKhzQAD13nJYKpABiFvXrXTC22j7Xq53ehZqlJT0ymIJxVrbhAoecPtqf2y0bSWvYcZ/sX+xMg4OSzlEEg8o7pa9ghp1iXGA3nnOjcHAz7zeSEWiPInhy/kN9P0f1xrg2g==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List project insights"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/insight/getProjectInsights"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns insights belonging to the specified project.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Insights retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

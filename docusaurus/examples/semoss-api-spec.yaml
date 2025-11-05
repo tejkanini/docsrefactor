@@ -1,0 +1,908 @@
+openapi: 3.0.3
+info:
+  title: SEMOSS API
+  description: |
+    SEMOSS (Semantic Modeling and Service Support) API providing access to data analytics, 
+    machine learning, and visualization capabilities. This API supports authentication, 
+    data engine management, project management, and pixel execution for analytical workflows.
+    
+    ## Authentication
+    The API supports multiple authentication methods:
+    - Basic Authentication (using access token and secret)
+    - Trusted Token Authentication
+    - OAuth2 providers (Google, Microsoft, GitHub, etc.)
+    - SAML SSO
+    
+    ## Base URL Structure
+    - Main API: `/api/*`
+    - Trusted Token API: `/token/*`
+    - Data API: `/data/*`
+    - Admin Configuration: `/adminconfig/*`
+  version: 1.0.0
+  contact:
+    name: SEMOSS Support
+    url: https://semoss.org
+  license:
+    name: Apache 2.0 / GPLv2
+    url: https://www.apache.org/licenses/LICENSE-2.0
+
+servers:
+  - url: https://workshop.cfg.deloitte.com/cfg-ai-demo/Monolith
+    description: Demo Environment
+  - url: http://localhost:8080/Monolith
+    description: Local Development
+
+security:
+  - basicAuth: []
+  - trustedToken: []
+
+paths:
+  # Authentication endpoints
+  /api/auth/whoami:
+    get:
+      tags:
+        - Authentication
+      summary: Get current user information
+      description: Returns information about the currently authenticated user
+      security:
+        - basicAuth: []
+        - trustedToken: []
+      responses:
+        '200':
+          description: User information retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserInfo'
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal server error
+
+  /api/auth/logins:
+    get:
+      tags:
+        - Authentication
+      summary: Get available login providers
+      description: Returns a list of available authentication providers
+      responses:
+        '200':
+          description: Login providers retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LoginProvider'
+
+  /api/auth/logout/{provider}:
+    get:
+      tags:
+        - Authentication
+      summary: Logout from specific provider
+      description: Logs out the user from the specified authentication provider
+      parameters:
+        - name: provider
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [local, google, microsoft, github, okta, saml]
+        - name: disableRedirect
+          in: query
+          required: false
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Logout successful
+        '302':
+          description: Redirect to logout URL
+
+  # Engine execution endpoints
+  /api/engine/runPixel:
+    post:
+      tags:
+        - Engine Execution
+      summary: Execute a Pixel command
+      description: |
+        Executes a Pixel (SEMOSS scripting language) command. Pixels are used for 
+        data processing, analytics, and workflow automation in SEMOSS.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                insightId:
+                  type: string
+                  description: The insight ID to execute the pixel in. Use "new" to create a new insight.
+                  example: "new"
+                expression:
+                  type: string
+                  description: The pixel expression to execute
+                  example: "META | true"
+              required:
+                - expression
+      responses:
+        '200':
+          description: Pixel executed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PixelResponse'
+              examples:
+                echo:
+                  value:
+                    insightID: "TempInsight_b838644e-48ac-4816-8704-474d4d7c22be"
+                    pixelReturn:
+                      - pixelId: "0"
+                        pixelExpression: "EchoE --help ;"
+                        isMeta: false
+                        timeToRun: 2
+                        output: "Description:\nThis reactor returns back the encoded input the user enters\nInputs:\n\tinput 0:\tvalue =\tThe value to echo back\n"
+                        operationType: ["HELP"]
+        '400':
+          description: Bad request - invalid pixel syntax
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal server error
+
+  /api/engine/runPixelAsync:
+    post:
+      tags:
+        - Engine Execution
+      summary: Execute a Pixel command asynchronously
+      description: Executes a Pixel command asynchronously and returns a job ID for tracking
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                insightId:
+                  type: string
+                  description: The insight ID to execute the pixel in
+                expression:
+                  type: string
+                  description: The pixel expression to execute
+              required:
+                - insightId
+                - expression
+      responses:
+        '202':
+          description: Pixel execution started
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AsyncJobResponse'
+
+  # Configuration endpoints
+  /api/config/:
+    get:
+      tags:
+        - Configuration
+      summary: Get server configuration
+      description: Returns server configuration settings and capabilities
+      responses:
+        '200':
+          description: Configuration retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerConfig'
+
+  /api/config/fetchCsrf:
+    get:
+      tags:
+        - Configuration
+      summary: Get CSRF token
+      description: Returns a CSRF token for secure form submissions
+      responses:
+        '200':
+          description: CSRF token retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  csrfToken:
+                    type: string
+                    description: CSRF token
+
+  # Session management
+  /api/session/active:
+    get:
+      tags:
+        - Session
+      summary: Get active sessions
+      description: Returns the number of active sessions
+      responses:
+        '200':
+          description: Active sessions count retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  activeSessions:
+                    type: integer
+
+  /api/session/cleanSession:
+    post:
+      tags:
+        - Session
+      summary: Clean session
+      description: Cleans up session resources
+      responses:
+        '200':
+          description: Session cleaned successfully
+
+  # Database Engine endpoints
+  /api/engine/database:
+    get:
+      tags:
+        - Database Engine
+      summary: List available databases
+      description: Returns a list of available database engines
+      responses:
+        '200':
+          description: Database list retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DatabaseInfo'
+
+    post:
+      tags:
+        - Database Engine
+      summary: Create new database
+      description: Creates a new database engine
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DatabaseCreateRequest'
+      responses:
+        '201':
+          description: Database created successfully
+        '400':
+          description: Bad request
+        '403':
+          description: Forbidden - insufficient permissions
+
+  /api/engine/database/{databaseId}:
+    get:
+      tags:
+        - Database Engine
+      summary: Get database information
+      description: Returns information about a specific database
+      parameters:
+        - name: databaseId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Database information retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DatabaseInfo'
+        '404':
+          description: Database not found
+
+    delete:
+      tags:
+        - Database Engine
+      summary: Delete database
+      description: Deletes a database engine
+      parameters:
+        - name: databaseId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Database deleted successfully
+        '403':
+          description: Forbidden - insufficient permissions
+        '404':
+          description: Database not found
+
+  # Model Engine endpoints
+  /api/model/openai:
+    post:
+      tags:
+        - AI Models
+      summary: Execute OpenAI model request
+      description: Executes a request using OpenAI-compatible models
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OpenAIRequest'
+      responses:
+        '200':
+          description: Model execution successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OpenAIResponse'
+
+  # Project Management endpoints
+  /api/project:
+    get:
+      tags:
+        - Projects
+      summary: List user projects
+      description: Returns a list of projects accessible to the current user
+      responses:
+        '200':
+          description: Projects retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProjectInfo'
+
+    post:
+      tags:
+        - Projects
+      summary: Create new project
+      description: Creates a new project
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectCreateRequest'
+      responses:
+        '201':
+          description: Project created successfully
+        '400':
+          description: Bad request
+
+  /api/project/{projectId}:
+    get:
+      tags:
+        - Projects
+      summary: Get project information
+      description: Returns information about a specific project
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Project information retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProjectInfo'
+        '404':
+          description: Project not found
+
+    delete:
+      tags:
+        - Projects
+      summary: Delete project
+      description: Deletes a project
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Project deleted successfully
+        '403':
+          description: Forbidden - insufficient permissions
+        '404':
+          description: Project not found
+
+  # Insight Management endpoints
+  /api/insight:
+    get:
+      tags:
+        - Insights
+      summary: List insights
+      description: Returns a list of insights accessible to the current user
+      responses:
+        '200':
+          description: Insights retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InsightInfo'
+
+  /api/insight/{insightId}/execute:
+    post:
+      tags:
+        - Insights
+      summary: Execute insight
+      description: Executes a specific insight
+      parameters:
+        - name: insightId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                parameters:
+                  type: object
+                  additionalProperties: true
+      responses:
+        '200':
+          description: Insight executed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InsightExecutionResult'
+
+  # File Upload endpoints
+  /api/upload/file:
+    post:
+      tags:
+        - File Management
+      summary: Upload file
+      description: Uploads a file to the SEMOSS system
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: The file to upload
+                engineId:
+                  type: string
+                  description: Target engine ID (optional)
+      responses:
+        '200':
+          description: File uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  fileId:
+                    type: string
+                  fileName:
+                    type: string
+                  filePath:
+                    type: string
+
+  # Storage Engine endpoints
+  /api/storage:
+    get:
+      tags:
+        - Storage
+      summary: List storage engines
+      description: Returns a list of available storage engines
+      responses:
+        '200':
+          description: Storage engines retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StorageEngineInfo'
+
+  # Scheduler endpoints
+  /api/schedule:
+    get:
+      tags:
+        - Scheduler
+      summary: List scheduled jobs
+      description: Returns a list of scheduled jobs
+      responses:
+        '200':
+          description: Scheduled jobs retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ScheduledJob'
+
+    post:
+      tags:
+        - Scheduler
+      summary: Create scheduled job
+      description: Creates a new scheduled job
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScheduleJobRequest'
+      responses:
+        '201':
+          description: Scheduled job created successfully
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Basic authentication using access token and secret
+
+    trustedToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Trusted token authentication
+
+  schemas:
+    UserInfo:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        type:
+          type: string
+          enum: [admin, user, api]
+        permissions:
+          type: array
+          items:
+            type: string
+
+    LoginProvider:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        enabled:
+          type: boolean
+        loginUrl:
+          type: string
+
+    PixelResponse:
+      type: object
+      properties:
+        insightID:
+          type: string
+          description: The insight ID where the pixel was executed
+        pixelReturn:
+          type: array
+          description: Array of pixel execution results
+          items:
+            type: object
+            properties:
+              pixelId:
+                type: string
+                description: Unique identifier for the pixel execution
+              pixelExpression:
+                type: string
+                description: The pixel expression that was executed
+              isMeta:
+                type: boolean
+                description: Whether this is a meta operation
+              timeToRun:
+                type: number
+                description: Execution time in milliseconds
+              output:
+                type: string
+                description: The output result of the pixel execution
+              operationType:
+                type: array
+                items:
+                  type: string
+                description: Array of operation types performed
+        success:
+          type: boolean
+          description: Whether the operation was successful
+        message:
+          type: string
+          description: Any additional message or error information
+
+    AsyncJobResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+        status:
+          type: string
+          enum: [SUBMITTED, RUNNING, COMPLETED, FAILED]
+        insightId:
+          type: string
+
+    ServerConfig:
+      type: object
+      properties:
+        version:
+          type: string
+        buildTimestamp:
+          type: string
+        anonymousUsersAllowed:
+          type: boolean
+        adminOnlyDbAdd:
+          type: boolean
+        adminOnlyDbDelete:
+          type: boolean
+        adminOnlyProjectAdd:
+          type: boolean
+        adminOnlyModelAdd:
+          type: boolean
+        adminOnlyVectorAdd:
+          type: boolean
+        adminOnlyFunctionAdd:
+          type: boolean
+        supportedAuthProviders:
+          type: array
+          items:
+            type: string
+
+    DatabaseInfo:
+      type: object
+      properties:
+        databaseId:
+          type: string
+        engineName:
+          type: string
+        engineType:
+          type: string
+          enum: [H2_DB, RDBMS, SESAME, NEO4J, TINKER, JENA]
+        isPublic:
+          type: boolean
+        isDiscoverable:
+          type: boolean
+        hasAccess:
+          type: boolean
+        creator:
+          type: string
+        dateCreated:
+          type: string
+          format: date-time
+
+    DatabaseCreateRequest:
+      type: object
+      required:
+        - engineName
+        - engineType
+      properties:
+        engineName:
+          type: string
+        engineType:
+          type: string
+          enum: [H2_DB, RDBMS, SESAME, NEO4J, TINKER, JENA]
+        connectionProperties:
+          type: object
+          additionalProperties: true
+        isPublic:
+          type: boolean
+          default: false
+        isDiscoverable:
+          type: boolean
+          default: false
+
+    ProjectInfo:
+      type: object
+      properties:
+        projectId:
+          type: string
+        projectName:
+          type: string
+        description:
+          type: string
+        isPublic:
+          type: boolean
+        hasAccess:
+          type: boolean
+        creator:
+          type: string
+        dateCreated:
+          type: string
+          format: date-time
+        insights:
+          type: array
+          items:
+            $ref: '#/components/schemas/InsightInfo'
+
+    ProjectCreateRequest:
+      type: object
+      required:
+        - projectName
+      properties:
+        projectName:
+          type: string
+        description:
+          type: string
+        isPublic:
+          type: boolean
+          default: false
+
+    InsightInfo:
+      type: object
+      properties:
+        insightId:
+          type: string
+        insightName:
+          type: string
+        projectId:
+          type: string
+        projectName:
+          type: string
+        isPublic:
+          type: boolean
+        hasAccess:
+          type: boolean
+        creator:
+          type: string
+        dateCreated:
+          type: string
+          format: date-time
+        lastModified:
+          type: string
+          format: date-time
+
+    InsightExecutionResult:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        metadata:
+          type: object
+        executionTime:
+          type: number
+
+    OpenAIRequest:
+      type: object
+      required:
+        - engine
+        - command
+      properties:
+        engine:
+          type: string
+          description: The model engine ID to use
+        command:
+          type: string
+          description: The command/prompt to execute
+        temperature:
+          type: number
+          minimum: 0
+          maximum: 2
+        maxTokens:
+          type: integer
+          minimum: 1
+
+    OpenAIResponse:
+      type: object
+      properties:
+        response:
+          type: string
+        usage:
+          type: object
+          properties:
+            promptTokens:
+              type: integer
+            completionTokens:
+              type: integer
+            totalTokens:
+              type: integer
+
+    StorageEngineInfo:
+      type: object
+      properties:
+        storageId:
+          type: string
+        storageName:
+          type: string
+        storageType:
+          type: string
+        isPublic:
+          type: boolean
+        hasAccess:
+          type: boolean
+
+    ScheduledJob:
+      type: object
+      properties:
+        jobId:
+          type: string
+        jobName:
+          type: string
+        cronExpression:
+          type: string
+        status:
+          type: string
+          enum: [ACTIVE, PAUSED, COMPLETED, ERROR]
+        nextFireTime:
+          type: string
+          format: date-time
+        lastFireTime:
+          type: string
+          format: date-time
+
+    ScheduleJobRequest:
+      type: object
+      required:
+        - jobName
+        - cronExpression
+        - pixelExpression
+      properties:
+        jobName:
+          type: string
+        cronExpression:
+          type: string
+          description: Cron expression for scheduling (e.g., "0 0 12 * * ?" for daily at noon)
+        pixelExpression:
+          type: string
+          description: The pixel command to execute
+        insightId:
+          type: string
+          description: Target insight ID
+        parameters:
+          type: object
+          additionalProperties: true
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+        code:
+          type: integer
+        timestamp:
+          type: string
+          format: date-time
+
+tags:
+  - name: Authentication
+    description: User authentication and session management
+  - name: Engine Execution
+    description: Execute Pixel commands and workflows
+  - name: Configuration
+    description: Server configuration and settings
+  - name: Session
+    description: Session management and cleanup
+  - name: Database Engine
+    description: Database engine management and operations
+  - name: AI Models
+    description: AI and machine learning model operations
+  - name: Projects
+    description: Project management and organization
+  - name: Insights
+    description: Insight creation, management, and execution
+  - name: File Management
+    description: File upload and management operations
+  - name: Storage
+    description: Storage engine management
+  - name: Scheduler
+    description: Job scheduling and automation

@@ -1,0 +1,71 @@
+---
+id: get-engine-users
+title: "Get engine users"
+description: "Gets users and permissions for an engine."
+sidebar_label: "Get engine users"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVcFu2zAM/RWBZzdOh2IofAvWoCvQrcXSnoocFJuO1dqSJjHZMsP/PtB2kqZJ3Tg9GbLJ92g+6rEEknMP0RPIBWUwDSBBHztlSRkNEVwjebHw6LyQOhEWXaG8V0Z7kRonpBao50rjAAIwFp3kvJsEIpgjjetPj5wNAVjpZIHEh+ipBC0LhAia9JsEAlBM+HuBbgVvy2iQhEpQk0oVOgjAxxkWEqISaGUZypNTeg5VFWzQufKPsLm+V8iCjEhVTkdzeJQuzh7QFd08kzpOUBN4DPK2293I95u4fpXnqlDUDX3bhhwDZ9LU4wd4d+uYYwDfm43Tlf+cnp/T7GRF9hKVJpzXKqfGFZKaV18vjlCjD9Y0AIfeGu3Rc8aX4ZAf+7fHC4fkFC6RGx4bTaiJQ6W1uYprTwifPceX+xWY2TPGBFVVVQFcDM8PcGg2J+PUvyMIGpwCKTOtDdXeQxlEEDJOKJNC6bAZrnDPpjy65dqjFi6HCDIi66Mw/GPci8+MHcTpfJBgbhQRDmJThHE6P5PqLMHChD+MNrliGqv2xv8KCyPGOrFGaRKPv26BFdvSRGGYm1jmmfEUXQ4vh91wtxwrrnCJubEF94RF8xgvnKLVhDvdSDeTXsUjdvht35lvPRF8rmN4hEDp1NSBinL+MroR34xDCIA701APB8PB+dnk5+h+8v3uAaoArPFUyFrjdgSvkdr10KyQt/WXWyl7LZr2Bwj/UmhzqTTT100sW6XbdRZArTUErZVA8HYtTQPgXnNGWc6kx0eXVxW/bm4MT0GivJzlmECUytxjx08cWlMHi33B1a6/LWW+4LB6Ho4n7NpdHcQbczyRdneVdRDteOmJZIe2WwfljgGfSLneeh00a6c+kWGzBzsoNg7ezdFzlnpNQG8Ve2vQp5vvtmXKB6c4GqKnaRVAhjJBV1/fJmsUx2hfZ+2tDkbZrI3r8QNU1X/+u8bC
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get engine users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/engine/getEngineUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets users and permissions for an engine.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"engineId","in":"query","description":"Engine identifier","schema":{"type":"string"}},{"name":"userId","in":"query","description":"User identifier to filter","schema":{"type":"string"}},{"name":"searchTerm","in":"query","description":"Search term","schema":{"type":"string"}},{"name":"permission","in":"query","description":"Permission filter","schema":{"type":"string"}},{"name":"limit","in":"query","description":"Limit","schema":{"type":"string"}},{"name":"offset","in":"query","description":"Offset","schema":{"type":"string"}},{"name":"engineId","in":"query","schema":{"type":"string"}},{"name":"userId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"permission","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

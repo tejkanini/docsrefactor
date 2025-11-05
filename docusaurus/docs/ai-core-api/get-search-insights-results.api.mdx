@@ -1,0 +1,71 @@
+---
+id: get-search-insights-results
+title: "Search insights"
+description: "Searches insights with optional filters and pagination."
+sidebar_label: "Search insights"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVF1P3DoQ/SvWPDubbSm327xxC1el4hbEwhNaVY4zSdw6tms77K5W+e/VOIGGVsCV7lNiz/jMxzkzB4iiCVDcwZlplEF2tkPZR2UNbDhUGKRXLh0LWKPwssXAlAmqaWNgWxVbZpNdaFYrHdEHJkzFnGiUEWRYAAfr0KfDeQUFNBhHqPMJ5xpDr2MADh5/9Bji37baQ3EAaU1EE+lXOKeVTCD5Lttut1ltfZf1XqORtsKKnIJssRP0F/cOoQBbfkMZgYPzlENUGMg6Znoq4tw3RK9MA79X/Xl9+SWbYjyWqIzUfaVMw4RzX1WVak6dHDho1an4OvAFubHa+lmzgAPuROc0vXtzTGi2rgP+B7jL5PcS3pLgQur8esR4FXTkiU3WYeAQVUxgTxn8x/oOBrITg8oTHdH3mC6CsyaMjX+7XNLnaZCJfuYx9t5gBfw54r8FenD4VdPdARRJqqzfHh2vjo+y1V/l++zd6qjOxFIcZwLfrT6UNVYf3pcwS15oDKzcs2tsxi49TEEgSxJiMmyGzZDKCih7r+I+hSxFUPKkjy0Ud5thw6HD2FrKw9mQ1CbIBjmmmcolmuiFzlNVu5i/MAAB/T36kML0XkMBbYwuFHm+tf57aK1byLpZVKitihEX0na5rJtMqKzCzub/WmO1im0unPqDzVPsLDszlbPKRHZ7fQEDn4cp8lxbKXRrQyxWy9XyZbgL8mWneI/auo7ool48dGpNsziyPuvXo+AoHtWbvIhB8kkKU6a2yXEi6+ScfbQegQN1Zgy9XCwXb7L1l5Or9afLG9I1db4TSR1GdL8U+risfk9/tl3+x2abqkm0Oi2UoVxSRw+TCu5gVAGpetTBg753JJVntbDhQDwQwOFQioC3Xg8DXf/o0ZMQNxzuhVeiTJOwGTi0KCr0STzfcQ8FfBxLzG4oTXLXPaX7+jIlYYwQJ1Kii888TgP5ZAKuLtc3wKGcNnhnK3ozQ+bzw5i2eCqNUQp8+lIxk0GY/SyP1JVRV7cBPbE+DMCntPvpKlXy2vsrEcLW+mr23k1XkDbAT7rtfSU=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search insights"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/central/context/getSearchInsightsResults"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Searches insights with optional filters and pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"type":"object","properties":{"filterData":{"type":"string","description":"JSON-encoded filters including app_id and tags"},"limit":{"type":"string","description":"Limit for pagination","example":"15"},"offset":{"type":"string","description":"Offset for pagination","example":"0"},"searchString":{"type":"string","description":"Search string"}},"title":"SearchInsightsForm"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Results returned","content":{"application/json":{"example":[{"id":"bf235853-86b7-483f-a0a5-ae489bfed97b","title":"Sales by Region","tags":["sales","region"]}]}}}}}
+>
+  
+</StatusCodes>
+
+
+      

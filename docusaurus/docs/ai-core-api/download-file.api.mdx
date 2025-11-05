@@ -1,0 +1,71 @@
+---
+id: download-file
+title: "Download exported file"
+description: "Downloads an exported file for a given insight and file key."
+sidebar_label: "Download exported file"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMlu2zAQ/RViTi1AW07RQ6Cbm7it0XRBE58CH2hxJLGhSJakHLuG/r0YLV6SOi1QXSSRs7yZ92Z2EEURIL2HmSmUQTbbYFZHZQ0sOUgMmVeu/U3h2j4abYUMTBiGG2d9RMlypZHl1jPBCrVGw5QJqigjE6a/fMDtGDhYh15QqLmEFGQf7L3SCByc8KLCiJ6w7MCICiGFPtRcAgdFEH7W6LfAIWQlVgLSHcStI8sQvTIFNA3fO1PuT7j9d9clB4/BWRMw0P2byYRep00gvGwAjwQssyaiiWQqnNMqa4tMbBYxjkL0KCq6O5eXQ259JSKksFJG+C00HHAjKqc7GO+602dI+nMOa6Fr3LuzHg97dYzgNTT0cHj7p6LmZi20knvqrN8zd77AH4F8dwPW9tN76yGFK1tryYyNLFdGsljiPrSSMAC5eA5kYUQdS+vVr5da+0LmkwB9yQGz2qu4bZW1EkFl0zqWkN4vifIKY2lJkQXGVoh0BQm245A8kWlAvx40WnsNKZQxupAmyaP1D6G0bpzlxViitipGHGe2SrK8GAk1kljZ5LM1VqtYJsIpeDZfWFk2M9JZZSJbfL8BUvMhTZok2mZClzbE9HJyOXk53A3Zsmtco7auojZSuUMzbkmOncCOWrIXJ+UbhqXVFtnQeIEyuW0NVaTWw3TOrqyn5lBnutST8WR8Mbr9Mv12+/HrHQna2RAr0bLWj+ewTU43ydMqdgcN/O/+6SuLuImJ00IZwtV2d9ezfg8d6wTimPclB+o5Gex2KxFw4XXT0HG3VEgNUgWx0ighzYUOyIFm53SDDXPa0nrG/rC0DtZL+vGKzFvRcihRSPRt3s5tmmXo4pHX2U10IvkPszvgIE6p76jm/Zty9BfCHONqO9HpZhHQE6tNA0MddX/U1vo3/28ihEfr5ZG/64+gWTZN8xv1a0uo
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download exported file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/engine/downloadFile"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Downloads an exported file for a given insight and file key.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"insightId","in":"query","schema":{"type":"string"}},{"name":"fileKey","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File downloaded","content":{"application/octet-stream":{"schema":{"type":"string","format":"binary"},"examples":{"Binary":{"description":"Binary","value":"binary content (octet-stream)"}}}}},"400":{"description":"Invalid insight or file key","content":{"application/json":{"example":{"error":"Could not find the insight id"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"example":{"error":"Unauthorized"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

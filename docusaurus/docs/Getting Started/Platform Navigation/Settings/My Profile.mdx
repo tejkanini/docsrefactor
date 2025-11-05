@@ -1,0 +1,50 @@
+---
+sidebar_label: "My Profile"
+sidebar_position: 2
+slug: "/platform-navigation/Settings/MyProfile"
+---
+
+ My Profile page allows you to see information about the user logged in
+
+
+
+![Access token](../../../../static/autoImg/PlatformNavigation/Settings-My%20Profile/My%20Profile%20Page.png)
+
+## Access Tokens
+
+Access tokens are useful for connecting to AI Core for development purposes. It generates an **Access Key** and a **Secret Key**, which can be used as environment variables to access AI Core.
+
+To create a new Access Token, click on + New Key, highlighted in the image below.
+
+![Access token](../../../../static/autoImg/PlatformNavigation/Settings-My%20Profile/Generate%20New%20Key.png)
+
+Give a name to your request and add a description (optional) and hit generate.
+
+![Access token](../../../../static/autoImg/PlatformNavigation/Settings-My%20Profile/Generate.png)
+
+Once you hit generate, you will be able to see your 'Access Key' and 'Secret Key'. Please note that this is the only time your Secret Key is available to view.
+
+After clicking 'Close', you will be redirected to the 'My Profile' page. Here, you will see your Access Tokens, including your Access Key (note that your Secret Key will not be visible).
+
+Now to connect to AI Core using your keys, paste your key values into `.env.local`, `.env`, or Python module 
+```
+# .env
+ENDPOINT="https://workshop.cfg.deloitte.com/cfg-ai-demo"
+MODULE="/cfg-ai-demo/Monolith"
+
+#.env.local
+ACCESS_KEY="<your access key>"
+SECRET_KEY="<your secret key>"
+```
+```
+
+# import the ai platform package
+import ai_server
+
+# pass in your access and secret keys to authenticate
+server_connection=ai_server.RESTServer(
+    access_key="<your access key>",            
+    secret_key="<your secret key>",            
+    base="https://workshop.cfg.deloitte.com/cfg-ai-demo/cfg-ai-demo/Monolith/api"
+)
+```

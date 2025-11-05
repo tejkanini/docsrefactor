@@ -1,0 +1,9 @@
+{
+    "label": "Building Apps",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "In SEMOSS, everyone can build an app. SEMOSS is a customizable GenAI solution built on a low-code platform with configurable components. Advanced users can upload web-based applications. These apps are accessible and modifiable through the App Library."
+    }
+  }
+  

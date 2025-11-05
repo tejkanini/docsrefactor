@@ -1,0 +1,98 @@
+---
+sidebar_label: "Model Catalog"
+sidebar_position: 3
+slug: "/platform-navigation/model-catalog"
+---
+
+import ReactPlayer from "react-player"
+import ModelsDemo from "../../../static/Demos/ModelsDemo.mp4";
+
+# Model Catalog
+
+Models are Large Language Models (LLMs), a type of Artificial Intelligence (AI) algorithm that leverages deep learning techniques and vast datasets to understand, summarize, generate, and predict new content. Gen AI Apps created on AI Core are built upon these advanced models.
+
+<ReactPlayer controls url={ModelsDemo} />
+
+To connect to existing model or add new models, click on the **model** icon on the left side of AI Core portal to access the Model catalog.
+
+![Model Library](../../../static/autoImg/PlatformNavigation/Model%20Catalog/Model.png)
+
+The Model catalog displays a list of LLMs that are already accessible to you. If you do not have any existing LLMs in your current model catalog, you can go to **Discoverable models** to browse through the available models and request access:
+
+## Adding a Model
+Click on **Add Model**, choose your preferred model from the list and fill in the required details to connect to the model.
+
+![Add Model](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Connect_To_Model.PNG)
+
+> _Various Model Options_
+
+{/* <ReactPlayer controls url={ModelCatalog} /> */}
+
+There are three primary types of models, each with distinct characteristics:
+
+**Commercially-hosted Models -** Managed by an external vendor, these models come with a subscription or licensing fee. The vendor handles hosting and maintenance, offering highly scalable and customizable solutions.
+
+**Locally-hosted Models -** Installed and managed on the organization's own servers, these models also come with a subscription or licensing fee. This setup gives the organization full control over the model, allowing for extensive customization to meet specific requirements.  
+
+**Embedded Models -** Integrated with other software or platforms, these models focus on specific functions and can be seamlessly blended into existing systems.
+
+## Usage
+The usage tab for a model tells you how to use the model in JavaScript, Python, Langchain API, Java and also how to use externally with OpenAI API and our Python SDK.
+
+![Usage of a Model](../../../static/autoImg/PlatformNavigation/Model%20Catalog/ModelCatalogUsage.png)
+
+## Access Control
+![Access Control](../../../static/img/FunctionEngines/functionAccessControl.png)
+The Access Control tab allows authors of the model to change model permissions
+
+### Add members
+You can grant access to other users by clicking on Add Member. When adding a member you will have to select which [permission level](../../Getting%20Started//Platform%20Navigation/Settings/Permissions.mdx) to grant.
+
+### Pending Requests
+Users can request access to your model if it is  [Discoverable](#discoverable-models), these requests will be visible in Pending Requests. 
+
+![Model Access](../../../static/autoImg/PlatformNavigation/AppLibrary/PendingRequests.png)
+
+### Public Model
+Making a model public allows all users to have READ-ONLY access to the model. Users would also be allowed to request access to the model.
+
+### Discoverable Model
+Making a model discoverable allows all users to request access to the model.
+[Request Access for Discoverable Models](#discoverable-models)
+
+
+### Discoverable Models
+If a model is discoverable other users can request access to the model.
+
+![Discoverable Models](../../../static/img/FunctionEngines/discoverableFunction.png)
+
+Click on **Request Access** near the top-right corner and a pop-up will provide you with 3 options to choose from - Author, Editor & Read-Only. You can choose the option based on your role and request.
+
+![Request Access](../../../static/img/FunctionEngines/functionRequestAccess.png)
+
+## Edit Model
+This allows you to edit the model metadata displayed in the Overview tab for the model. It provides a convenient way to update details, correct errors, or enhance information as needed. By clicking this button, users can access editable fields and make changes before saving or submitting their updates. This functionality helps maintain accurate and up-to-date content.
+
+![Edit](../../../static/img/FunctionEngines/Edit.png)
+
+
+  - Edit Model Options
+    - Edit/View Tabs: The "Edit" tab is for entering or modifying content, while the "View" tab allows users to see how the content will appear once formatted.
+    - Description: A field for providing a detailed explanation of the model, helping others understand its purpose and usage.
+    - Tag: Allows users to add tags for categorization or easy searching, enhancing the discoverability of the model.
+    - Domain: Users can specify the domain or area of application for the model, aiding in contextual understanding.
+    - Data Classification: A input field for specifying the classification of data, which can be important for compliance and security purposes.
+    - Data Restrictions: This field is for noting any restrictions on the data, such as access limitations or usage guidelines.
+
+
+![EditInterface](../../../static/img/FunctionEngines/EditInterface.png)
+
+
+
+## Export Model
+The **Export** button allows users to download the current content as a ZIP file, making it easy to save and share multiple files in a compressed format. This feature streamlines the process of exporting data for backup, collaboration, or offline use. By clicking the Export button, users can quickly package their work and transfer it efficiently. This zipped file can be uploaded in other AI Core enviornments.
+![Export](../../../static/img/FunctionEngines/Export.png)
+
+
+## Delete Model
+Authors can permanently delete a model.

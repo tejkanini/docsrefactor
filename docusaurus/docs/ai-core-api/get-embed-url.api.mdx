@@ -1,0 +1,71 @@
+---
+id: get-embed-url
+title: "Get embed logo for project"
+description: "Returns the default (or configured) embed logo file contents for the project."
+sidebar_label: "Get embed logo for project"
+hide_title: true
+hide_table_of_contents: true
+api: eJx9Uk1v2zAM/SsCTxvgxO7QQ+FbsBZYgGwrmuVU9KDKtKVOFlWJ7pYF/u8DnY9lHdaTIJDvkXzv7YB1l6G+h9tET2gYHgpoMJvkIjsKUMMd8pBCVmxRNdjqwbN6R0kZCq3rhoTNe4X9IzbKU0eqdR6lxhg4q5bSBIx79jkUQBGTFu5lAzV0yDcC3iQPBUSddI+MSVbaQdA9Qg0H8LKBApysFDVbKCDh8+ASNlBzGrCAbCz2Guod8DYKMHNyoYNxLE5cLmTX2TOu5wHTFt4CP8ikHClkzFL/UFXy/K3SSm4/nK3SJBk2MBZwWV38270JemBLyf1CWeSAm4bjTy4t9x7q3ViAjtE7M8lVkmHkWeaEupfqOLFf/meXQKxaGsIr/nPCpyztQjQWkNEMyfF2Ev5RZ2cWA1uo7x9EgB7Z0sGvyScpQXlwZrY7WTSWUxZkBREV08vRzCF5qMEyx1yX5Q9K37OlODdtN2/Qk2PGuaG+NG03027WYE/lZwrkHdtSRwevg3mNPamb0ERygdXmbgXi858xdVl6MtpbylxfVVfV23Qr6VXX+IKeYi9yyeFHWdYSj73/Z+KcwiLzjiGS/9QjwQMXWpoaHXupLJbqIyWEAkSZ/ehqXs0vZusvi9v1p6/fYBx/A3LJPik=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get embed logo for project"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/project-{projectId}/embedLogo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the default (or configured) embed logo file contents for the project.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}},{"name":"insightId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Logo content returned"},"401":{"description":"Unauthorized","content":{"text/html":{},"application/octet-stream":{}}},"404":{"description":"Logo not found","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

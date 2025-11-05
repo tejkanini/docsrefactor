@@ -1,0 +1,71 @@
+---
+id: download-project-asset
+title: "Download a project asset file"
+description: "Returns the content of an asset under app_root/version/assets by relative path."
+sidebar_label: "Download a project asset file"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU8Fu2zAM/RWBZ8dyhx4K3YJ1wwJ0W9CspyIYVJuJ1cmiJtHpMsP/PtB1s64ddthJEPj4SL33NADbfQZzC+tE91gzbAtoMNfJRXYUwMA1cp9CVtyiqikwBla0UzYomzOy6kODSdkYvyYi1gdM2VHQUzGru6NK6C27A6pouS2hAIqYrLCvGjDQ0EPwZJt5gaX0QQHRJtshY5LtBgi2QzAQH0GrBgpwsp1wQgEJv/cuYQOGU48F5LrFzoIZgI9RGjMnF/YwjsWJK6FfP3b/H9NWwDlSyJil/qaq5PhTvek5J93SpCU2MBZwXp29ht8E23NLyf1EeeLcN03HH6xb7jyYYSzAxuhdPamoqWbkReaEtpPqOLGfv2Z/7zyqQKx21IcX/M8J77PAhWgsIGPdJ8fHyYY7m1297LkFc7sVBTrklsTG/eyalEDPPi2Gk2Gj/pvRephdGEEmpcOT333yYKBljtlo/UDpW24plvVuXzboyTFjWVOn691+Yd2iwY70RwrkHbfaRgcvY3yJHal3oYnkAqub6yuQKPweY7T2VFvfUmZzUV1U/6a7Eqy6xAN6ip1oKGo8abWR0Dym4plipwjJPJijJfcJI9kEF3Y0AR17qSxX6i0lhALmfwUGqrIqzxabT8v15sPnLzCOvwAkbVDx
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download a project asset file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/project-{projectId}/downloadProjectAsset/{relPath}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the content of an asset under app_root/version/assets by relative path.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}},{"name":"relPath","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Asset content returned"},"401":{"description":"Unauthorized","content":{"text/html":{},"application/octet-stream":{}}},"404":{"description":"File not found","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

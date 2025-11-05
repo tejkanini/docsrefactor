@@ -1,0 +1,71 @@
+---
+id: get-admin-themes
+title: "List admin themes"
+description: "Returns a paginated list of admin themes (admin only)."
+sidebar_label: "List admin themes"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1P3DAQ/SvWnFrJbBbaA8ptVVCLRCni44T2YJLJxsWxXXsC3Ub+79U4WdgF0aL2FNkz88bz3psMQGoVobyBqxY7jLCUUGOsgvaknYUSLpD6YKNQwquVtoqwFkZHEq4Rqu60FZQrxbvx5KxZv5+BBOcxKAY5qaGEFdKC41MbCV4F1SFh4O4DWNUhlGB0pwkkaG79o8ewBgmxarFTUA5Aa89Z2hKuMICExoVO0Xj14QBSko9Qrmki/hfWUkLA6J2NGLniYD7nzy4/40AjJSFzhTVIqJwltMT5ynujq0xF8T1y0ZBSkvDxNThtV8I6Etpq0sroX29H3H+JeOZIqJ5aFxhIFBk6a/UW0CQhYtUHTeus062Kulr01EJ5s2SGOqTWTQpnWTkExWiK4oXsEcP9RvM+GCihJfKxLIoHF+5i6/ysalazGo3TRDirXFdUzWpP6b0aO1d8ddYZTW2hvIbnXj3CzoljW3unLYnri1NgPzy1KYvCuEqZ1kUqD+eH8z/DnXKuOMJ7NM53TBMPvKHjshpnKndIefQV99v4jc85hw0K2jYuJ2oyHFmciE8uIEhgZsbW89l8tr93ebY4v/zy7QqSBO8idYpV2Rj8lC23vYLPBxie5P33NZ7GIfxJhTdKW35MpnSYxL6Bx/bP5F5KYKo5ZRhuVcTrYFLi63Ed2QS1jurWYA1lo0xECXe43voR3CvTc/+s5Cu5j5v+lLzkQ9CcnY0qoUVVY8gtx6pFVaHfrnqxADv2/nx8BRLUrsijqHL6MvYUUHa9hZyHHx1yHTGwfinB5vn9dJVH/Fv9uYrxwYV6q95PV5CWKaXfxnL+KQ==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List admin themes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/themes/getAdminThemes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a paginated list of admin themes (admin only).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"limit","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Themes list returned","content":{"application/json":{}}},"400":{"description":"Theming not initialized","content":{"application/json":{}}},"401":{"description":"Not authorized / not admin","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

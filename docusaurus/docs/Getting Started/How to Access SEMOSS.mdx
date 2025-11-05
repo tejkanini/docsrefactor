@@ -1,0 +1,58 @@
+---
+sidebar_label: 'How to Access AI Core'
+sidebar_position: 3
+slug: '/how-to-access-AI Core'
+---
+
+# How to Access AI Core
+The primary way that most business users should access AI Core is through the **[live web server](https://workshop.cfg.deloitte.com/cfg-ai-demo/SemossWeb/packages/client/dist/)**.
+
+The **[live web server](https://workshop.cfg.deloitte.com/cfg-ai-demo/SemossWeb/packages/client/dist/)** is a simple and low-overhead method to access AI Core. 
+
+### Ready to Start?
+Access the [live web server](https://workshop.cfg.deloitte.com/cfg-ai-demo/SemossWeb/packages/client/dist/) here and follow along with the **[Connecting to AI Core](../How%20To/Establish%20Connection%20to%20CFG%20Portal/Connecting%20to%20CFG%20AI.md)** guide for detailed instructions on setting up your account and connections.
+
+
+## Alternate Ways to Access AI Core (For Advanced Users)
+For advanced users and developers, the live web server may not be sufficient for their business needs. Therefore, AI Core also supports two ways of installing the platform locally to give users full control over their local instance of AI Core: 
+
+1. [Docker container](../Advanced%20Installation/Docker%20BE%20Install%20Guide.md) (intermediate)
+2. [Local/Source code installation](#semoss-local-installation) (advanced, suitable for developers)
+
+## Local vs. Dockerized: Which one should I choose?
+**Run a full local installation if you:**
+* Want the ability to directly modify the core backend source code and configuration
+* Want to contribute to the AI Core project
+* Want to bring your own dependency versions
+  
+**Run a Docker container if you:**
+* Want a prepackaged solution without having to manage and install packages/dependencies locally
+* Do not need visibility into core backend logic
+* Only plan to create custom backend reactors for your apps
+
+**For most users, it is sufficient to run AI Core in a Docker container.** You can still create custom app logic when running AI Core in a Docker container. For instructions on how to run AI Core with Docker, click [here](../Advanced%20Installation/Docker%20BE%20Install%20Guide.md). 
+
+## AI Core Local Installation
+AI Core, like most web apps, has a backend and a frontend. The **backend** is responsible for managing the data, models, and running the logic that underpins AI Core.
+Meanwhile, the **frontend** provides a user interface that allows you to view and interact with AI Core in a browser.
+
+You must install both the backend and the frontend in order to run AI Core locally.
+
+## Installation Instructions
+The installation steps differ slightly depending on whether your operating system is **Windows** or **OSX (Mac)**.
+### Windows Installation Guide
+
+Please click on the link below to find the Windows Installation Guide
+
+*    [AI Core Installation for Windows](/windows-developer-install)
+
+
+
+### OSX (Mac) Installation Guide
+
+Please click on the below link to find Mac Installation Guide 
+
+*    [AI Core Installation for Mac Silicon](../Advanced%20Installation/Mac%20Developer%20Install.md)
+
+### Frontend install
+To access the frontend local installation instructions, click [here](../Advanced%20Installation/Frontend%20Installation.md).

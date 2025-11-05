@@ -1,0 +1,8 @@
+{
+    "label": "Vector Databases",
+    "position": 4,
+    "link": {
+      "type": "generated-index",
+      "description": "In-Depth Guides for Vector Databases"
+    }
+  }

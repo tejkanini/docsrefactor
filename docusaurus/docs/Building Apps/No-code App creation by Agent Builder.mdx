@@ -1,0 +1,101 @@
+---
+sidebar_label: 'Using Construct an agent'
+sidebar_position: 2
+slug: '/using-agent-builder'
+---
+
+import ReactPlayer from "react-player"
+import AgentBuilderDemo from "../../static/Demos/AgentBuilderDemo.mp4";
+
+# Using Construct an agent(Agent Builder) to Create a New App
+
+Agent Builder is a Drag and Drop feature in AI Core designed for developing applications where users can input data and receive corresponding outputs. Agent Builder simplifies UI creation by requiring only a prompt to define the input types the user will provide and expected outputs of the app.
+
+Initially, we will create a prompt that specifies the types of inputs users will provide and the expected outputs. Once this initial UI is generated, the Agent Builder app functions just like any other Drag and Drop app in AI Core. Let's understand the process to develop an app via Construct an agent.
+
+<ReactPlayer controls url={AgentBuilderDemo} />
+
+To use Agent Builder, first click on **Create New App** button on the top right corner of your AI Core home page and then click on **Get Started** on the Construct an agent tab.
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB14.png)
+
+## Create a Prompt
+
+### Prompt Details
+
+In this section, we give a name to our prompt. Also, we will select a model (LLM) through which the prompt will run to provide the output based on user input.
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB15.png)
+
+### Define the Prompt
+
+In the "Prompt Context" section, we will write the actual prompt that defines the input options for the user and outlines the app's UI. To write a prompt, imagine you are talking to the app as if it were a living being and explain its role. For instance, if you are creating an itinerary planner app, you might say, *"Suppose you are a travel agent."* This sets the context for the app's role.
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB3.png)
+
+### Including User Inputs and Expected Output
+
+We will also include the inputs the user will provide and the expected output the app should present. For example, a sample prompt for a travel guide app could be:
+
+*"Suppose you are a travel agent. The user will provide the destination, number of days of travel, and their travel pace preference (slow or fast). Prepare an itinerary for them."*
+
+In this example, we have:
+	1. Told the app about its role.
+	2. Mentioned the inputs the user will provide.
+	3. Specified the expected output.
+
+### Define the Input Parameter
+
+The inputs that the user decides are called input parameters. We need to inform the app about these input parameters, which the user will provide data for. To do this, include the input parameters inside double curly brackets \{\{ \}\}. This way, the app knows that these are the input parameters provided by the user. Our sample prompt will be updated to: 
+
+*"Suppose you are a travel agent. The user will provide the \{\{destination\}\}, \{\{number of days\}\} of travel, and their \{\{travel pace\}\} preference (slow or fast). Prepare an itinerary for them."*
+
+You can also set input parameters under the 'Set Inputs' section after creating the prompt. Click on the word you want to create as an input parameter.
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB16.png)
+
+### Test Prompt
+
+After you define your input and select your model (LLM), you can test your prompt against the LLM and decide if the model fits your app's needs.
+
+### Define Input Types
+
+In this section, you can define the type of the input parameter you have selected. You can choose between any of the options in the dropdown that best suits the input needed.
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB17.png)
+
+### Set Constraints
+
+In this last section before previewing your prompt, you can set constraints for the output. Examples include limiting responses to a certain number of words, specifying whether the output should be in bullet points or not, etc..
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB18.png)
+
+### Preview Prompt
+
+Click on the "Preview" button to save your settings. You will be directed to the preview of the prompt.
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB19.png)
+
+Click on Create App to complete creating the app. You will be directed to the UI page where you will be able to see the input parameters that you created. Once you enter inputs for these prompts, the App will run through the model and provide an output.
+
+## Post Initial App Development
+
+### Editing the prompt
+
+It is possible to edit the original prompt you have created. To do this, go to your app in the App Library and click on **Edit** in the top right corner.
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB20.png)
+
+Now go to the Data tab and click on Notebooks tab and then on **Prompt Query**. Here, inside the query, encapsultaed by the double quotes, we can edit the original prompt. Save the changes so it reflects in the UI.
+
+![AB](../../static/img/Navigating/Create%20New%20App/AB21.png)
+
+### Editing the UI tab or Data tab
+
+Using Construct an agent, by providing a prompt, we can develop the entire app. This automatically sets up the UI and creates the required queries (notebooks) and variables in the Data tab. However, you can still edit the UI by adding or removing blocks, or by adding more queries (notebooks) and creating variables. This process mimics the Drag and Drop app.
+
+If we want to edit the **UI tab**, by adding different blocks like HTML, Iframe, or an Image, you can follow the steps mentioned in the documentation of the Drag and Drop app. Please click on the link below for detailed instructions:
+*    [Edit the UI tab](./No%20Code%20App%20Creation%20by%20Drag%20and%20Drop.mdx#Design)
+
+If we want to edit the **Data tab** by adding more queries or variables, it is recommended to delete this app and use the Drag and Drop feature to create a new app. Please refer to the documentation in the link below for guidance:
+*    [Edit the Data tab](./No%20Code%20App%20Creation%20by%20Drag%20and%20Drop.mdx#using-the-notebook-tab)

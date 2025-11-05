@@ -1,0 +1,7 @@
+Reactor Name: ExportAppReactor
+Description: Export an app as a single .smss-app file
+Required.keys: project
+Key description:
+- project: This is a required value containing the id of the app that is being exported
+Optional keys: None
+Usage: Export an app to a file for backup or migration.

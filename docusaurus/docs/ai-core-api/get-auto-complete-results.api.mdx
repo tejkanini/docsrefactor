@@ -1,0 +1,71 @@
+---
+id: get-auto-complete-results
+title: "Autocomplete insights"
+description: "Returns autocomplete suggestions for insight search."
+sidebar_label: "Autocomplete insights"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU01v2zAM/SsGz2qc7VT4FnTBVqDbiqY9FTkoMmNrlSVNpNMEhv/7QMXZ0hbdgJ0ESfx4fO9xANYNQfUIS99Yj8Vyj6ZnGzysFdRIJtmYrxXcIffJU6F7DiZ00SFjQX3TIEkEFduQCuvJNi0XhDqZdgYKQsSkJeC6hgoa5EXP4WrKv0PqHRMoiDrpDhmToBnA6w6hglOfe0wdKLCC42eP6QAKyLTYaagG4EOUYOJkfQPjuFaQkGLwhCT/H+dzOV6OszpDnvJoWIMCEzyjZ4nXMTprMvbyB0nSALjXgkgYI+2Qis2hSNhISQWmJw4dpsK0ffKwHsdxVEBo+mT5kOfaaLJm0XML1eNagHbIbZiYyTTIF5SY5SgNek7alRnVnst36SNMuxN3fXJQQcscqSrL55CeqA1xZrbNrEYXLDPOTOhKs20utL2osQvl1+CDs9yWOlp4rfwn7EKx9HUM1nPxcHcDozpvU5WlC0a7NhBXl/PL+d/L3Uhs8Ql36ELshGwh4kTTSmQ96nZG1m+Rpd9JfLnnGBCerd+GHGhZBILFdXEVEoICYebYej6bzz5crL4tbldfvt/DqCAG4k5nbSfPLc79PfmZXg8x/DHK/y7GNFDWNTptvcDJpA6TDR7haAOx1tEIJ4PuxSvvmGGtQISQ9GHYaMKH5MZRno+bIxapLemNwxqqrXaECp7w8Hbddtr1AjHrs9PJSk42roIWdY0pFzvmLozByGdZb9bnhd0/L+9BgX4p7lFMNZ1Se/rQ/nBWOY91dMYDYRLdxhFOQ/TTUzbpv/JvNdFzSPVZfpyeYJQF/gVMn8uY
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Autocomplete insights"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/engine/central/context/getAutoCompleteResults"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns autocomplete suggestions for insight search.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"completeTerm","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Suggestions returned","content":{"application/json":{"example":["sales by region","customer churn"]}}}}}
+>
+  
+</StatusCodes>
+
+
+      

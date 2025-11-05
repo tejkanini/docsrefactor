@@ -1,0 +1,71 @@
+---
+id: result
+title: "Get async job result"
+description: "Retrieves the final result for a previously submitted asynchronous Pixel job."
+sidebar_label: "Get async job result"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE2P2zYQ/SvEnGXLLXIIdHOTRbtB2iz242T4QFFji47EYcihPyDovxdDaTfepGlQoCeJ5Hy89+aRA7DeR6g2cOP21qG6OaNJbMnBtoAGownW52UF98jB4hGj4hbVzjrdqYAxdax2FJRWPuDRUordRcVU95YZG6XjxZk2kKMU1Z09Y6cOVC+hAPIYtNS+baCCqRIUEPBLwsi/UXOBagBDjtGx/GrvO2tySnlenE6nxY5Cv0ihQ2eowUaCommx1/InhWyQ3Q0cqL5thBJfPEIFVB/QSDcfBAZbjJIyhVXDc1jkYN0evlVifc3pQLWyDTq2O4sBxrEAttxJ+gcpdz/xgVFOvmLikDBvRE8uTu1/Xa3k863sWeKAnILDBoofSXKIEj8AnnXvpf8AkTWnKESSMRijMNE8q5P1rmCaCT7PXVFinzJcAfxm9eZ7SB+oVo5k7Mk1ikJeWKcixigR/wUihkDhn2ri2WelZiARTQqWL1BtBqh1tGaduIVqsx23BfTILYmNPMU8Vi1nUGJ2dflirojhiCHmIil0UEHL7GNVlicKn2NLfml2+2WDHYl9l4b60uz2C20XDfZU/kmOOsttqb39zhbvsSd14xpP1rF6uv8IY3HdpirLjozuWopcvV29Xf17uY8Sq97jETvyvagpTJ91eBCfT7a5UuPFudJP+OYoqKaYbE7rdpQDZ5Oub9U7CggFiDJT69Vytfxl8fDX+u7hj0+PMBZZ117n4TmdK/6OPF3ufANeFH7F4er6/u/Px0yU8cyl77R1AjOLPczj38A0/vyoZHjbAkR8ORqGWkd8Ct04yvaXhEG8tS3gqIPVtWiz2Y4FtKgbDNkxn/ECFbybKC0eBYCEd0mA/Px1EjdMJdbGoOcfJOdL8srUd58eHqGAen4Se2ok56pycb2YYOvXfpjmX8xfITMfaHe5wpFVmcz0FDHIqMcRihl2mrcyk5/l3+kYTxSaq3w/b8G4Hcfxb78CRVc=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get async job result"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/result"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves the final result for a previously submitted asynchronous Pixel job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["jobId"],"type":"object","properties":{"jobId":{"type":"string","description":"Asynchronous job identifier"}},"title":"JobIdRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Result returned","content":{"application/json":{"example":{"status":"success","data":{"result":"Pixel execution output"}}}}},"404":{"description":"Job not found or not in session","content":{"application/json":{"example":{"error":"Job not found or expired"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

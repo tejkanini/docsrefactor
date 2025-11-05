@@ -1,0 +1,67 @@
+---
+id: set-app-global
+title: "Set app global (legacy)"
+description: "Sets the database public/private. Deprecated: use /auth/admin/engine/setEngineGlobal."
+sidebar_label: "Set app global (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v1DAQ/SvWnEBK1ykCqcptRStYqdCqaU/VHhxnduPWsY09WVii/Hc03m27bRFw4ZQoeZ437yMZgdQ6QXULaqAOlgW0mHQ0gYx3UEGNlAR1KFpFqlEJRRgaa7QM0WwU4UycYoioFWFbiSGhkDxIqrY3TqJbG4cyIZ3lu0/WN8rOoAAfMCrmWLRQQUKah7B7CwVETMG7hAmqEd6VJV+er3XxcFykQWtMaTXwQe0doSPGqxCs0Rkj7xIfGiHpDnvFd7QNCBX45g41QQEh8kJkdpT7mQfAxnuLysFLexauZRJMwqyyTf75YthiC9NUABmyPOgc10pv5+xOvWO52ouFaWLg+/L4tdwbx6b6aH5i+1eZecyH37m2cITRKSsSxg1GgTH6+C/zJtb9EDNUFAcsoEfqPKcXfMoeKuqggsP8VQjyRbY7am7cCEO0UEFHFFIl5Xcf71Pnw0yv1rMWrTdEONO+l3q1PlLmqMXeyy/eeWuYIZhXcZxi78WZa4M3jsTN1TlMxSFNJaX1WtnOJ6pOypPyz+POGStOcYPWh54dmpasQA/R0LbmNu0K06hk9Jw/oKfKMB/rzSiuEGNyF4xb+Qzcd2K+EB99RCiAndlRl7NydnxUf51f1p8vrmEqssu9yj12Kk+skYQKQayzt+KNzd16+1LG+JTvf/uc95oJf5AMVhnHG2ffx30v9j+YAvIovoZsz2E7lgVwMgweR97uJtpp4sffBoxbqG6XBWxUNKph426XUwEdqhZjrtM9btlNrTFwHzfKDrzUq0pziI/lvbyor2GafgEvZMBn
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set app global (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/app/setAppGlobal"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Sets the database public/private. Deprecated: use /auth/admin/engine/setEngineGlobal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation successful","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Indicates if the operation succeeded"}},"title":"LegacyAdminSuccessResponse"}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}},"500":{"description":"Internal server error","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

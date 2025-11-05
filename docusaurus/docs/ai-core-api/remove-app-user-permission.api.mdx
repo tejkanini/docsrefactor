@@ -1,0 +1,67 @@
+---
+id: remove-app-user-permission
+title: "Remove app user permission (legacy)"
+description: "Removes a user's permission for a database. Deprecated: use /auth/admin/engine/removeEngineUserPermission."
+sidebar_label: "Remove app user permission (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMtu2zAQ/BViL20BRnKKHgLd3CZAA6RNEMenwIc1tbaYUCRDUm5dQf9eLK0kdpM+Tj3pgeHM7s4se0i4jlDdAnapgYWEmqIK2iftLFRwTa3bUBQoukjhTRSeQqtj1M6KlQsCRY0JlxipEKfkAylMVFeMFiVTlli32pZk19pSGTLdWf6YRwpXT2wFSHCeArLweQ0V7LBT7w+BICFQ9M5GilD18H4y4cdh2ZePTCJ2SlGMq86ABOVsIpsYj94brTKmvIt8qIeoGmqR39LWE1TglnekEkjwgWtLeic5cu4Bl84ZQq7tsI5zW7MIRaFXIjUk3GFhVFMNwyAh6WSY6ILWqLZTntlsp3I9NgvDwMAPr7X7EWsR6KGjmP7a5chy/JJlbtkwF/QPqv+FZuBuHy2HKoWOJLSUGsf2eZeL8ZgaqGA/C+h9+XtzI4UNBY5kD10wUEGTko9VWX5z4T42zhdqtS5qMk6nRIVybalW6yPURzW1rvzirDOaxbx+4ccptU6c2do7bZOYX1/AIPdlqrI0TqFpXEzVyeRk8me6C8aKU9qQcb7lYQ0L7kB1QaftjOO0S8wSo1ZT3rDnzLAe95tRnCHG5DBou3IZOIZiei4+uUAggSezk54Uk+L4aPZ1ejX7fHkDg8wDbzEH2WJm3C2vQO/z9u7v7luTg/bu15b6Z9v/7+6PQ0n0PZXeoLbcUjamHzM0XlESMis/vc+XwetJWkhgF/lc33OR82CGgX8/dBS2UN0uJGwwaFzykG8Xg4SGsKaQo3dPW568UuQ5xhs0Hdf3YhPY8KfMX13ObmAYfgJw8N+0
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove app user permission (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/app/removeAppUserPermission"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Removes a user's permission for a database. Deprecated: use /auth/admin/engine/removeEngineUserPermission.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation successful","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Indicates if the operation succeeded"}},"title":"LegacyAdminSuccessResponse"}}}},"400":{"description":"Bad request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

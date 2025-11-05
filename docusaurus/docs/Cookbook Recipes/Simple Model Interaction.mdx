@@ -1,0 +1,173 @@
+---
+sidebar_label: "Simple Model Interaction"
+sidebar_position: 2
+---
+
+## Purpose
+
+Learn how to send a prompt to an AI model and receive a response using the Model in AI Core. This recipe demonstrates a basic pro-code workflow for integrating a model into an application.
+
+---
+
+## How to Use
+
+1. Go to the [model catalog](../Getting%20Started/Platform%20Navigation/Model%20Catalog.mdx), select a model that is most suitable for the usecase. 
+![Models available](/img/SimpleModelInteraction/ModelCatalog.png)
+There are many models available on the platform, and interacting with any of them follows the same process—the only difference is the unique model ID. 
+
+2. Click on a specific model, in this example we will use the **GPT-4o** model.
+![GPT 4o model](/img/SimpleModelInteraction/GPTModel.png)
+
+3. To use this model in our code, we need to copy the model id
+**`4acbe913-df40-4ac0-b28a-daa5ad91b172`**
+
+### JavaScript Example
+
+#### **Basic Generation**
+
+```javascript
+// Generate a response from the model
+LLM({
+  engine: "4acbe913-df40-4ac0-b28a-daa5ad91b172",
+  command: "<encode>Your question here</encode>",
+  paramValues: [
+    { max_completion_tokens: 2000, temperature: 0.3 }
+  ]
+});
+```
+
+#### **With Image Input**
+
+```javascript
+// Using an image URL
+LLM({
+  engine: "4acbe913-df40-4ac0-b28a-daa5ad91b172",
+  command: "<encode>Your question with image</encode>",
+  paramValues: [
+    { image_url: "https://your_image_url.com" }
+  ]
+});
+
+// Using a base64-encoded image
+LLM({
+  engine: "4acbe913-df40-4ac0-b28a-daa5ad91b172",
+  command: "<encode>Your question with image</encode>",
+  paramValues: [
+    { image_encoded: "base64_of_image" }
+  ]
+});
+```
+
+#### **ChatML-style Conversation**
+
+```javascript
+LLM({
+  engine: "4acbe913-df40-4ac0-b28a-daa5ad91b172",
+  command: "<encode>ignore</encode>",
+  paramValues: [
+    {
+      full_prompt: [
+        { role: "system", content: "You are a helpful assistant." },
+        { role: "user", content: "Who won the world series in 2020?" },
+        { role: "assistant", content: "The Los Angeles Dodgers won the World Series in 2020." },
+        { role: "user", content: "Where was it played?" }
+      ],
+      max_completion_tokens: 2000,
+      temperature: 0.3
+    }
+  ]
+});
+```
+
+#### **Embeddings**
+
+```javascript
+Embeddings({
+  engine: "4acbe913-df40-4ac0-b28a-daa5ad91b172",
+  values: ["Sample String 1", "Sample String 2"],
+  paramValues: [{}]
+});
+```
+
+---
+
+### Python Example
+
+```python
+from ai_server import ModelEngine
+
+# Initialize the model engine
+model = ModelEngine(engine_id="4acbe913-df40-4ac0-b28a-daa5ad91b172", insight_id='${i}')
+
+# Basic generation
+question = 'Sample Question'
+output = model.ask(question=question, param_dict={'max_completion_tokens': 2000, 'temperature': 0.3})
+
+# With image input
+output = model.ask(
+    question='Sample Question With Image',
+    param_dict={'image_url': 'https://your_image_url.com', 'max_completion_tokens': 2000, 'temperature': 0.3}
+)
+output = model.ask(
+    question='Sample Question With Image',
+    param_dict={'image_encoded': 'base64_of_image', 'max_completion_tokens': 2000, 'temperature': 0.3}
+)
+
+# ChatML-style conversation
+output = model.ask(
+    question='ignore',
+    param_dict={
+        "full_prompt": [
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": "Who won the world series in 2020?"},
+            {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
+            {"role": "user", "content": "Where was it played?"}
+        ],
+        'max_completion_tokens': 2000,
+        'temperature': 0.3
+    }
+)
+
+# Embeddings
+text_arr = ['Sample String 1', 'Sample String 2']
+model.embeddings(strings_to_embed=text_arr)
+```
+
+> _**Note**: Replace the **Engine id** with the model specific to the preference or usecase._ 
+
+---
+
+### Notebook Integration (Python)
+
+You can also interact with the model in a notebook environment:
+
+```python
+from semoss_sdk import call_model
+
+result = call_model(model_id="your-model-id", prompt="What is the weather today?")
+print(result["text"])
+```
+
+---
+
+## Example in VS Code
+
+Here is a simple application called Training Plan Generator which based on selected Technology, Level and Number of weeks A pre generated prompt will be generated which can be passed to a Model and be used to generate actual Training plan. 
+
+```JavaScript
+ useEffect(() => {
+    if (technology && level && weeks) {
+      setPrompt(`Create a training plan on ${technology}, for ${level} level, for ${weeks} weeks (each week is 5 working days, 8 hours per day) in a structured way and give the resources to study those topics.`);
+    }
+  }, [technology, level, weeks]);
+```
+
+![VS Code Example](/img/SimpleModelInteraction/VSCodeExample.png)
+
+The UI of this React Based app is shown below 
+
+![UI of the React App](/img/SimpleModelInteraction/ReactAppUI.png)
+
+An example of the Training Plan Generator app after generating a sample Training plan is here. 
+
+![Example of the App](/img/SimpleModelInteraction/PromptResponse.png)

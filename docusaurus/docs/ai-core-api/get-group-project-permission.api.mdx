@@ -1,0 +1,71 @@
+---
+id: get-group-project-permission
+title: "Get group permission for a project"
+description: "Returns the permission string for the specified group, type, and projectId."
+sidebar_label: "Get group permission for a project"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtu2zAQ/BViz4zlFC0Q6GY0QWogbYM4OQU+0OTKYiKRLLly6wr692Ilxc4bQdKTIXOWM7ucnRZIrRPk16AaKmEpwWDS0Qay3kEOF0hNdElQiSJgrG1K1juRKFq3FoWP/UkKqG1h0Yh19E2QgrYBpVDOiBD9DWqamwlI8AGj4pvnBnJYI50y/HyAnO+uBwlBRVUjYWRtLThVI1cwfG5AgmVxvxqMW5CQdIm1grwF5oUcBnnQdXJX2p+8o26n/+3FSwkRU/AuYeLzT9Mp/zwc7L5bUSDpEplAe0foiNEqhMrqfljZTeKS9imlX7E26Lquk/D5OZq526jKGmFdaOjjDIdPGa4cO8dH+xeN8FHYkTHh3Vt+iPPLc10tMG4wCozRx48RdBJqpNKPfuydRyXkkHFXWW+4bPRA9pphUy9pcGsTK8ihJAopz7LfPt6m0oeJLtYTg5W3RDjRvs50sT5Q9sBg7bPv3vnKUpmpYOHxFh5j7cWJM8FbR+Lq4gzYoXuaPMsqr1VV+kT50fRo+vp1Z4wVx7jByoeaJ8eeTaibaGm74HENzl2pZPWMg2E/POa7sz9/9xheGbCu8D3QUsUns7n46iNvHU9moJ5OppPDg8WP2fni289L6CQEn6hW/UONK3eKNOTI/cThqFF3afK4o3Zvgf+cWGPThH8oC5WyjiX3g29Hp4zJKYdwYgPtNL7sl6UEfiuubtuVSngVq67jv4d4YRcZm9SqQgN5oaqEEm5x+yADN6pqWFxvhhfQY+y9BXo/6fb4JX9EywWQXy87CSUqg7GXOBTOtMZA96qeLCHfsluz05NL6Lp/mwU+Bw==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get group permission for a project"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/group/project/getGroupProjectPermission"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the permission string for the specified group, type, and projectId.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"type","in":"query","schema":{"type":"string"}},{"name":"projectId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Permission fetched","content":{"application/json":{"schema":{"type":"object"}}}},"400":{"description":"Invalid input","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized or invalid session","content":{"application/json":{"schema":{"type":"object"}}}},"500":{"description":"Server error","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

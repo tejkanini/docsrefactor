@@ -1,0 +1,10 @@
+#Base Properties
+ENGINE	2555ec1b-e1a2-4905-91e0-022dc57fc564
+ENGINE_ALIAS	Movies
+ENGINE_TYPE	prerna.engine.impl.rdbms.RDBMSNativeEngine
+OWL	db/@ENGINE@/Movies_OWL.OWL
+RDBMS_TYPE	H2_DB
+DRIVER	org.h2.Driver
+USERNAME	sa
+PASSWORD	
+CONNECTION_URL	jdbc:h2:nio:@BaseFolder@/db/@ENGINE@/database;query_timeout=180000;early_filter=true;query_cache_size=24;cache_size=32768

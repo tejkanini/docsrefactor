@@ -1,0 +1,71 @@
+---
+id: comms
+title: "Open an SSE channel for MCP tool communications"
+description: "Establishes a Server-Sent Events (SSE) stream used for real-time interaction with a toolbox. The stream emits event data as processing progresses."
+sidebar_label: "Open an SSE channel for MCP tool communications"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVmFv2zYQ/SsHfkoA2XKGDSi0okCSGliGtgni5FNqFGfpbLGhSJak4riG/vtwlOTEsZd6HTDsUxz6+O7d4907r0XAhRfZnfh4fiWmiSjI507aII0WmRj7gDMlfUkeECbkHsgNJqQDjB9IBw9Hk8n4GHxwhBXUngqYGweOUA2CrAikDuQwZzhYylACQjBGzczjEG5K6m9SJYMHYkwoMCCgB+tMTt5LveCPC0fekx+KRBhLDhnxohCZyE1VeZEIiw4rCuS4mrXQWJHIRJfsiyxEIiSXZDGU4mWdFwXpIOeSHJg5hJLg4/lVz1QkwtG3WjoqRBZcTYnweUkVimwtwspyHh+c1AvRNMkmNeZM/8s9rfrU32pyq53cl/EDKmgvwD2toohYFLL/pg6lcfJ7rFoclv70xZ3IoCQsyO1Q2IqFNgiOaLgYJnCGXuZgHJwROnIQzD3p4wNJHCj/TRsGcvMM/73mr1Y0bemQD2emWHHE3+D9Obn8BNySqAuwuFIGC8DQ97nUMsj+RXKjA+nAaGitknn8Iv3qGXK9y8bMvlIeRNM0DdPx1mhPngN+GY12OU0m4814bca4+L2dMg9LqRTMCGzNx1DrIBUzt4piFxgHhfS50ZqTbrEN9BjSCDNoE+yl24n3Uvo9JtKxPIqQGbxlgHefP+toBRm87XR8d9zV/uu+cs+wgO6Nfsy2gznZhbnV/bBRcSjOyR46561wrGSujD8Y7Ld9tV2wi3J7+SgekHPGHQTYJMJTXjsZVtEWZzzNPO4iu5tyW1cUSsM+ak0ULs5nJlKGq3Kbrp9GuEl7r21ptEZbO8XGEoL1WZoujbv3pbHDfL4YFqSMDIGGuanSfL4YoBwUVJn0o9FGyVCmaOVOg7ynysBYF9ZIHeD2+oPgAX9Kk6WpMjmq0viQvRm9Gb0O94Fj4T09kDK2YrW47F6UCXdtO0TPpNn0MOfrjYH/jzHsOIKn9PrJEsaPyJPDorPxzE0EkUFFK76Ac+NIJIJVa2mNhqPhyWDy6fRq8sfljWiS+AAVxtHv3OzSkgbUwJOcl6g1qbgZ+t0UjabWnXH4l6Wvn/rj/7nIO5Fj61qFUrMM8aHXXR/eCXrkrqxyfoZsa520zThNBDcCh67XM/R061TT8HHr/NyihfQ4U7xJ5qg8vSLTT+zivUXwPnmxjR5Q1RwYu/lfMfqppFP+x0nO+g81ObruFvEx7N3Te7l0h6i3WPQcn71jM22S/mcJ82oDztvsgxuGeQLYWZOsZXvjNM/Jhmexu4a4ZXdXl5MbkYhZt84rU/Alh0v+5YHLlq2x7WBl6/ZsLRTqRY0Ljm0JsBfgtmm0JpF0f7movWrEdm0d59azvVfUNBuJ6u4olvij+1fo/dK44tl92x2xwE3zF2NrJcY=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Open an SSE channel for MCP tool communications"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/ext/mcp/{toolbox_id}/comms"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Establishes a Server-Sent Events (SSE) stream used for real-time interaction with a toolbox. The stream emits event data as processing progresses.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"toolbox_id","in":"path","description":"Identifier of the MCP toolbox","required":true,"schema":{"type":"string"}},{"name":"access_key","in":"query","description":"Optional access key for additional authorization","schema":{"type":"string"}},{"name":"Authorization","in":"header","description":"Authorization header (e.g., Basic or Bearer token)","schema":{"type":"string"}},{"name":"toolbox_id","in":"path","description":"Toolbox identifier","required":true,"schema":{"type":"string"}},{"name":"access_key","in":"query","description":"Optional access key","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Optional JSON command payload at stream initiation","content":{"application/json":{"schema":{"type":"object"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SSE stream established; events will be pushed until completion or disconnect","content":{"text/event-stream":{"schema":{"type":"string","description":"Server-Sent Events stream (event: <type>\\n data: <payload>)"}}}},"400":{"description":"Bad request","content":{"text/event-stream":{}}},"401":{"description":"Unauthorized","content":{"text/event-stream":{}}},"410":{"description":"Connection closed","content":{"text/event-stream":{}}},"500":{"description":"Internal server error","content":{"text/event-stream":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

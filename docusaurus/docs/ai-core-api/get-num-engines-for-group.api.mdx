@@ -1,0 +1,71 @@
+---
+id: get-num-engines-for-group
+title: "Count engines for group"
+description: "Returns the number of engines assigned to the specified group."
+sidebar_label: "Count engines for group"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMFO3DAQ/ZVozmazVKhCuW2BUiRKK1hOaA9eZ5IYEo+xJ7TbKP9eTbLLskARoqfI8Zt545n3pgPWZYTsBnTLFSwU5BhNsJ4tOcjgErkNLiZcYeLaZokhoSJBV1qHMdEx2tJhnjANiOjR2MJinpSBWj8BBeQxaEl2lkMGJfJF25yM4V8pnAoMFHgddIOMQUrpwOkGBS23ZzkosFLLfYthBQqiqbDRkHXAKy+4yMG6Evpe7YbO5foDwRF1MNUcQ/P+6IWCgNGTixjl/tN0Kp/dbh5R6zgJQ09R3mXIMToWpPa+tmZoVXobBd69pLOOscQACgoKjebx1+cD6Pu+V3DwGukXnScB71uM/AFGWt6i4cf8+y/zXzuRDgX750NPekLQK2iQK1orZdAFV5BBKgypzhvr0mGy6b+EFDE8bFTUhhoyqJh9zNL0F4W7WJGfmKKc5FiTZcaJoSY1Rbmn7V6ODaXfyVFthcxbeG6GY2woOXG5J+s4ub48BxHNliZL05qMriuKnB1OD6dvpzsXbHKMD1iTb6RnoqKIpg2WV1fSqFFLSx2tmYk/t20Tvo0g5TxgRMVgXUED0HItN7Oz5IiCGEE6M1JPJ9PJ/t7Vxezn1bcfc+gVeIrc6GFEaxeMYt1YvaAwmvr5M7rtxP9/W6wfx/ibU19r66S0ocHdWgvrRaVgUAMo2BT1uiIWCmQaEtd1Sx3xOtR9L79HS4tOchv1ssYcskLXERXc4Wpn+zzoupWyhnG/hV4vnPfgd3bMNmAhh2AlArKbRa+gQp1jGAodI2fGoOcnUS9sJlkejXR6Moe+/wvBRwgg
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Count engines for group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getNumEnginesForGroup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the number of engines assigned to the specified group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"groupType","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Count returned","content":{"application/json":{"schema":{"type":"integer","format":"int64"}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

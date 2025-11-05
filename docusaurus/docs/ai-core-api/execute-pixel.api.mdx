@@ -1,0 +1,71 @@
+---
+id: execute-pixel
+title: "Execute Pixel (scheduler)"
+description: "Executes a Pixel expression in the scheduler context and returns the result."
+sidebar_label: "Execute Pixel (scheduler)"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWBpw1Q4mynwres7bAC3Vos7SnIQZGZWK0sqRLdJDD87wPlpM3SdbvsZFl+fCQfH90BqXWCcg4zXWPVWoywkFBh0tEEMt5BCZdb1C1hEkrcmi1agdsQMSXjnTBOUI0iHaKF9o5wS0K5SkSkNrqUERFTa2kMEnzAqJj6qoIScCDPxCAh4lOLib74agdlB5nNER9VCNboHFhsR5vNZrTysRm10aLTvsKKQVxHo/jERCby7RxCJl9IoF1AKMEvH1ATSAiRiyGDiUMGWNkdYImicWs4leONBuTFvgvoewlkyOKrbBn+1ccGev76WhfFFvNFCt6loYTPkwk//pww01Ug31PlITG863OeBqn2LHDwKbeqqIYSisOkihPhE8ZnjGyFDtpooYSaKKSyKDY+Pqbah7FerccVWm+IcKx9U+jVeqTMqMLGF9+989ZQXahg3kh2gY0Xl64K3jgS9z+voZfHacqisF4rW/tE5dnkbPJ3umvGigt8RutDw0r0C+5At9HQjp3cDHIuVTJ62nLnL1PlfNxvRkE5YPLgjFv5DNwPcHolzn1EkMDKDKkn48n402j2Y3o7+3ZzB73M+jaKhQenmqPB75flw8tufDxt5Mjf/3vJ9s0yqghWGcelZsG7vRXmcOAD+fsWLiTwIBjSdUuV8D7avufrpxbjDsr5QsKzikYtWaf5opdQo6owZvc84g5KOB86G91xIQy3LRf07y1mZwwUU60x0DvB2ew89hej397M7kDCcv/raHzFMUfM8viFy+77X7PHwKs=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Execute Pixel (scheduler)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/schedule/executePixel"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Executes a Pixel expression in the scheduler context and returns the result.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["pixel"],"type":"object","properties":{"pixel":{"type":"string","description":"Pixel expression to execute"}},"title":"ExecutePixelForm"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Pixel executed","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

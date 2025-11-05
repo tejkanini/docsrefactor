@@ -1,0 +1,71 @@
+---
+id: update-smss-file-2
+title: "Update a project SMSS file"
+description: "Validates and updates the project's SMSS configuration file. Only project owners or admins may perform this action."
+sidebar_label: "Update a project SMSS file"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNkk9v2zAMxb+KwMsujp0WOxS+BeuGBWjXYl53KYJBk+lYnSxqIp0iC/zdB+ZP0W7D0JNliHxP/D3uQOyaob6H20wP6ARWBbTILvskniLU8NUG31pBNja2ZkyHs/Ro0qHlDZvmummMo9j59ZitNprOByzNTQzbU52hx4iZDWVj28FHNoPdmoS5ozwY6T0b67S3hAIo4UFo2UINB9dmYP7gA347hwKSzXZAwayv30G0A0INR6tlCwV4fX2y0kMBGX+OPmMLteQRC2DX42Ch3oFskzayZB/XME0rLeZEkZH1/nw+189LJvt5dcIjj9bw6Bwyd2MIWyjAURSMop02peDdfpbqgbV9N01TAW//JXyErQApKzgV9XFtMGfKrxU++1v4LtpResr+F7amMj5u1MmwylN8jfBUAKMbs5ftnvh3y94tRumhvl8ptgGlJ00rEcs+Ib2D6pjJbPcUzlS9DBRUOm9OWY45QA29SOK6qh4p/+CeUum6ddliIC+CpaOhct16Zv2sxYGqa4oUvPSVTR7+XOFLHMi8j20iH8Xcfb6CqXhuU1dVIGdDTyz1xfxi/n+5K601l7jBQGlQaDr+CU6jq3XYnWeInhZN/eC4gPq/rwGl62NH+0IvQW8WS/OOssJRMgfreTkvz2bNp8Vt8/HmC0zTb93PULQ=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a project SMSS file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/project-{projectId}/updateSmssFile"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Validates and updates the project's SMSS configuration file. Only project owners or admins may perform this action.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMSS file updated successfully","content":{"application/json":{}}},"400":{"description":"Validation or processing error","content":{"application/json":{}}},"401":{"description":"Unauthorized / invalid session","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

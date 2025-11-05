@@ -1,0 +1,71 @@
+---
+id: status
+title: "Get async job status"
+description: "Returns the current status of an asynchronous Pixel job."
+sidebar_label: "Get async job status"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVM1v2jAU/1eidzaETZtU5cbaqmPqKIJyQhyM8yCmie3aTgFF/t+nZ6cdbOp62CnJ8/v4fTynA893DooV3KqdVJjdHlG0XmoFawYlOmGliZ8FzNG3VrnMV5iJ1lpUPnOe+9ZleptxlXF3UqKyWunWZTN5xDrb680QGGiDllObSQkFpCJgYPG5Ree/6fIERQdCK4/K0ys3ppYiluTHweFwGGy1bQatrVEJXWJJSU5U2HB6o0bSUnQFe72ZlITenwxCAXqzR+GBgbEEw0t0VJLSiu41zXkr1Q7+JD0+57TXm0yWqLzcSrQQAgMvfU3lP6jdPPGBQCe/MXnbYgw4o5VL4z+PRvS4HLZIatooNJbA3pNk7yi/AzzyxtD87lXUAubL6XQyvUuEdxadg+LL1xAiKIeitdKfoFh1sOFOinHrKyhW67Bm0KCvNDlktIuKcTqDHONu5G++ObQvaF1s0toaCqi8N67I84O2T67SZii2u2GJtZbe41DoJhfb3YDLQYmNzn9qpWvpq5wb+ZfiN9jo7FaVRkvls+X8HgI7H1Pkea0FryvtfHE1uhr9u9095WY3+IK1Ng1pSUxfdVjQCiVHztR4WwqaR3xjFhQpJ/ou1VbHxN7/8SS71haBASmTRo+Go+GnwWI6ni2+PzxCYFHXhkfrFI8d79CnexOX603hCw5nN+N/LmHPyePR56bmUhGiqGvXO72C5DRRTkjWDEhnOuq6DXe4tHUIFH5u0dIarRm8cCv5hmRYrQODCnmJNi7HE56ggOuEfvBIACi9bgnIx3ecjE8txkKg8e8Ux9twsb+zh8UjMNj0P5ZGl1Rz1pmdfyTY/NL6ZDXrn0SmP+DqdIYjqpL2ZunQkqshAOtht30oMvmofsadO2hbntWbPgRhHUL4BahG+YI=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get async job status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the current status of an asynchronous Pixel job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["jobId"],"type":"object","properties":{"jobId":{"type":"string","description":"Asynchronous job identifier"}},"title":"JobIdRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Status returned","content":{"application/json":{"example":{"status":"RUNNING","progress":45}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-media-wiki-tags-for-search-term
+title: "Search MediaWiki tags"
+description: "Searches Wikipedia for a term and returns top results with Product Ontology links."
+sidebar_label: "Search MediaWiki tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1U01P3DAQ/SvWnE2ypReU26osLRIUxIJ6QHswyWzirmO79oRlFeW/V+NkYZeq5dRcEjvz5uO9Nz2QqiMUj7CwtbYoFi9YdqSdhZWECmMZtE/HApaoQtlgFD/0RnustBJrF4QShKEVylYiIHXBRkHOi4CxMxTFVlMjboOrupLEjSVnXL0TRttNzECC8xgUF7isoIAa6ZoTc4V7VccLF8aq9xhakOBVUC0SBm65B6tahALiYYjmVn91GHYgIZYNtgqKHmjnUygFbWsYBvmKtl17N/b6IVpbwhoDSFi70Coarz6fwjCsJASM3tmIkRGnsxm/jhmc6kw8YQUSSmcJLXGs8t7oMpGR/4wM6AFfVOsN8mdD5Is83263mR/pdBObmQt1rqt87lMoXIROkzgonWUZDPxIiFh2QdMu8fekoi7nHTVQPK54hBapcZMQiW7+BTkmb+QtS7PVG50n03Cy8LzXogsGitRk5C5d2MTG+axc11mFxmkizErX5uW6PlH6pMLW5dfOOqOpyZXX8N5u59g6sbCVd9qSeLi7AhbtrUyR58aVyjQuUnE2O5v9O90Vx4pzfEbjfMuU88B7OpYs9ajcASmvwnO9vSH4nGLYRaDt2qVATYn7+aX44gKCBGZmLD3LZtmnk+X3+e3y2809DBK8i9SqpPDkwtHm4tX9YqL4aIj+zS7/ZxuncQlfKPdGacvNJsr7yQyPMJoB2CyTHRjI3a4ksBgc1PdPKuJDMMPA1+NGsU0qHdWTwQqKtTIRJWxw936Fn5XpuI0k+F8AR1v7BljxIWhGJE9LaFBVGFLtETkvS/R0gPpj74424eviHiSoYz+M+svpzbmnH8ruDjInFkYzPUQMLPUwwH6EbrpKY36Ev1Uxbl2oDvB+uoJhNQzDb3IjAMk=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search MediaWiki tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/engine/mediawiki/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Searches Wikipedia for a term and returns top results with Product Ontology links.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"numResults","in":"query","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Results returned","content":{"application/json":{"example":{"http://www.productontology.org/id/Apple":"Fruit description..."}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,7 @@
+{
+    "label": "Platform Navigation",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "AI Core is a platform to create Gen AI applications at the client level and deploy within the enterprise. It consists of App Library, Functions, Models, Database, Vector, and Storage.\n\nIn this section we are going to see how to navigate and work through the platform and its different resources."
+      }  }

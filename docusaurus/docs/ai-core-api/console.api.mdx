@@ -1,0 +1,71 @@
+---
+id: console
+title: "Get async job console logs"
+description: "Returns standard output logs for an asynchronous Pixel job."
+sidebar_label: "Get async job console logs"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVEuP0zAQ/ivRnN2mcEK5FVjBIlhW+zhVPbjOtHFJPMaebFtF+e9o7ABZEHDgFGc8M57vYQ/A+hCh2sCVO1iHxdUZTc+WHGwV1BhNsD79VnCH3AcXi8ja1TrUBfXsey5aOsRiT6HQrtDx4kwTyFEfi1t7xrY40m4JCshj0NLpuoYKDLlILYKCgF97jPya6gtUg2wwOpal9r61JtWU58XpdFrsKXSLPrToDNVYS1I0DXZaVtLIBolu4Ei761oQ8MUjVEC7IxoGBT7IHGwxSklOq4bvaZGDdQf4Ffh6DupIu8LW6NjuLQYYRwVsuZXyD9LuLuOBUXZ+zsShxxSInlzMx79creTz/LA3mZnMakiUYw3qT8Qco1QNgGfdeZligMia+yiCPd7cXN+8AwUdxqgPKNS0ovILUHnxErbjmEaNaPpg+QLVZoCdjtase26g2mzHrTTghkQ4TzHxqGUPSkyuKX/KGTE8YYipSx9aqKBh9rEqyxOFL7EhvzT7w7LGliwzLg11pdkfFtouauyo/ESOWstNqb39TYi32FFx5WpP1nHxePcRRjU/pirLloxuG4pcvVq9Wv293UfJLd7iE7bkOyFXoH4n4l6clYWa0fHDK3Ke4E1ZUOWcZAfr9pQSJ1usr4s3FIQcYSYfvVquli8W9zfr2/v3nx9gVInYTictnU4d3yHn+5Q8Z2a++BXJ7Nr85y2dwDGeufSttk5GSwQPk+YbyJpnSybVtwqEcdkbhp2O+BjacZTw1x6DOGqr4EkHq3dCyGY7KmhQ1xiSTb7gJfteECweZAJJb3uZ5N+PgFggt1gbg57/UJwuyjMr336+fwAFu+nl6aiWmllnNf/JY+vnJsiiq+krYKYN7S6zORIr2UGPEYPoO46gprH7KZSQ/Kv+Vsd4olDP6v0UglHu8jcNBQWu
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get async job console logs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/console"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns standard output logs for an asynchronous Pixel job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["jobId"],"type":"object","properties":{"jobId":{"type":"string","description":"Asynchronous job identifier"}},"title":"JobIdRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Console logs returned","content":{"application/json":{"example":{"status":"RUNNING","message":["line 1","line 2"]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

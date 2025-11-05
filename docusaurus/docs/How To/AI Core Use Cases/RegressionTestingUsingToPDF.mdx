@@ -1,0 +1,125 @@
+---
+sidebar_label: "Regression Testing Using ToPDF"
+sidebar_position: 8
+slug: "/regression-testing-using-topdf"
+---
+
+# Regression Testing Using ToPDF
+
+## Overview
+
+You can use the **ToPdf** reactor to snapshot visualizations and dashboards for visual regression testing in AI Core. This is useful when you want to ensure that your dashboards look the same after upgrading AI Core to a new version.
+
+The workflow is:
+- Take screenshots of your dashboards using ToPdf on your current AI Core version.
+- After updating AI Core, rerun ToPdf to generate new PDFs.
+- Compare the new PDFs to the old ones to check for visual differences.
+
+If the PDFs do not match, you know something has changed between the two AI Core versions.
+
+
+## How ToPdf Works
+
+The ToPdf reactor takes an input with HTML content, searches for `<semoss>` tags, and uses Headless Chrome to take screenshots of the URLs specified in those tags. The screenshots are then formatted into a PDF according to the provided HTML and CSS.
+
+### Example Input
+
+```python
+ToPdf(
+  html=["<encode><html> <head> <title>Semoss Screenshot as PDF</title> <style> *{margin: 0; padding: 0;}.imgbox{display: grid; height: 100%;}.center-fit{max-width: 100%; max-height: 100vh; margin: auto;}</style></head> <body> <semoss class=\"center-fit\" url=\"http://localhost:8080/SemossWeb/#!/insight?engine=8d356496-f940-42a0-82c4-159d86d78541&id=a3ca18c7-2d1b-4c9f-b395-a796b24f87a3\"/> <semoss class=\"center-fit\" url=\"http://localhost:8080/SemossWeb/#!/insight?engine=8b6cdcc4-d4ba-43a1-98b6-9b30b7a07902&id=e1c1565c-a731-4570-840a-8f528630126f&sheet=0\"/> </body> </html></encode>"],
+  url=["http://localhost:8080/SemossWeb/"],
+  filePath=["C:/workspace/example.pdf"]
+)
+```
+
+- **html**: Contains the HTML structure, CSS, and `<semoss>` tags with URLs to snapshot.
+- **url**: The base URL for your AI Core instance.
+- **filePath**: The path where the PDF will be saved.
+
+
+## Step-by-Step Guide
+
+### 1. Open AI Core in your browser
+
+![AI Core Home](/img/UseCases/SemossUrlCheck.jpeg)
+
+### 2. Get the Embed URL for your dashboard
+
+Go to the dashboard or insight you want to test, click on **Share / Export**, and select **Embed**.
+
+![Share Export Embed](/img/UseCases/UrlFinding.jpeg)
+
+Copy the Embed URL for use in your `<semoss>` tag.
+
+### 3. Example Output
+
+After running ToPdf, you will get a PDF with screenshots of your dashboards, similar to the example below:
+
+![Sample PDF Output](/img/UseCases/OutputDashboard.jpeg)
+
+
+## Explanation
+
+- The **html** parameter defines the layout and which dashboards to snapshot using `<semoss>` tags.
+- Each `<semoss>` tag should have a `url` attribute pointing to the dashboard or insight you want to capture.
+- You can find these URLs in AI Core by clicking “Share or Export” > “Embed” and copying the Embed URL.
+- To capture specific sheets, append `&sheet=0`, `&sheet=1`, etc., to the URL.
+- You can use as many `<semoss>` tags as needed and include any valid HTML or CSS for formatting.
+
+### Notes
+
+- Always wrap your HTML in `<encode>` tags for correct parsing.
+- Screenshots may take time, as Chrome loads the dashboard and waits (typically 10 seconds) for rendering.
+- If you omit the `filePath` parameter, the PDF will be saved to your Downloads folder.
+
+
+## Parameter Breakdown
+
+### html
+
+Defines the HTML and which dashboards to snapshot.
+
+```html
+<encode>
+<html>
+  <head>
+    <title>AI Core Screenshot as PDF</title>
+    <style>
+      *{margin: 0; padding: 0;}
+      .imgbox{display: grid; height: 100%;}
+      .center-fit{max-width: 100%; max-height: 100vh; margin: auto;}
+    </style>
+  </head>
+  <body>
+    <semoss class="center-fit" url="http://localhost:8080/SemossWeb/#!/insight?engine=8d356496-f940-42a0-82c4-159d86d78541&id=a3ca18c7-2d1b-4c9f-b395-a796b24f87a3"/>
+    <semoss class="center-fit" url="http://localhost:8080/SemossWeb/#!/insight?engine=8b6cdcc4-d4ba-43a1-98b6-9b30b7a07902&id=e1c1565c-a731-4570-840a-8f528630126f&sheet=0"/>
+  </body>
+</html>
+</encode>
+```
+
+### url
+
+The base URL of your AI Core instance, e.g.:
+
+```
+url=["http://localhost:8080/SemossWeb/"]
+```
+
+### filePath
+
+Where the PDF will be saved:
+
+```
+filePath=["C:/workspace/example.pdf"]
+```
+
+
+## Tips
+
+- Use the **Embed** feature in AI Core to get the correct URLs for your dashboards.
+- Use CSS classes like `center-fit` to control the layout in the PDF.
+- Chain multiple `<semoss>` tags to capture multiple dashboards or sheets.
+
+
+With this approach, you can automate visual regression testing for your AI Core dashboards using ToPdf!

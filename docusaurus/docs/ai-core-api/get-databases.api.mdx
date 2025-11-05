@@ -1,0 +1,75 @@
+---
+id: get-databases
+title: "Get databases (legacy)"
+description: "Returns engine settings for database-type engines. Deprecated: use /auth/admin/engine/getEngines with engineTypes."
+sidebar_label: "Get databases (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVE1v2zAM/SsCTy2gxOmwQ6FbsXRdge4D/TgVOSg2Y6uVJU2i02WG//tAx0napChy28mQxUc+8j2xBdJlAvUIuqEKZhIKTHk0gYx3oOAWqYkuCXSlcSgSEhlXJrHwURSa9FwnHNEq4BCRxmKKIWKuCQslmoQi48yZLmrjsnVQViJdrsPFi6FqwN6vAqYxSPABo2YC1wUoKJGmQ6UEEoKOukbCyKxbcLpGULDhcl2ABMPMfzcYV7Dfz1djCaOYr8QOIU4iBuSjxVOQkPIKaw2qBW4MFCSKxpXQdfKIegdoHaPmC0NYp/eydjMJEVPwjjtULXyaTPjzlvl2BiIiRYNL5NK5d4SOOFyHYE3ezy17Soxpjyfj50+YE5PpOgmfJ2eHBB4cC+mj+XtE5XWeYmsFUBQblFAjVX5QtReTKlDw2iKbyWZ7uieMy43oTbSgoCIKSWXZi4/PqfJhnC/KcYHWGyIc577O8kU50mZUYO2z7955a7hMMAe2mGLtxaUrgjeOxMPtDbDWuzIqy6zPta18InU+OZ98nO6GY8UUl2h9qHlKrHHCvImGVncsylrpuU4mv+CXt5OC6218xOc+hs0Hxi18H2jI8s3FtfjiI4IEnsy69GQ8GZ+N7n5c/Lr79vMeOgnBJ6p1b4fBvFdIW/sncWKx1PnqdL+Ldifx/1kDwzwI/1AWrDaOu+k1aQfjDFtLQp+WGxi4gHy7NmYSWDpGtC3/eoi26/j3+tmyqQqTeAMUoBbaJvxgGscskXfJP+Nqf3cstW04sDfcAYUPATM+RMMIUI+zTkKFusDYd7NGXuQ5BnqFOniqnGX7KK8u76Hr/gFOuxnn
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get databases (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/database/getDatabases"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Returns engine settings for database-type engines. Deprecated: use /auth/admin/engine/getEngines with engineTypes.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"databaseId","in":"query","description":"Filter by databaseId (repeatable)","schema":{"type":"string"}},{"name":"databaseId","in":"query","schema":{"type":"array","items":{"type":"string"}}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Databases retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,18 @@
+Reactor Name
+EchoEReactor
+
+Description
+This reactor returns back the encoded input the user enters
+
+Required keys
+VALUE
+
+Key description
+VALUE: The value to echo back
+
+Optional keys
+None
+
+Usage
+EchoE(value="Hello%20World")
+EchoE("Hello%20World")

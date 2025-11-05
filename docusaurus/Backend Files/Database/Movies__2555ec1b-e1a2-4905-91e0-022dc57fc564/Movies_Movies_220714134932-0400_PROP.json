@@ -1,0 +1,53 @@
+{
+  "dataTypes": {
+    "RottenTomatoes_Audience": "DOUBLE",
+    "RottenTomatoes_Critics": "DOUBLE",
+    "Director": "STRING",
+    "Revenue_Domestic": "INT",
+    "MovieBudget": "INT",
+    "Title": "STRING",
+    "Genre": "STRING",
+    "Revenue_International": "INT",
+    "Studio": "STRING",
+    "Nominated": "STRING"
+  },
+  "startRow": 2,
+  "endRow": 442,
+  "nodeProp": {
+    "Director": [],
+    "Title": [
+      "RottenTomatoes_Audience",
+      "RottenTomatoes_Critics",
+      "Revenue_Domestic",
+      "MovieBudget",
+      "Revenue_International"
+    ],
+    "Genre": [],
+    "Studio": [],
+    "Nominated": []
+  },
+  "newHeaders": {},
+  "relation": [
+    {
+      "relName": "Title_Director",
+      "toTable": "Director",
+      "fromTable": "Title"
+    },
+    {
+      "relName": "Title_Genre",
+      "toTable": "Genre",
+      "fromTable": "Title"
+    },
+    {
+      "relName": "Title_Studio",
+      "toTable": "Studio",
+      "fromTable": "Title"
+    },
+    {
+      "relName": "Title_Nominated",
+      "toTable": "Nominated",
+      "fromTable": "Title"
+    }
+  ],
+  "additionalDataTypes": {}
+}

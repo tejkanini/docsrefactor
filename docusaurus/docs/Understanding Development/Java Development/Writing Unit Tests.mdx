@@ -1,0 +1,148 @@
+---
+title: "JUnit Tests"
+description: "A guide to writing unit tests in AI Core"
+---
+
+
+# How To Write Unit Tests in AI Core
+
+
+Unit testing helps ensure code is reliable, maintainable, and functions as expected in isolation. In AI Core, we use **JUnit** for testing and **Mockito** for mocking, while following a consistent folder structure to keep tests organized and discoverable.
+
+This guide will walk through:
+
+- AI Core's expected test directory structure
+- How to write unit tests using JUnit
+- How to mock dependencies with Mockito
+- Where to find good examples in the existing codebase
+
+---
+
+## Test Directory Structure
+
+AI Core follows a mirrored structure between main and test sources. This helps maintain clarity and consistency when navigating between classes and their test cases.
+
+```plaintext
+AI Core/
+├── src/
+│   ├── prerna/
+│   │   └── examplepackage/
+│   │         └── YourClass.java
+├── test/
+    ├── prerna/
+│       └──examplePackage/
+│            └── YourClassTest.java
+
+```
+
+Each class in src should have a corresponding test class in test, under the same package path.
+
+⸻
+
+**Writing Unit Tests with JUnit**
+
+JUnit is used for defining and running test cases. AI Core projects generally use JUnit 5.
+
+The documentation can be found here https://junit.org/junit5/docs/current/user-guide/
+
+Here’s a basic example of a test using @Test and assertEquals:
+
+```plaintext
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class YourClassTest {
+
+    @Test
+    public void testMethod() {
+        YourClass instance = new YourClass();
+        int result = instance.methodUnderTest();
+        assertEquals(expectedValue, result);
+    }
+}
+
+	•	@Test: Marks a method as a test case
+	•	assertEquals: Compares expected and actual values
+
+```
+
+You can also create a test suite that runs all tests in the specified package using the @Suite and @SelectPackages annotations.
+
+Here's an example:
+
+```
+import org.junit.platform.suite.api.SelectPackages;
+import org.junit.platform.suite.api.Suite;
+
+@Suite
+@SelectPackages("prerna.examplePackage")
+public class YourTestSuite {
+    // This class can be empty
+}
+```
+
+To run a test class/suite, in Eclipse you can right click on the source file and select `Run as > 2 Junit Test` (Or you can hit `Ctrl-Alt-X T` (Windows), `Cmd-Opt-X T` (Mac) while selecting the source file)
+
+⸻
+
+**Mocking Dependencies with Mockito**
+
+Mockito helps isolate behavior by mocking external dependencies.
+
+The documentation can be found here https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html
+
+Here’s a common Mockito pattern:
+
+```plaintext
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class YourClassTest {
+
+    private DependencyClass mockDependency;
+    private YourClass instance;
+
+    @BeforeEach
+    public void setUp() {
+        mockDependency = mock(DependencyClass.class);
+        instance = new YourClass(mockDependency);
+    }
+
+    @Test
+    public void testWithMock() {
+        when(mockDependency.someMethod()).thenReturn(expectedValue);
+        int result = instance.methodUnderTest();
+        assertEquals(expectedValue, result);
+        verify(mockDependency).someMethod();
+    }
+}
+
+	•	mock(): Creates a mock of a dependency
+	•	when(...).thenReturn(...): Defines return behavior
+	•	verify(...): Confirms that expected calls were made
+
+```
+
+⸻
+
+**Existing Test Examples**
+
+AI Core already includes a rich set of unit tests. If you’re unsure how to test something, look around:
+	1.	Go to the test package
+	2.	Find the package matching your module, or a related one
+	3.	Open an existing *Test.java file
+
+
+
+⸻
+
+**Next Steps** \
+	•   Start by writing a small test for any new method you write. \
+	•	Review existing test files when you’re stuck. \
+	•	Reach out to your team or the CFG AI support group at [CFGAI@deloitte.com](mailto:CFGAI@deloitte.com) if you’re not sure how to test a specific component.
+
+⸻

@@ -1,0 +1,71 @@
+---
+id: terminate
+title: "Terminate async job"
+description: "Terminates a running asynchronous Pixel job."
+sidebar_label: "Terminate async job"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVEtv2zAM/isGz0qc7VT4lnUF1qJbg6Y9BTnIMhMrtUVVkpsEgf77QNnN3A5dsZNtio/vQfkEQW49FCu4MlttMLs6oOqCJgNrARV65bRNnwU8oGu1kQF9JjPXGaPNNpP+aFTtyFDns4U+YJPtqJyCALLoJJdeV1BAeC0GAQ6fO/ThG1VHKE6gyAQ0gV+ltY1WqSo/TPb7/WRDrp10rkGjqMKKk7yqsZX8xo204+gKdlReVww6HC1CAVTuUAUQYB0jCRo9l/Rpxek1zQenzRbec52Pae2ozHSFJuiNRgcxCgg6NFx+w+3uez4Q+eQPpuA6TAFvyfh+/NfZjB9vh91QmZ31qUB8pMjOc/oJ8CBbm8b7Tin0nidHAR5V53Q4QrE6QSm9VvMu1FCs1nEtoMVQE1thySddJJ9Bjsn4fGyQR/eCzqc+nWuggDoE64s835N78jXZqdpspxU2pEPAqaI2V5vtROpJhS3lP8lQo0OdS6v/kvY7tpRdmcqSNiF7vL+FKMZjijxvSMmmJh+Ki9nF7N/tbjk3+44v2JBtWTUm+yrFknell34kyNl9nsd8UxYUfU4yWJsNpcTB6Pl1dkmOxWFl+tGz6Wz6ZbL8NV8sf9w9QBRJ2lYmk4xMHc+Xpr8pvEvvKYxuwP/esYFGwEPIbSO1YRBJytPg7wp6fzn57PBaAKvLp6dTKT0+uiZGDj936Hh/1gJepNOyZPKrdRRQo6zQpZV4wiMUcNmDnjwwBk5vOsby+RVmu/sWc6XQhg+K07a/WdzF3fIBBJTDf6OlimtGncX4o4ct3xreGyyGJ5MZDqQ5jnAkVfptefTo2MsYQQywuyGUmHxWv5De78lVo3o7hCCuY4y/AX8l64U=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Terminate async job"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/engine/terminate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Terminates a running asynchronous Pixel job.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"required":["jobId"],"type":"object","properties":{"jobId":{"type":"string","description":"Asynchronous job identifier"}},"title":"JobIdRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Job terminated","content":{"application/json":{"example":"success"}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,20 @@
+Reactor Name
+DeleteAppAssetsReactor
+
+Description
+Delete a single or multiple files in the projects assets folder
+
+Required keys
+PROJECT, FILE_PATH
+
+Key description
+PROJECT: The unique id for the project/app
+FILE_PATH: Names of the file(s) to delete. This relative path should assume the prefix of '/version/assets/' and not include the prefix in the string value.
+COMMENT_KEY: Comment to add while removing the files within the git repository for the project
+
+Optional keys
+COMMENT_KEY
+
+Usage
+DeleteAppAssets(project="myProjectId", file_path=["file1.txt", "file2.txt"], comment_key="Removed old files")
+DeleteAppAssets("myProjectId", ["file1.txt", "file2.txt"], "Removed old files")

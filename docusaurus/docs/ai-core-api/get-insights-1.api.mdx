@@ -1,0 +1,71 @@
+---
+id: get-insights-1
+title: "List insights"
+description: "Returns insights for the current user filtered by project and/or search term, with pagination."
+sidebar_label: "List insights"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VNtu2zAM/RWBz2qcDsVQ+C1biy1Ad0EvT0UwKDZtq7UllaLTZYH/faDj3Npdig7LSyD5kIciD88K2JQR0lswLVcw05BjzMgGtt5BCpfILbmorIu2rDiqwpPiClXWEqFj1UYkVdiakTBX86UK5O8wY2VcnnhSEQ1llWKkRqtHy5UKprTOSP4RaPABqT9Mc0ihRJ4OTN+OQUMwZBpkJClxBc40CCkMFNMcNFip8qFFWoKGmFXYGEhXwMsgyMhkXQldp7fB64KukZrXRNe2sfzXQOsYSyTQUHhqDK+v3p4cpPJFEfGfcs00EMbgXcQoEW/GY/k7nOCmn4qQyeICpWuZd4yOBW1CqG3WjyC5ixKyel6EITJSnWVs4t69n8sgoJOfhpNf8b8zuSJ8aDHyK4j3CCT/8fP8N06U68n+eNXLDl/QIFd+EGIvP64ghUQYEpM31iXDIiR7SpWpIS02Im2phhQq5hDTJHn0dB8rH0ZZUY5yrL1lxlHmmyQryiNjj3JsfPLJO19bIQkWnu7gGTZenbs8eOtY3VxegKhoR5MmSe0zU1c+cno6Ph3/Od2FYNUZLrD2oZFeiZAiZi1ZXl5Jg9Zymptos4nYwq5dwrdRqZx7jMgarCt8D7Rcy5fJVL33hKBBOrOmHo/Go+Ojq8+Tr1cfv1xDpyH4yI3pRzOsxYWNvLWbp8WvdvP9/9Y0PJnxOyehNtZJwX3bV4MyBtfU0GujX+W+FtD7TiauKrMR/Go1NxFvqO46uV5vvagmt9HMa8whLUwdUcM9Lp9Y3cLUrRTUj/83+AN3e0nAxtBegt061g48kwNZQUN6O+s0VGhypP5N66hJlmHYj3q2l5Jlu3kfzq+h634CCxFCgQ==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List insights"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/insight/getInsights"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns insights for the current user filtered by project and/or search term, with pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Insights retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

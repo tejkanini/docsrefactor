@@ -1,0 +1,71 @@
+---
+id: get-insight-users
+title: "List insight users"
+description: "Returns users who have access to a given insight, with total count and pagination."
+sidebar_label: "List insight users"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VF1P2zAU/SvWfTZNmdCE8tYNtFViH4LxhPrgOreJwbGNfVPWRfnv0036AZRtFWhPldNz7ue5pwVSZYL8BlRDFcwkFJh0NIGMd5DDJVITXRJNwpjEQ+VFpZYolNaYkiAvlCjNEp0wLpmyIikeDFWCPCkrtG8cCeUKEVRpnOKYI5DgA8b+MS0ghxJpOpCvOQlICCqqGokf+U0LTtUIOYTob1HTtAAJhmu7bzCuQELSFdYK8hZoFRiZKBpXQtfJLXld3uvI3PzrmAFjbVLiWb6CbU1t6J9E4whLjCBh4WOtaPj0/uRJKL9YJHxTrJmEiCl4lzAx4914zD9P5dJvUESkaHCJPDLtHaEjhqoQrNH94rPbxPh2vwI/5yVD13WdhJOXcnxQhYh432Cit8c/fqEHx6fgo/n11gY6CTVS5dcq75VNFeSQcYZMFbVx2VqZ2f4ZJIzLzQ000UIOFVFIeZY9+HiXKh9GelGOCrTeEOFI+zrTi/JImaMCa5998c5bw4mCgeeHfYa1F+euCN44EteXF8Bq2aXJs8x6rWzlE+Wn49Px38NdMFac4RKtDzXPiwWTUDfR0OqKhzTIZq6S0RP2mt3ION9GjfzuMSxfMG7he6Ahy/9MpuKjjwgSeDJD6vFoPDo+uvo6+X71+dsP6CQEn6hW/XrW8r8wiTYWNXjZ8w7a3aL/j+mteyX8SVmwyjiutJ93u5bF2oMl9MLob7UPD3LPI2cSeDHMadu5Sngdbdfx5+G0WTKFSWpusYB8oWxCCXe4emajS2UbLqrf/R/wj53zEPzWLA8BP/HHQwgbSzwEu/W8HXjGj2gYDfnNrJNQoSow9gMbWBOtMTxm7V09R9ne9afzH9B1vwELAHuZ
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List insight users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/insight/getInsightUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns users who have access to a given insight, with total count and pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"query","schema":{"type":"string"}},{"name":"insightId","in":"query","schema":{"type":"string"}},{"name":"userId","in":"query","schema":{"type":"string"}},{"name":"permission","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"object"}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

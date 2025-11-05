@@ -1,0 +1,75 @@
+---
+id: get-user-database-permission
+title: "[LEGACY] Get user database permission"
+description: "Legacy endpoint. Use /auth/engine/getUserEnginePermission instead."
+sidebar_label: "[LEGACY] Get user database permission"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU8Fu2zAM/RWDZ9Vyhx0K34I2yApkW7E2h6HIQZEZW60taRKdLTP07wMdp01boJfuZMh65KPeexyAVB2hvAfVUwNrARVGHYwn4yyUsMRa6X2GtvLOWMqzVcRMMlairY1FWSOtIob5eLrB0JkYjbOZsZFQVTkIcB6D4obXFZQwFVwpUhsVT0pAgFdBdUgYeKQBrOoQSqgm6HUFAgyP9avHsAcBUTfYKSgHoL1naKRgbA0prQUEjN7ZiJHvPxUFf16+7mTcgBQM7pAptLOElhivvG+NHoeXD5GLhrekbvOAmiCllAR8Ls7fEq0sS+aC+ftRgsQO+YBaEVZQUuhRQIfUuEnbUUVqoISDTUfx5Hu6Rwy7o+h9aKGEhsjHUsrfLjzGxvlcb+u8wtYZIsy166Te1mfKnFXYOfnVWdcaaqTyBl5n6Ao7l82nBGWrH0tI4pSmlLJ1WrWNi1ReFBfF++2WjM2ucIet8x3LyGZH1H0wtL9l7Q6Wb1Q0esaxflaS+Y654fOIAVbV2K0bgYZavpldZ5cuIAhgZQ7URV7k52e332Y3t1++30ES4F2kTo2uTWG9X84Xs8uf62yBlPURQ3Z0IPOnkr941PAcif+zctNzCf+Q9K0ylocdJR+meEwbL562C8Q7q7kWwPZw2TDw3Sq0KfHvwypycCoT1ablVG5VG1HAI+5fb+9OtT0PNnq2U8FwBZT36ySgQVVhGFsdKmdao6eTqjfLwl2ewr+Y30FK/wBNVK0T
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"[LEGACY] Get user database permission"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/database/getUserDatabasePermission"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Legacy endpoint. Use /auth/engine/getUserEnginePermission instead.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"databaseId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Permission retrieved","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

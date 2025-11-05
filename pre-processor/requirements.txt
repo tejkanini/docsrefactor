@@ -1,0 +1,11 @@
+urllib3==1.26.15
+numpy==1.23.5
+pandas==2.0.0
+openpyxl==3.1.2
+pdfplumber==0.9.0
+PyMuPDF==1.22.1
+opencv-python==4.7.0.72
+pytesseract==0.3.10
+openai==0.27.4
+tiktoken==0.3.3
+streamlit==1.23.1

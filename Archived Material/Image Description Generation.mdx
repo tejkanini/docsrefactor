@@ -1,0 +1,63 @@
+---
+sidebar_label: "Asking the Model Engine a Question About an Image"
+sidebar_position: 5
+slug: "/image-description"
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Asking the Model Engine a Question About an Image
+Use `ModelEngine` to ask to ask a Model Engine a question about an image 
+
+## Key Components
+
+| Key Components               | Description                                                                                      |
+|------------------------------|--------------------------------------------------------------------------------------------------|
+| ModelEngine Initialization   | The `ModelEngine` is instantiated with an `engine_id` and an `insight_id`.                       |
+| Question                     | The question to be asked by to the model                                                         |
+| Image URL Processing         | Provided model can process an image  via a URL.                                                  |
+| Encoded Image Processing     | Alternatively, the model can process an image provided as a base64 encoded string.               |
+
+## Example
+
+This code snippet demonstrates how to use the ModelEngine class to generate a description of an image. The ModelEngine is initialized with specific engine and insight IDs, and it can process an image URL or an encoded image to produce a descriptive response.
+
+<Tabs groupId="programming-languages">
+  <TabItem value="python" label="Python" default >
+```python
+from gaas_gpt_model import ModelEngine
+question = 'Describe this image.'
+model = ModelEngine(engine_id = "4acbe913-df40-4ac0-b28a-daa5ad91b172", insight_id = '${i}')
+output = model.ask(question = question, param_dict={"image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/car.jpg?download=true"})
+# OR
+output = model.ask(question = question, param_dict={"image_encoded": base64ImageEncoded})
+```
+</TabItem>
+  <TabItem value="javascript" label="JavaScript">
+ ```javascript
+ const { ModelEngine } = require('gaas_gpt_model');
+
+const question = 'Describe this image.';
+
+const model = new ModelEngine({
+engine_id: "4acbe913-df40-4ac0-b28a-daa5ad91b172",
+insight_id: '${i}'
+});
+
+// Using Image URL
+model.ask({
+question: question,
+param_dict: {
+image_url: "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/car.jpg?download=true"
+}
+}).then(output => {
+console.log(output);
+}).catch(error => {
+console.error(error);
+});
+
+```
+  </TabItem>
+</Tabs>
+

@@ -1,0 +1,22 @@
+Reactor Name
+LLMReactor
+
+Description
+This method is used to run an LLM text-generation call
+
+Required keys
+ENGINE, COMMAND
+
+Key description
+ENGINE: The unique id for the LLM engine/model
+COMMAND: This is the prompt to execute against the LLM
+CONTEXT: The system prompt to use for the LLM call
+USE_HISTORY: Boolean true/false to determine if we should incorporate the user's chat history based on the previous chats in this insight id. Default is true.
+PARAM_VALUES_MAP: Map containing the key-value pairs for model parameters like 'temperature', 'top_p', etc. You can also pass 'full_prompt' to represent a full prompt and history via ChatML format.
+
+Optional keys
+CONTEXT, USE_HISTORY, PARAM_VALUES_MAP
+
+Usage
+LLM(engine="myEngineId", command="What is the weather today?", context="You are a helpful assistant.", use_history=true, param_values_map={"temperature":0.7})
+LLM("myEngineId", "What is the weather today?", "You are a helpful assistant.", true, {"temperature":0.7})

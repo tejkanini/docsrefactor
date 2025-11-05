@@ -1,0 +1,71 @@
+---
+id: search-for-user
+title: "Search for users"
+description: "Searches for users by a case-insensitive search term."
+sidebar_label: "Search for users"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU1tv0zAU/ivReXabDIE05a1iAyYNmOj6NPXBdU4bs8Q2Pk5Hifzf0XHSLe0QSDxZ9rl+F/cQ5I6gfIBFF2rr9S8ZtDWwFlAhKa9dupawROlVjZRtrc86Qk/Z5pDJTEnCmTaEhnTQe8woJWYBfTsHAdahTy1vKihhCH6wfkXoQYCTXrYY0PMKPRjZ4nPWPfoWBGie/qNDfwABpGpsJZQ9hINLqcFrs4MY1wI8krOGkDj+pij4OAVxqylkdpu1MqgaqwEHCFDWBDSBC6RzjVZp4/w7cVUfYxTwtrh43W9l5MgaVhAFvPvT0CX6PfoMvbceuBWh6rwOhwR5I0kr5h7KhzWjaDHUlrnaYUgMcQhyOZUnP+eR0oyBxM43UEIdgqMyz5+sf6Taurna7uYVNlaHgHNl21xtdzOpZxW2Nv9sjW10qHPpNJxLf4Wtza5N5aw2IVt9u4UopmPKPG+skk1tKZSXxWXx93a3nJtd4R4b61qmnWEfSVmywoOEE2qe9eZ5Rx/wPeUkVrXZ2pSoQ8ORxU323noEAczMMLqYF/OL2fLL4m756es9K+YshVayykfzDUZ/sfn5/v2LW/77U4xgAv4MuWukNrxKIrQfBX+AE8GTxFPJ1wKYbk7s+40kXPkmRn4evgobodIkNw1WUG5lQyjgEQ/nv2svm45XSRrspddckawooEZZoU+thsqFUujCpOrVZzkx8MfrexAJx0TAQTAxntx7DEhzmHROoAb1GS9rEyMcIXTjUzLiv+rvJNGT9dWk3o1PENcxxt9HtbuU
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search for users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/authorization/searchForUser"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Searches for users by a case-insensitive search term.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"searchTerm","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of matched users","content":{"application/json":{}}},"401":{"description":"Unauthorized"},"500":{"description":"Server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

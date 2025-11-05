@@ -1,0 +1,71 @@
+---
+id: get-project-landing-page
+title: "Get project landing page"
+description: "Retrieves the custom landing HTML page for the project if it exists."
+sidebar_label: "Get project landing page"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNkkFv2zAMhf+KwLNjuUMPhW7BOqAB0i1o2lORgybTljpb1CQ6a2f4vw9ynKLrgG0nw+DTR/LxjcC6TaAeYRfpCQ3DoYAak4kusCMPCu6Qo8MjJsEWhRkSUy867WvnW3Fzf7sVQbcoGoqzIJw4wjXCscBnlziVUAAFjDojNzUoaJGXhtsTaadbhAKCjrpHxphnGsHrHkHBwtzUUIDLMwXNFgqI+H1wEWtQHAcsIBmLvQY1Ar+E/DBxdL6FaTpkcQrkE6Zc/1BV+fP7pssop33mzSLyED3mvoY8o+cZjs8sLfcdqHGapgIuq4s/aQ9eD2wpup9YCym0MZiSqNG79zwdQufMbI58SvnxGXv5jyE9sWho8P8FnApIaIbo+GU296tOzqwHtqAeD9mhHtnScp35FrkEcnF/Nb6eYZLL/SEj4/F8riF2oMAyh6Sk/EHxW7IUStO0ZY0dOWYsDfXSNO1Ku1WNPclb8tQ5tlIHB++zd409iU++DuQ8i4e7LUzF2zZKyo6M7iwlVlfVVfV33DZrxTUesaPQZ7Py2mdT9jk9p3i8seY1S7kfLBnL/7MGsqvONzQLHXe5st6IjxRznLMzp9ZVWZUXq/3n9W5/8+UepukXm+o0Ug==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get project landing page"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/project-{projectId}/landing"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves the custom landing HTML page for the project if it exists.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Landing page HTML returned","content":{"text/html":{}}},"401":{"description":"Unauthorized / access denied","content":{"application/json":{}}},"404":{"description":"Landing page not found","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-insight-data
+title: "Process insight data and stream incremental plain text output"
+description: "Accepts a JSON payload and returns a streamed plain text response where each line represents incremental processing output."
+sidebar_label: "Process insight data and stream incremental plain text output"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVU1v40YM/SsDnlpAtrxFCyzUUzZZoC42iREnp8AoaA1tze5oZnaGiuMK+u8LSsrGTtzk2JNtmh+Pj4+cFhi3CYp7uDxfwCoDTamMJrDxDgo4K0sKnBSqv5fXVyrg3nrUCp1WkbiJTv5KHAlr0ipYNE4xPbKKlIJ3idSuokiKsKyUNY5UpBApkeOkjCsj1eQYrQrRl5SScVvlGw4NTyEDHyiiIJlrKGBLPHfJbCu+QEbIIGDEmpii4G/BYU1QAHtv1/7xH6MhAyNNBOQKXnY21+TYbAxF5TeKK1KX5ws1BkMGkb43JpKGgmNDGaSyohqhaIH3QeokjsZtoetWgzMl/uT1XjyOKx0xx/6pVcig9I7JsYRgCNaUfbP51yRx7euSfv2VSoau617i6w0D40kCfpvNXgNZ9nMSio9G9OfBdExS6P5rMJFSY/kYt2TK+7mfRDyS9JL8K9pJuYkma2rDpEcNPWGTFrsMfj/VxScU7fV8vwFljP/wOv7OYcOVj+Zf0u8l+OMUgLljig6tShQfKCqK0ce3M3UZJCqbaHjfS3WNyZRnDVdQ3K9EQDVx5UXkwfdt9ZItIJc8dRny9lnVXW7EYyg+KL+JFgqomEMq8nzn47dU+TAtN9upJusNM01LX+flZjtBM9FU+/zSO28NVzkG82o+F1R79dnp4I1jdXfzBbrssEyR59aXaCufuPg4+zh7O90X8VUX9EDWB9EVSM9PjCxFNINsD3j5KSGpB+P+ye/eB4RS2ZOb5837/Ih1sCSMy+JvfJ/EsJjgbK7OfSTIQFgbYM2ms+mHyfLqbLH86/oWuqxnv8ZeyuM1WQzyV2a4PEojY3/+BsEer8rz+Rtu2Esi2meN/M+XdeT2QKddNsy3HbV3D7KHGdSlsF8cX1WWl0KGL35tu8ZEd9F2nZi/NxRF5asMHjAaXAv/9y1ok+S7hmKDNtEb1PxyM962X9V7V/pkH6MR3V7GjbaRX5DBN9ofvw/dqsugItQUe4iDw/kAZHIraZ4TvLrQshJDxDDLA99DPIfbvbhe3kIG6/GdqL0W74g7eXBwN8D0PSX9PvS2Fiy6bYNb8R0qi/rxeE2GtcjGT+nmJA39sIYdu0tyxmrqup/cNKOp7+29+AWmtPNRH8SH0STMdt0PzIvrBg==
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Process insight data and stream incremental plain text output"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/ext/mcp/{toolbox_id}/it"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Accepts a JSON payload and returns a streamed plain text response where each line represents incremental processing output.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"toolbox_id","in":"path","description":"Identifier of the MCP toolbox","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"JSON payload to process","content":{"application/json":{"schema":{"type":"object"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Streaming text response; each line is an incremental processing result","content":{"text/plain":{"schema":{"type":"string","description":"Newline-delimited streaming text"}}}},"400":{"description":"Bad request","content":{"text/plain":{}}},"401":{"description":"Unauthorized","content":{"text/plain":{}}},"500":{"description":"Internal server error","content":{"text/plain":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

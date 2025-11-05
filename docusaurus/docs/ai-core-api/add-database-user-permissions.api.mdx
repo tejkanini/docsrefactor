@@ -1,0 +1,67 @@
+---
+id: add-database-user-permissions
+title: "Add database user permissions in bulk (legacy)"
+description: "Adds user permissions in bulk. Deprecated: use /auth/admin/engine/addEngineUserPermissions."
+sidebar_label: "Add database user permissions in bulk (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMtu2zAQ/BViTy3ASE7RQ8CbWweogbQJ4uQU+ECTa4sxRTIk5dYV9O/F0krzatJeepIgDGd3HlQPWW4SiBuQXW5gyUFjUtGEbLwDAVOtE+sSRhYwtiYl411ixrFVZ7cVm2GIqGRGLQjFamKppW6Nq9FtjMNaan1a3q4TxosHkgo4+IBR0qS5BgFS65nMciXTcyxwiJiCdwkTiB4+TCb0eLrq+T0ZS51SmNK6s8BBeZfRZcLLEKxRBVPfJjrUQ1INtpLe8j4gCPCrW1QZOIRI62VzGDlyPgKuvLcoHTy3bO40DcHEzJrlBpl/uhhq1DAMHLLJlojOcCPVfkqmLQ5TLkexMAwE/PgnuZ+kZhHvOkz5rypHluOXLNeOEvPR/ET9LzQDqb3PHESOHXJoMTeeEgy+LBNkbkDA4zLoMdj6zZATxh1GqmMPXbQgoMk5JFHX333cpsaHSq03lUbrTc5YKd/War05kuZIY+vrr955a2hoMC9ymWHr2anTwRuX2fXlGQz88RhR19YraRufsjiZnEzepjsjLJvhDq0PLZk2LEmB6qLJ+wXV6tCclUxGTel2PXSH5pHegqIuEaaUwri1L8CxHNM5++wjAgdy5jB6Uk2q46PFt+nF4sv5FQy8GN/KUmgnC+NUa3Zv+qsXmL2zpXvvn6vrH5rwn38BoyEZf+Q6WGkcySmh9GOPxl8Th8JJm46yyqdX27TkQEnS+b4vgGiHgT7fdRj3IG6WHHYyGrkio2+WA4cGpcZY6rfFPWlXCgNVeidtR3u+uBUU+u/+X5wvrmAYfgGVGd97
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add database user permissions in bulk (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/database/addDatabaseUserPermissions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Adds user permissions in bulk. Deprecated: use /auth/admin/engine/addEngineUserPermissions.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation successful","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Indicates if the operation succeeded"}},"title":"LegacyAdminSuccessResponse"}}}},"400":{"description":"Bad request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

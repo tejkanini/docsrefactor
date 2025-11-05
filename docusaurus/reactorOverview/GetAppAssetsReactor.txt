@@ -1,0 +1,19 @@
+Reactor Name
+GetAppAssetsReactor
+
+Description
+Retrieve the contents of a file in the projects assets folder
+
+Required keys
+PROJECT, FILE_PATH
+
+Key description
+PROJECT: The unique id for the project/app
+FILE_PATH: Names of the file to get the contents. This relative path should assume the prefix of '/version/assets/' and not include the prefix in the string value.
+
+Optional keys
+None
+
+Usage
+GetAppAssets(project="myProjectId", file_path="myfile.txt")
+GetAppAssets("myProjectId", "myfile.txt")

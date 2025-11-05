@@ -1,0 +1,71 @@
+---
+id: get-engines-for-group
+title: "List engines for group"
+description: "Returns engines assigned to the specified group with optional filters and pagination."
+sidebar_label: "List engines for group"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1P20AQ/SurOZs4VKhCvqWFUiT6IQgnlMPGHtsD691ldxyaWv7v1TgJIYAoStVcIu++NzM78+Z1wLqKkN2AbrmGWQIFxjyQZ3IWMrhEboONCm1FFqPSMVJlsVDsFNeoosecSsJCVcG1Xj0Q18oNbG1USYYxRKVtobyuyGq5GEECzmMYPs4LyKBCPl0l+OLCmQSCBLwOukHhQ3bTgdUNClRuzwtIgKS++xbDEhKIeY2NhqwDXnrBRQ5kK+j7ZJc6les9yBF1yOsphmYftqGG+K9EsowVBkigdKHRvDr6eLQTypVlxH+KNUsgYPTORozC+DAey9/u4NfzUAE5EC5QOp47y2hZwNp7Q/kwwfQ2CqN7WYMOQUtxxNjEJ+dufos5Qy+/BI5eS/9JFyrgfYuR90j8JIHEP3wZ/9qK3l2g33u9bPcFDXLt1joehMs1ZJBKhlQXDdl0kF76qswjhsVG420wkEHN7GOWpg8u3MXa+VFeVqMCjSNmHOWuSfOyOtB0UGDj0m/OOkOSyRM8X98TbJw6tYV3ZFldX16AKGmbJktT43Jtahc5Ox4fj98OdyFYdYILNM430jARU8S8DcTLK+nSSlJzHSmfiKNseyb5NkqV7wEj0gaypRuAxEZuJufqswuyptKZVerxaDw6PLj6Pvl59fXHFPoEvIvc6GE+69W4oMiPTlW6sPKk56/ottP+b/a2fjLjL0690WSl4KHt3Voea8NNYBAIJLCp9RWRzBKQAQmp6+Y64nUwfS/Hq/UX6RQU9dxgAVmpTcQE7nC5Y5cLbVqpaVDAW+i1Q74Hv2OK7yFsfPA92Eej24Jn8hFI0JDdzPoEatQFhqEDK9Ykz9E/Zb3YZ4nyuLFnp1Po+z/AzGg6
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List engines for group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/group/getEnginesForGroup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns engines assigned to the specified group with optional filters and pagination.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"groupType","in":"query","schema":{"type":"string"}},{"name":"searchTerm","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int64"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Engines retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

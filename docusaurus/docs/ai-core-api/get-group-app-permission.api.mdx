@@ -1,0 +1,71 @@
+---
+id: get-group-app-permission
+title: "Get group permission for an app/engine"
+description: "Returns the permission string for the specified group, type, and app/engine id."
+sidebar_label: "Get group permission for an app/engine"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsCz2qcDhtQ+BasRReg24qmPRU5KDIdq5UlTaKzZYb/+0DbSfo5bCt2MmQ+6pHU42uB1DpBfguqoQqWEgpMOppAxjvI4QqpiS4JqlAEjLVJyXgnEkXj1qL0sY+kgNqUBguxjr4JUtA2oBTKFUKFkKFbG4fCFBOQ4ANGxbfPC8hhjXTOKbMQLvfXg4SgoqqRMHJtLThVI6MZOi9AguHivjUYtyAh6QprBXkLzAs5DOVB18l9ah/5hzwV/opwKSFiCt4lTBx/N53y5/FQD52KEklXyATaO0JHjFYhWKP7IWV3iVPa55R+dYeaoOu6TsL7l2jmbqOsKYRxoaG3Mxw/Z7hxrBofzU8shI/CjIwJd+/4Js4PL3W1wLjBKDBGH99G0EmokSo/6rBXHVWQQ8ZdZb3YRu1mr+k09dUMIm2ihRwqopDyLPvu432qfJjocj0p0HpDhBPt60yX6yNljgqsffbZO28NVZkKBp4u3ynWXpy5InjjSNxcXQAL80CTZ5n1WtnKJ8pPpifT3193wVhxihu0PtQ8NJZrQt1EQ9sFT2oQ7Uolo2fsB4e5Md9O+XzuMbwpYFzpe6Ahy5HZXHz0kZeNJzNQTyfTyfHR4svscvHp6zV0EoJPVKv+jcZNO0ca7OOh0bDDKPfARZ521R4U8B/Mamye8AdlwSrjuPT+AdpRLKNxysGbQMK+zJcls5TAz8WJbbtSCW+i7Tr+PZgLC6kwSa0sFpCXyiaUcI/bR+63Ubbhuno9vIIeDe9PoDuPO2CXfIiGwZDfLjsJFaoCY1/ekDTTGgM9yHq2fnzLfsHOz66h634ByE44Mg==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get group permission for an app/engine"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/group/engine/getGroupAppPermission"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the permission string for the specified group, type, and app/engine id.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupId","in":"query","schema":{"type":"string"}},{"name":"type","in":"query","schema":{"type":"string"}},{"name":"appId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Permission fetched","content":{"application/json":{"schema":{"type":"object"}}}},"400":{"description":"Invalid input","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized or invalid session","content":{"application/json":{"schema":{"type":"object"}}}},"500":{"description":"Server error","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

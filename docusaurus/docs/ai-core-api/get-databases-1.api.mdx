@@ -1,0 +1,75 @@
+---
+id: get-databases-1
+title: "[LEGACY] List databases"
+description: "Legacy endpoint. Use /auth/engine/getEngines with engineTypes instead."
+sidebar_label: "[LEGACY] List databases"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtu00AQ/RVrnrdxWnio/Ba1oVSkgGgjhKoIbeyxve16d9mdpBjL/47GuboVJEU82R6fOXM/DZAsAiT3IBdUwkxAhiH1ypGyBhKYYCHTOkKTOasMDaJpwChmbIymUAbjAmncvYXoSVEZrcx3tcMQKRMIZTYAAdahl0x6nUECBdKlJDmXAcP3UxDgpJcVEnrOpQEjK4QEsjXmOgMBivP5sUBfg4CQllhJSBqg2jFUei/5hyKswp49kFemgLZtxZY2V5rQf7X+MO3WfeetVaXooKMyhAV6EJBbX0lamd6c9ahsngf8X1xG1+/k0npFGA5Szq3VKE2PoUKSH7A+7PyaXht7gyRfkc9MgMfgrAnYcZ8Nh/zor+V2eSKP5BUukUeZWkNoiOHSOa3SbuHih8A+zfF12PkDpsR1tK2At8PTlwlMDd+A9erXP0XuR8jQeUwlYQYJ+QUKHkVp14fSXQeVkMDq7jZHEe8fEfcU/XJzPwuvIYGSyIUkjp+sfwyldYM0LwYZaquIcJDaKk7z4kSqkwwrG99YY7WiMpZOwXMduMTKRuO1CkTTLxPgGe/CJHGsbSp1aQMl58Pz4d/pJoyNLnGJ2rqKO8dzD5guvKL6ltu1mv5cBpWOWJp2zeN4mx3qdocxvMmgTG47oCLNf0bX0YX1CAK4M6vQw8FwcHpy+3H0+fb9pztoBTgbqJLdoNZLez8ZX40uvs2iiQoUZXtN7pXR7Ob+/4RyXSThT4qdlspwil2jm/UerLVabOURRE9QWcV5DoxsGjZNvW5bNq/ujzckU0HONW9cLnVAAY9YP1fcpdQLzqWb9R8celp6jMNGPo/BbvXxKPAzATzGZ0/yjoFvxWwHnvGHV4yG5H7WCihRZui7Jq+8RmmKbr+KFxLBLNuTvxrfQdv+Bgtuk7I=
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"[LEGACY] List databases"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/database/getDatabases"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Legacy endpoint. Use /auth/engine/getEngines with engineTypes instead.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"databaseId","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"filterWord","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"onlyFavorites","in":"query","schema":{"type":"boolean"}},{"name":"metaKeys","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"noMeta","in":"query","schema":{"type":"boolean"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Databases retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

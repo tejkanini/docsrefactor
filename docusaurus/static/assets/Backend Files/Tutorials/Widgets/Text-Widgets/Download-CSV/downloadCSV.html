@@ -1,0 +1,51 @@
+<body>
+    <!-- Change QueryAll() to a select statement if you do not want all headers in your default frame -->
+    <button class="button" ng-click="textWidget.runPixel('Frame () | QueryAll() | ToCsv();')" type="button" style="vertical-align:middle" >
+        <span>Download</span>
+    </button>
+</body>
+<style>
+    #TextWidget {
+        --button-background-color: #143F5B;
+        --button-text-color: #ffffff;
+    }
+    #TextWidget .button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: var(--button-background-color);
+    border: none;
+    color: var(--button-text-color);
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+
+    #TextWidget .button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    }
+
+    #TextWidget .button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    }
+
+    #TextWidget .button:hover span{
+    padding-right: 25px;
+    }
+
+    #TextWidget .button:hover span:after{
+    opacity: 1;
+    right: 0;
+    }
+</style>

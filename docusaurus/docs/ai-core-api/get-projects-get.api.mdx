@@ -1,0 +1,71 @@
+---
+id: get-projects-get
+title: "List projects"
+description: "Returns projects filtered by optional parameters with pagination and metadata options."
+sidebar_label: "List projects"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1v2zAM/SsGz26cdjsUvmVrsRVrt6If2CHIgbHpWK0sqRKdLjP83wc6zle7rVnRnYJYj48U+fjUAOMsQDoGrLmESQw5hcwrx8oaSOGKuPYmRM7bO8o4RIXSTJ7yaLqIbIdCHTn0WBGTD9Gj4jJyOFMG5TBCk0cVMebI2AeEAcRgHfkOcZZDCjPiyz7Dp9MbiGHDCOm4AYMVQQp9FWc5xKCkvIea/AJiCFlJFULaAC+cINF7lAPFVIWt74G9MjNo2zZesy6v9N36l2nX4ZtorSrFLwYqwzQjDzEU1lfIy0/vjnaobFEEeiMu6fkXWoQ37ZSxF8T4IuXUWk1oduqpA/mbf4icxOApOGsCdVUdDYfys6vOlWYiT+wVzUkmmFnDZFjQ6JxWWSez5C5ISLN/A+xUuKUBbRvD+9/l/4B55OmhpsCvSLyVQPgPn/PfGtlK69XPV91s9wYVcWn7Zes2jEtIIZEMCeaVMkm/XsnWNsqQyM9Xe1h7DSmUzC6kSfJo/X0orRtkxWyQk7aKmQaZrZKsmB2gOsipssmFNVYrSeIUPPWXE6psdGpyZ5Xh6PbqHEQzmzRpkmiboS5t4PR4eDz8O925YKMTmpO2rpJeiZACZbVXvLiWBi3lNMWgspFY3qZdkm8lyk6MghERgzKF7YCKtZyMzqKP1hPEIJ1Zph4OhoPDg+uvo8vrz99uoI3B2cAVdqPpl+BcBV5b6dPim818/5/t9ldl+sGJ06iMFNq1u+kV0b8EMXSaEKEsa4B426XlpZCZCL5pphjo1uu2lc/L5Ra15CrgVFMOaYE6UAz3tHji4nPUtRTUjf0P+B1/3idgZcn7YNeeuw94y1T3ga/tch/wyiA32In88UrAkI4nbQwlYU6+6+0yaJRl5Larf+YLwrLefHlb2/YX/oK2CQ==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List projects"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/admin/project/getProjects"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns projects filtered by optional parameters with pagination and metadata options.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"projectId","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"filterWord","in":"query","schema":{"type":"string"}},{"name":"limit","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"offset","in":"query","schema":{"type":"integer","format":"int32"}},{"name":"metaKeys","in":"query","schema":{"type":"array","items":{"type":"string"}}},{"name":"noMeta","in":"query","schema":{"type":"boolean"}},{"name":"userT","in":"query","schema":{"type":"boolean"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Projects retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

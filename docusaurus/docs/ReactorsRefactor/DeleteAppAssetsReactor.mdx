@@ -1,0 +1,28 @@
+---
+id: deleteappassetsreactor-reactorsrefactor
+title: "Delete App Assets Reactor"
+sidebar_label: "DeleteAppAssetsReactor"
+description: "Delete a single or multiple files in the projects assets folder"
+api: "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"
+---
+
+# DeleteAppAssetsReactor
+
+**Description:** Delete a single or multiple files in the projects assets folder
+
+## Required Keys
+- **PROJECT, FILE_PATH**
+
+## Key Description
+- **PROJECT**: The unique id for the project/app
+- **FILE_PATH**: Names of the file(s) to delete. This relative path should assume the prefix of '/version/assets/' and not include the prefix in the string value.
+- **COMMENT_KEY**: Comment to add while removing the files within the git repository for the project
+
+## Optional Keys
+- **COMMENT_KEY**
+
+## Usage
+```javascript
+DeleteAppAssets(project="myProjectId", file_path=["file1.txt", "file2.txt"], comment_key="Removed old files")
+DeleteAppAssets("myProjectId", ["file1.txt", "file2.txt"], "Removed old files")
+```

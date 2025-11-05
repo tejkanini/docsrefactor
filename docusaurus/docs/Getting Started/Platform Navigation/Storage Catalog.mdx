@@ -1,0 +1,162 @@
+---
+sidebar_label: "Storage Catalog"
+sidebar_position: 6
+slug: "/platform-navigation/storage-catalog"
+---
+import ReactPlayer from "react-player";
+import StorageCatalogDemo from "../../../static/Demos/StorageCatalog.mp4";
+
+## Adding a Storage
+
+Storage is used to store data that is created while using Gen AI Apps on AI Core. There are a number of options on which Storage can be hosted (eg- Amazon S3, Google Cloud Storage, Dropbox etc).
+
+To connect to existing Storage or add new Storage, click on the **box** icon on the left side of AI Core portal which will take you to Storage catalog.
+
+![Storage icon](../../../static/autoImg/PlatformNavigation/Storage%20Catalog/Storage.png)
+
+Once you're in the Storage Catalog, you will find Storage if they are already present and accessible by you as shown below.
+
+![Storage Catalogue](../../../static/autoImg/PlatformNavigation/Storage%20Catalog/Add%20Storage.png)
+
+> _"Add Storage" button_
+
+For adding, click on **Add Storage** and it will take you to **Connect to Storage** page where you will find number of Storage options to chose from as illustrated below.
+
+![Add Storage](../../../static/autoImg/PlatformNavigation/Storage%20Catalog/Amazon%20S3.png)
+
+> _Various Storage Options_
+
+Click on the **Storage option** which you want for your instance. In this case, we will click on **Amazon S3** and it will take you to the page where you have to fill out the Storage details.
+
+![Enter Storage Details](../../../static/autoImg/PlatformNavigation/Storage%20Catalog/Create%20storage.png)
+
+> _Storage Details Required_
+
+Please fill in the details below to connect a test MINIO storage source.
+
+**Catalog Name** - Test Storage 
+
+**Region** - India
+
+**Bucket** - Bucket Test
+
+**Access Key** - Test123!
+
+**Secret Key** - ******
+
+Click on **Create Storage** shown at the bottom of details page and Storage will be added to the Storage Catalog as shown in below snapshot.
+
+![Storage Catalogue 2](../../../static/img/Navigating/CFG%20AI%20Walkthrough/Storage%20Catalogue.png)
+
+> _Newly added Storage_
+
+<ReactPlayer controls url={StorageCatalogDemo} />
+
+## Usage
+
+The Usage tab shows how to use the Storage in JavaScript, Python, Langchain API and Java.
+
+![Usage of a Storage](../../../static/autoImg/PlatformNavigation/Storage%20Catalog/StorageCatalogUsage.png)
+
+These commands demonstrate how to use the storage engine via the Terminal app and within any apps that you create. These commands are not to be confused with the SDK which are seperate.
+
+```
+# Initialize the storage engine
+from gaas_gpt_storage import StorageEngine
+storageEngine = StorageEngine(engine_id = "2d905aa3-b703-4c98-8133-5bcaefddac1e", insight_id = '${i}')
+```
+
+```
+# List the files on your storage path
+storageEngine.list(storagePath = "my_s3_storage_path")
+```
+
+```
+# List the files on your storage path with extra details
+storageEngine.listDetails(storagePath = "my_s3_storage_path")
+```
+
+```
+# Sync'ing your local folder to the specified storage directory
+# Space can be the project id, "user" or "insight"
+# This is where the local path starts
+# So in this case, the local path starts in the project directory
+storageEngine.syncLocalToStorage(storagePath="my/s3/storage/path", localPath="/my/local/dir", space="my_project_id")
+```
+
+```
+# Sync'ing your storage directory to the local folder
+# Space can be the project id, "user" or "insight"
+storageEngine.syncStorageToLocal(storagePath="my/s3/storage/path", localPath="/my/local/dir", space="my_project_id")
+```
+
+```
+# Upload a folder or file from your local project/insight/user directory to the specified storage directory
+storageEngine.copyToStorage(storagePath="my/s3/storage/path", localPath="/my/local/dir", space="my_project_id")
+```
+
+```
+# Download a folder or file from the specified storage directory to your local project/insight/user directory
+storageEngine.copyToLocal(storagePath="my/s3/storage/path", localPath="/my/local/dir", space="my_project_id")
+```
+
+```
+# Delete a folder or file from the specified storage directory
+storageEngine.deleteFromStorage(storagePath = 'your/storage/file/path', leaveFolderStructure=False)
+```
+
+## Access Control
+The Access Control tab allows authors of the storage to change storage permissions
+
+### Add members
+You can grant access to other users by clicking on Add Member. When adding a member you will have to select which [permission level](../../Getting%20Started//Platform%20Navigation/Settings/Permissions.mdx) to grant.
+
+### Pending Requests
+Users can request access to your storage if it is  [Discoverable](#discoverable-storages), these requests will be visible in Pending Requests. 
+
+![storage Access](../../../static/autoImg/PlatformNavigation/AppLibrary/PendingRequests.png)
+
+### Public storage
+Making a storage public allows all users to have READ-ONLY access to the storage. Users would also be allowed to request access to the storage.
+
+### Discoverable Storage
+Making a storage discoverable allows all users to request access to the storage.
+[Request Access for Discoverable Storages](#discoverable-storages)
+
+### Discoverable Storages
+If an storage is discoverable other users can request access to the storage.
+
+![Discoverable Storages](../../../static/autoImg/PlatformNavigation/App%20Library/Discoverable.png)
+
+Click on **Request Access** near the top-right corner and a pop-up will provide you with 3 options to choose from - Author, Editor & Read-Only. You can choose the option based on your role and request.
+
+![Request Access](../../../static/img/FunctionEngines/functionRequestAccess.png)
+
+
+## Edit Storage
+This allows you to edit the storage metadata displayed in the Overview tab for the storage. It provides a convenient way to update details, correct errors, or enhance information as needed. By clicking this button, users can access editable fields and make changes before saving or submitting their updates. This functionality helps maintain accurate and up-to-date content.
+
+![Edit](../../../static/img/FunctionEngines/Edit.png)
+
+
+  - Edit Storage Options
+    - Edit/View Tabs: The "Edit" tab is for entering or modifying content, while the "View" tab allows users to see how the content will appear once formatted.
+    - Description: A field for providing a detailed explanation of the storage, helping others understand its purpose and usage.
+    - Tag: Allows users to add tags for categorization or easy searching, enhancing the discoverability of the storage.
+    - Domain: Users can specify the domain or area of application for the storage, aiding in contextual understanding.
+    - Data Classification: A input field for specifying the classification of data, which can be important for compliance and security purposes.
+    - Data Restrictions: This field is for noting any restrictions on the data, such as access limitations or usage guidelines.
+
+
+![EditInterface](../../../static/img/FunctionEngines/EditInterface.png)
+
+
+
+## Export Storage
+The **Export** button allows users to download the current content as a ZIP file, making it easy to save and share multiple files in a compressed format. This feature streamlines the process of exporting data for backup, collaboration, or offline use. By clicking the Export button, users can quickly package their work and transfer it efficiently. This zipped file can be uploaded in other AI Core enviornments.
+![Export](../../../static/img/FunctionEngines/Export.png)
+
+
+## Delete Storage
+Authors can permanently delete a storage.
+

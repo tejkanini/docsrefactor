@@ -1,0 +1,8 @@
+{
+  "label": "Navigation",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "SEMOSS platform walktrough, Examples of Commonly used Apps and Creation of New App"
+  }
+}

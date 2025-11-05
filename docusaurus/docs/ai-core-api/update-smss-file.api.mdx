@@ -1,0 +1,71 @@
+---
+id: update-smss-file
+title: "Update engine SMSS file"
+description: "Updates the engine's SMSS configuration file with new content, preserving concealed sensitive values and validating immutable fields (engine id, name, type). Requires admin or engine owner."
+sidebar_label: "Update engine SMSS file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytk0Fv1EAMhf/KyBdAyiZbxKEK4lDRIiq1gLqUC+phmnE2hmQ8jJ1dlVX+O3J2i4ACp56SjJ/83nx2dqB+LVB/hrO4pojuikdFuCkgoDSZkhJHqOE6Ba8oTjt0OCufiFtdrlau4djSeszelK6lHt2WtHMRt1ZTjFq4lFEwbyiu7axB32NwglFIaYNu4/sRxfkY7JWCV1PSMIzqb3t0LWEfxD3dOzsKhYt+wMLpXcJnpbvCbyNl6xAGio7zIaPjbcRcQgGccJ/wPEAN43yb1SDyhnqEApLPfkDFbCh2YM2hhn2T8wAFkEFIXjsoIO/dAtSaRyxAmg4HD/UOLA7UIJoprmGabkwsiaOgWP35cmmP39HOFPeJzOnAzHQ+pZ6aOXb1RTi+bDqfBfXVqO3i2BT/tp6mAl78ze7TATDPnFLmBkUMN+bM+bEDHD0McB39qB1n+o7BIlCUsW2pIYzqEuaBRIijPGaUqYABtWMbfmLReeTaQQ0VLnb3c56qB4thW3u/FWPuoYZONUldVVvOX6XjVDbtugzYM6li2fBQNe164WkRcODqkiP3pF3lE8GfP9UpDuzOYkhMUd311QVMxa82dVX13Pi+Y9H6eHm8/H+7C9O6U9xgz2kwbraAgs2YSe9Whme/hrdeqDkZ7f4/YZkfHHbZvmcNGDiKLc9C0t4qJ+fuNWeDY2T21styWR4tVu9OPqzevv8I0/QDlhKGQg==
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update engine SMSS file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/e-{engineId}/updateSmssFile"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the engine's SMSS configuration file with new content, preserving concealed sensitive values and validating immutable fields (engine id, name, type). Requires admin or engine owner.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"engineId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMSS updated","content":{"application/json;charset=utf-8":{"schema":{"type":"string"}}}},"400":{"description":"Validation or processing error","content":{"application/json;charset=utf-8":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized or insufficient permissions","content":{"application/json;charset=utf-8":{"schema":{"type":"string"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

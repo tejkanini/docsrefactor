@@ -1,0 +1,124 @@
+---
+sidebar_label: "Creating a Database"
+sidebar_position: 7
+slug: "/creating-a-database"
+---
+
+# Creating a Vector Database
+
+## Using the CreateVectorDatabaseEngine() Reactor
+- **CreateVectorDatabaseEngine():** This allows you to setup and configure a new vector database engine into your backend. You can specify the type of storage and other details using 2 input parameters.
+  - _Input 0:_ `database` - Fill in the name/ engine ID of the database you want to use within ("").
+  - _Input 1:_ `conDetails` - Provide the map or collection of data that speciifes details to establish connection with the database within (""), each element separated by a coma(,).
+  - _Input 2:_ `filePaths` - Any additional around file paths that may be required.
+
+## JavaScript Example
+```javascript
+const createVectorDatabaseEngine = async (newVector, vectorOptions) => {
+    let engine;
+
+    const engineNames = vectorOptions.map(option => option.database_name);
+
+    if (!engineNames.includes(newVector)) {
+        try {
+            const pixel = `CreateVectorDatabaseEngine(database = ["${newVector}"], conDetails = [{"VECTOR_TYPE": "FAISS", "NAME": "${newVector}", "EMBEDDER_ENGINE_ID": "${process.env.EMBEDDER}", "INDEX_CLASSES": "default", "CHUNKING_STRATEGY": "ALL", "CONTENT_LENGTH": 512, "CONTENT_OVERLAP": 20, "DISTANCE_METHOD": "Squared Euclidean (L2) distance", "RETAIN_EXTRACTED_TEXT": "false"}]);`;
+            const response = await actions.run(pixel);
+            const { output } = response.pixelReturn[0];
+            engine = output;
+            console.log('Vector Database Engine Created:', engine);
+        } catch (e) {
+            console.error('Error creating vector database engine:', e.message || e);
+        }
+    } else {
+        engine = vectorOptions.find(option => option.database_name === newVector);
+        console.log('Using existing Vector Database Engine:', engine);
+    }
+
+    return engine;
+};
+```
+### Explanation
+
+1. **Function Definition**: The `createVectorDatabaseEngine` function is defined as an asynchronous function that takes `newVector` and `vectorOptions` as parameters.
+2. **Engine Names Extraction**: It extracts the names of existing vector databases from `vectorOptions`.
+3. **Check for Existing Engine**: It checks if `newVector` already exists in the list of engine names.
+4. **Create New Engine**: If `newVector` does not exist, it constructs the `pixel` string and calls `actions.run(pixel)` to create the new vector database engine.
+5. **Handle Response**: It handles the response and logs the created engine or any errors that occur.
+6. **Use Existing Engine**: If `newVector` already exists, it finds and logs the existing engine.
+7. **Return Engine**: The function returns the created or found engine.
+
+
+## Python Example
+
+```python
+import os
+
+def create_vector_database_engine(new_vector, vector_options):
+    engine = None
+
+    engine_names = [option['database_name'] for option in vector_options]
+
+    if new_vector not in engine_names:
+        try:
+            pixel = f'CreateVectorDatabaseEngine(database = ["{new_vector}"], conDetails = [{{"VECTOR_TYPE": "FAISS", "NAME": "{new_vector}", "EMBEDDER_ENGINE_ID": "{os.getenv("EMBEDDER")}", "INDEX_CLASSES": "default", "CHUNKING_STRATEGY": "ALL", "CONTENT_LENGTH": 512, "CONTENT_OVERLAP": 20, "DISTANCE_METHOD": "Squared Euclidean (L2) distance", "RETAIN_EXTRACTED_TEXT": "false"}}]);'
+            response = actions.run(pixel)
+            output = response['pixelReturn'][0]['output']
+            engine = output
+            print('Vector Database Engine Created:', engine)
+        except Exception as e:
+            print('Error creating vector database engine:', str(e))
+    else:
+        engine = next(option for option in vector_options if option['database_name'] == new_vector)
+        print('Using existing Vector Database Engine:', engine)
+
+    return engine
+
+```
+### Explanation
+
+1. **Function Definition**: The `create_vector_database_engine` function is defined as an asynchronous function that takes `new_vector` and `vector_options` as parameters.
+2. **Engine Names Extraction**: It extracts the names of existing vector databases from `vector_options`.
+3. **Check for Existing Engine**: It checks if `new_vector` already exists in the list of engine names.
+4. **Create New Engine**: If `new_vector` does not exist, it constructs the `pixel` string and calls `actions.run(pixel)` to create the new vector database engine.
+5. **Handle Response**: It handles the response and logs the created engine or any errors that occur.
+6. **Use Existing Engine**: If `new_vector` already exists, it finds and logs the existing engine.
+7. **Return Engine**: The function returns the created or found engine.
+8. **Example Usage**: An example usage of the function is provided, demonstrating how to call `create_vector_database_engine` with sample data.
+
+## Java Example
+
+```java
+NounMetadata result = new CreateVectorDatabaseEngineReactor()
+    .store.setNoun(ReactorKeysEnum.DATABASE.getKey(), createGenRowStruct("MyVectorDatabase"))
+    .store.setNoun(ReactorKeysEnum.CONNECTION_DETAILS.getKey(), createGenRowStruct(Map.of(
+        IVectorDatabaseEngine.VECTOR_TYPE, "FAISS",
+        Constants.EMBEDDER_ENGINE_ID, "embedder-engine-id"
+    )))
+    .store.setNoun(ReactorKeysEnum.GLOBAL.getKey(), createGenRowStruct("true"))
+    .execute();
+```
+### Explanation
+
+1. **Instantiation**:
+   - `CreateVectorDatabaseEngineReactor reactor = new CreateVectorDatabaseEngineReactor();`
+     - This creates a new instance of the `CreateVectorDatabaseEngineReactor` class.
+
+2. **Setting Up Context**:
+   - `reactor.store.setNoun(ReactorKeysEnum.DATABASE.getKey(), createGenRowStruct("MyVectorDatabase"));`
+     - Sets the database name to "MyVectorDatabase".
+   - `reactor.store.setNoun(ReactorKeysEnum.CONNECTION_DETAILS.getKey(), createGenRowStruct(Map.of(
+       IVectorDatabaseEngine.VECTOR_TYPE, "FAISS",
+       Constants.EMBEDDER_ENGINE_ID, "embedder-engine-id"
+     )));`
+     - Sets the connection details, specifying the vector type as "FAISS" and providing an embedder engine ID.
+   - `reactor.store.setNoun(ReactorKeysEnum.GLOBAL.getKey(), createGenRowStruct("true"));`
+     - Sets the global flag to true.
+
+3. **Method Call**:
+   - `NounMetadata result = reactor.execute();`
+     - Calls the `execute` method on the `CreateVectorDatabaseEngineReactor` instance and stores the result in the `result` variable.
+
+
+
+
+

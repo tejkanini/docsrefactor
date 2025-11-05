@@ -1,0 +1,67 @@
+---
+id: deny-database-user-access-request
+title: "Deny database user access request (legacy)"
+description: "Denies user access requests. Deprecated: use /auth/admin/engine/denyEngineUserAccessRequest."
+sidebar_label: "Deny database user access request (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMtu2zAQ/BViTy0gi07RQ6CbWwdogLQJ4vgU+ECTa4sJRTIk5VYV9O/F0nLzcJD00pMEYTi786B6SGIboboF0aYaVgUojDJon7SzUMEcrcbI2oiBCSkxRhbwocWYYsnm6ANKkVBVhGCcOLhQjbYc7VZb5Aptd5ZflxHDLDNc7wlKKMB5DIJGnSuogMBzkcRaxGM4FBAwemcjRqh6+DSd0uP5upcHPhbbfHjTGihAOpvQJsIL742WGcPvIh3qIcoaG0FvqfMIFbj1HUqa6ANtmPR+5Mj5BLh2zqCw8NK2c6toCEamNyzVyNzzxVChgmEoIOlkiOgCt0J2M7Ju0Y6y92JhGAj4+TW5X4Q6xPGuypHl5JhlaSk3F/RvVP9CM5DaQ/JQpdBiAQ2m2lGI3uVlvEg1VPC0EmqMlr+Xc8Sww0Ct7KENBiqoU/Kx4vynC/exdr6Um22p0DidEpbSNVxuthOhJwobx78764ymuV4fRTPHxrEzq7zTNrHl9QUMxdMxFefGSWFqF1N1Oj2dvk13QVg2xx0a5xvybViRAtkGnboFNWtfnrWIWs7okj3Wh+aR3oyiOhEm90LbjcvAsR+zc/bVBYQCyJn96Gk5LU8mix+zq8W3yxsYiux9I3KnrciMc7QdOxj/2jVmH0yu3seXyvrHIvzvv8DoRsJfiXsjtCUtOZF+7NH4eyog09Kqo6S89VttWhVASRJF32dIMMNAnx9aDB1Ut6sCdiJosSajb1dDATUKhSHX7x47cl9K9NTMnTAtrXp0MSj0v1fg6nJxA8PwB+0Q4qw=
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deny database user access request (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/database/denyDatabaseUserAccessRequest"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Denies user access requests. Deprecated: use /auth/admin/engine/denyEngineUserAccessRequest.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation successful","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Indicates if the operation succeeded"}},"title":"LegacyAdminSuccessResponse"}}}},"400":{"description":"Bad request","content":{"application/json":{}}},"401":{"description":"Unauthorized","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

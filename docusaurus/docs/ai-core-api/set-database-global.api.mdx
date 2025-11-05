@@ -1,0 +1,67 @@
+---
+id: set-database-global
+title: "Set database global (legacy)"
+description: "Sets the database public/private. Deprecated: use /auth/admin/engine/setEngineGlobal."
+sidebar_label: "Set database global (legacy)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1lE9v1DAQxb+KNSeQ0iRFIFW5rdgKViq0atpTtQfHmd24dWxjTxaWKN8djTelfwVcOCWKnt/MvPk5I5DcRqhuQA7UwTqDFqMK2pN2FiqokaKgDkUrSTYyovBDY7QqfNA7SZiLJfqAShK2lRgiioKNCtn22hZot9piEZFO09sn4xppcsjAeQySa6xaqCAiLWf/gwQyCBi9sxEjVCO8K0t+PO3t/N5DxEEpjHEz8EHlLKEl1kvvjVZJU9xGPjRCVB32kt9o7xEqcM0tKoIMfOCuSB9Kzp6PhI1zBqWF5xmtbMtFMAq9SVm5p41hiy1MUwakybDRGW6l2i84ovpQ5XIeFqaJhe/L45fjXltO1gX9E9u/jplsPryW2soSBiuNiBh2GASG4MK/+E089/2uoaIwYAY9Uud4hd7FlKGkDip4DME9OcVrWz40wQCOMAQDFXREPlZF8d2Fu9g5n6vNNm/ROE2EuXJ9oTbbI6mPWuxd8cVZZzTX8vrFYpbYO3FqW++0JXF9eQZT9rhMVRTGKWk6F6k6KU/KP9udsVYscYfG+Z6zmtY8gRqCpn3NXB3QaWTUasH36QEersfzJhXDxJpEhbYbl4QzHYuV+OgCQgaczKF0mZf58VH9dXFRfz6/gilLefcyEW1lcqyRHm7pNgUs3piE2tvns4wP6/5vV3wenPAHFd5IbbntFP44YzL/dDJIVtzj3EEC4zks6wx4UXxsHPn7dTDTxJ+/DRj2UN2sM9jJoGXDOd6spww6lC2GRNcd7jlcpdAzqDtpBm7vBeu8099UX5zXVzBNvwBMAswf
+sidebar_class_name: "post api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set database global (legacy)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/admin/database/setDatabaseGlobal"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Sets the database public/private. Deprecated: use /auth/admin/engine/setEngineGlobal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation successful","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Indicates if the operation succeeded"}},"title":"LegacyAdminSuccessResponse"}}}},"401":{"description":"Unauthorized","content":{"application/json":{}}},"500":{"description":"Internal server error","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

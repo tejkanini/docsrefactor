@@ -1,0 +1,62 @@
+[
+    {
+        "label": "Choose Filters",
+        "query": "UnfilterFrame(); SetFrameFilter((Director__Director==[<Director__Director>])); SetFrameFilter((MovieBudget>=<Movie__Budget>)); if(<Nominated>, (SetFrameFilter(Nominated == \"Y\");Nominated = true;), (UnfilterFrame(Nominated); Nominated = false;));",
+        "listeners": [
+            "updateTask"
+        ],
+        "params": [
+			{
+                "paramName": "Director__Director",
+                "view": {
+                    "displayType": "checklist",
+                    "attributes": {
+                        "multiple": true,
+                        "quickselect": true,
+                        "searchable": true
+                    }
+                },
+                "model": {
+                    "query": "Database ( database = [ \"2555ec1b-e1a2-4905-91e0-022dc57fc564\" ] ) | Select ( Director__Director ) .as ( [ Director ] ) | Distinct ( true ) | Sort ( columns = [ Director__Director ] , sort = [ \"asc\" ] )  | CollectAll();",
+                    "valueQuery": "Select ( Director__Director ) | CollectAll();"
+                },
+                "required": false,
+                "link": "instance"
+            },
+            {
+                "paramName": "Nominated",
+                "view": {
+                    "label": "Filter by following criteria",
+                    "displayType": "checkbox",
+                    "attributes": {
+                        "label": "View nominated movies?",
+                        "direction": "left"
+                    }
+                },
+                "model": {
+                    "defaultValue": "false",
+                    "valueQuery": "if((VariableExists(\"Nominated\") AND Nominated), true, false);"
+                },
+                "required": false
+            },
+            {
+                "paramName": "Movie__Budget",
+                "view": {
+                    "displayType": "number",
+                    "label": "Minimum Movie Budget:",
+                    "attributes": {
+                        "multiple": false 
+                    }
+                },
+                "model": {
+                    "defaultValue": 0,
+					"min": 0,
+					"max": 10000000,
+					"valueQuery": "Select (round(Min(MovieBudget), noname=[0])) | Iterate() | GrabScalarElement();"
+				},
+                "required": false
+            }
+        ],
+        "execute": "button"
+    }
+]

@@ -1,0 +1,71 @@
+---
+id: image-download
+title: "Download engine image"
+description: "Returns the engine image (PNG/JPEG/GIF/SVG). Supports ETag-based client caching. Falls back to generated default if none found."
+sidebar_label: "Download engine image"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFk0Fv1DAQhf+KNadWZOMUeqhyq9jtsqiUqttyQT147Uli1fEYe7KlrPLfkbMUKIVeOVnWvPG8+fS8A1ZtgvozLHxrPYorGhjhtgCDSUcb2JKHGq6Qh+iT4A4F7pW2Vy2Kg8uLpXx/uVjK5epMrj8tD0uxHkKgyEksrlU726iERmhn0bPQSnfWt6U4U84lsVH6TjCJFj1GxWiEwUYNjoVthCePoqHBmxIKoJAVlvzKQA3T8Dnde0fKQAFBRdUjY8y77MCrHqGGvdNVFti8RVDcQQERvww2ooGa44AFJN1hr6DeAT+E3Jc4Wt/CON5mcQrkE6Zcf11V+XjKZjWBaKxDESdMaGAs4E11/Fx7QSx6MraxaMRB5iN6xbo7zB3Hf33db5Wz5pE6xTwkWtwqJzBGilCAJs/oOTerEJzVEyhJmpFniSOqPtf+vWfxpC9t21dfe/dyyzgZPnpu+MargTuK9huabNeTUFpjSv/N6FhAj9xRDk6LPMWFO6hB4mz3mJFRTpmS5leoEsbtY6KG6KCGjjmkWsp7inepo1Dqpi0NOrLMWGrqpW7ambIzgz3JD+TJWe6kChb+/FFz7EksvAlkPYubq3MYi9/H1FI60sp1lLg+qU6ql587z1oxxy06Cn1mnMObUA/R8sM609lHeKOS1adD3v8nqzwPfvyDfJ80E23rG5qEll2unK7EW4oIBWQy+9FVWZVHs/XF6eX63cdrGMfvMVB/DQ==
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download engine image"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/e-{engineId}/image/download"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the engine image (PNG/JPEG/GIF/SVG). Supports ETag-based client caching. Falls back to generated default if none found.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"engineId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Image file returned"},"304":{"description":"Not modified (ETag match)"},"400":{"description":"Invalid engine or retrieval error","content":{"application/octet-stream":{"schema":{"type":"string"}},"application/svg+xml":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized or no access","content":{"application/octet-stream":{"schema":{"type":"string"}},"application/svg+xml":{"schema":{"type":"string"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

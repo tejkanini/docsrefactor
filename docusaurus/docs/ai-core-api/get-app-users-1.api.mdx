@@ -1,0 +1,75 @@
+---
+id: get-app-users-1
+title: "[LEGACY] List app users"
+description: "Legacy endpoint. Use /auth/engine/getEngineUsers instead."
+sidebar_label: "[LEGACY] List app users"
+hide_title: true
+hide_table_of_contents: true
+api: eJylU8tu2zAQ/BVhz4ykFD0EuhmpkQZwH2jiQxEYxZpaS0wokiVXbl1B/16srDROU/TQ6iKJHO4sZ2YHYGwSVHeAPbewUVBT0tEENt5BBStqUB8ycnXwxnGerRNlhWALco1xVDTEy+lrnSimzLjEhHUOCnygiFLnuoYKGuJFCBPoyzkoCBixI6Yo7AM47AgqwBCua1BghPxrT/EACpJuqUOoBuBDEFTiaFwD47hRECkF7xIl2X9VlvJ6fodjY5E4GtqTVNfeMTkWKIZgjZ7aLO6T4IeXfBgjSiOGqUsn6357T5phlEfB6/L8D+ROxPLR/Pgn5ucMNYVIGplqqDj2pKAjbv0s7yQqt1DB0SAMoThRXYSkuH8UvI8WKmiZQ6qK4puPD6n1Ide7Jq/JesNMufZdoXfNGZqzmjpfvPPOWzOVNvB7VN5Q57PlHJRs/WkFozqlqYrCeo229Ymri/Ki/Hu5lWCzN7Qn60MnmonbiXQfDR9uRKij51tMRi8kvU+yCd9jcOR/woBIaNzOT0DDVnYW19mljwQKRJkjdZmX+fnZzfvFx5u3H25hVBB84g4ni+ag3q2WV4vLz5tsZRJnGELWzyI/u8bw5Ph/zdJ8L6bvXASLxklXk7bDbPo8wUpyBep03GSqRXTBDMMWE62jHUdZPk6YxKE2CbdWgrVDm0jBAx1O5nGPtpcGJhP2GI2AobrbjApawpriVOV4aKE1BT459SLqUuVXdK+WtzCOPwGb0I5L
+sidebar_class_name: "get api-method"
+info_path: ai-core-api/ai-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"[LEGACY] List app users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/auth/app/getAppUsers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Legacy endpoint. Use /auth/engine/getEngineUsers instead.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"appId","in":"query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users retrieved","content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
